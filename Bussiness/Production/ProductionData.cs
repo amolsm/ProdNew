@@ -39,11 +39,11 @@ namespace Bussiness.Production
         }
 
         //RMR Rp bind
-        public DataSet GetRMRDetails()
+        public DataSet GetRMRDetails(string dates)
             {
                 dbproduction = new DBProduction();
 
-                return dbproduction.GetRMRDetails();
+                return dbproduction.GetRMRDetails(dates);
             }
 
         public DataSet GetExistingBatchNo(string batchno)

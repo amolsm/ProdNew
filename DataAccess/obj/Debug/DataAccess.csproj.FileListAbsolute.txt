@@ -849,3 +849,12 @@ D:\ProdCode\DataAccess\bin\Model.pdb
 D:\ProdCode\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 D:\ProdCode\DataAccess\obj\Debug\DataAccess.dll
 D:\ProdCode\DataAccess\obj\Debug\DataAccess.pdb
+D:\Nanjil\ProdNew\DataAccess\bin\DataAccess.dll
+D:\Nanjil\ProdNew\DataAccess\bin\DataAccess.pdb
+D:\Nanjil\ProdNew\DataAccess\bin\Comman.dll
+D:\Nanjil\ProdNew\DataAccess\bin\Model.dll
+D:\Nanjil\ProdNew\DataAccess\bin\Comman.pdb
+D:\Nanjil\ProdNew\DataAccess\bin\Model.pdb
+D:\Nanjil\ProdNew\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\Nanjil\ProdNew\DataAccess\obj\Debug\DataAccess.dll
+D:\Nanjil\ProdNew\DataAccess\obj\Debug\DataAccess.pdb

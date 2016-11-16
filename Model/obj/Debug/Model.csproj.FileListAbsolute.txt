@@ -473,3 +473,7 @@ D:\ProdCode\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\ProdCode\Model\obj\Debug\Model.dll
 D:\ProdCode\Model\obj\Debug\Model.pdb
 D:\ProdGit\ProdCode\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Nanjil\ProdNew\Model\bin\Model.dll
+D:\Nanjil\ProdNew\Model\bin\Model.pdb
+D:\Nanjil\ProdNew\Model\obj\Debug\Model.dll
+D:\Nanjil\ProdNew\Model\obj\Debug\Model.pdb

@@ -1041,3 +1041,14 @@ D:\ProdCode\Bussiness\bin\Model.pdb
 D:\ProdCode\Bussiness\obj\Debug\Bussiness.csprojResolveAssemblyReference.cache
 D:\ProdCode\Bussiness\obj\Debug\Bussiness.dll
 D:\ProdCode\Bussiness\obj\Debug\Bussiness.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\Bussiness.dll
+D:\Nanjil\ProdNew\Bussiness\bin\Bussiness.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\Comman.dll
+D:\Nanjil\ProdNew\Bussiness\bin\DataAccess.dll
+D:\Nanjil\ProdNew\Bussiness\bin\Model.dll
+D:\Nanjil\ProdNew\Bussiness\bin\Comman.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\DataAccess.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\Model.pdb
+D:\Nanjil\ProdNew\Bussiness\obj\Debug\Bussiness.csprojResolveAssemblyReference.cache
+D:\Nanjil\ProdNew\Bussiness\obj\Debug\Bussiness.dll
+D:\Nanjil\ProdNew\Bussiness\obj\Debug\Bussiness.pdb

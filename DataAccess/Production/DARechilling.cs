@@ -47,9 +47,10 @@ namespace DataAccess.Production
         }
       
        
-        public DataSet GetRechillingDetails()
+        public DataSet GetRechillingDetails(string dates)
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
+            paramCollection.Add(new DBParameter("@date", dates));
             return _DBHelper.ExecuteDataSet("[sp_Prod_RechillingViewDetails]", paramCollection, CommandType.StoredProcedure);
         }
         public DataSet GetRechillingDataById(int RMRId)

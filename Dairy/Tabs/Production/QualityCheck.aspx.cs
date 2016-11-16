@@ -215,7 +215,7 @@ namespace Dairy.Tabs.Production
                 //qtydata.QCId = string.IsNullOrEmpty(hId.Value) ? 0 : Convert.ToInt32(hId.Value);
                 qtyMdata.RMRShiftId = Convert.ToInt32(dpShiftDetails.SelectedItem.Value);
                 //qtyMdata.RMRDate = DateTime.Now.ToString();
-                qtyMdata.QualityDate = DateTime.Now.ToString();
+                qtyMdata.QualityDate = Convert.ToDateTime(txtDate.Text).ToString("dd-MM-yyyy");
                 qtyMdata.Temperature = string.IsNullOrEmpty(txtTemperature.Text) ? 0 : Convert.ToDouble(txtTemperature.Text);
                 qtyMdata.Alcohol = string.IsNullOrEmpty(txtAlcohol.Text) ? 0 : Convert.ToDouble(txtAlcohol.Text);
                 qtyMdata.Neutralizer = string.IsNullOrEmpty(txtNeutralizer.Text) ? 0 : Convert.ToDouble(txtNeutralizer.Text);
@@ -242,7 +242,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "QualityData Added Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    //GetQualityDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy"); 
+                    GetQualityDetails(dates);
                     uprouteList.Update();
                     ClearField();
                 }
@@ -274,7 +276,7 @@ namespace Dairy.Tabs.Production
             //qtydata.QCId = string.IsNullOrEmpty(hId.Value) ? 0 : Convert.ToInt32(hId.Value);
             qtyMdata.RMRShiftId = Convert.ToInt32(dpShiftDetails.SelectedItem.Value);
             //qtyMdata.RMRDate = DateTime.Now.ToString();
-            qtyMdata.QualityDate = DateTime.Now.ToString();
+            qtyMdata.QualityDate = Convert.ToDateTime(txtDate.Text).ToString("dd-MM-yyyy");
             qtyMdata.Temperature = string.IsNullOrEmpty(txtTemperature.Text) ? 0 : Convert.ToDouble(txtTemperature.Text);
             qtyMdata.Alcohol = string.IsNullOrEmpty(txtAlcohol.Text) ? 0 : Convert.ToDouble(txtAlcohol.Text);
             qtyMdata.Neutralizer = string.IsNullOrEmpty(txtNeutralizer.Text) ? 0 : Convert.ToDouble(txtNeutralizer.Text);
@@ -303,7 +305,9 @@ namespace Dairy.Tabs.Production
                 divSusccess.Visible = true;
                 lblSuccess.Text = "QualityData Data Updated Successfully";
                 pnlError.Update();
-                //GetQualityDetails();
+                string dates;
+                dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetQualityDetails(dates);
                 uprouteList.Update();
                 ClearField();
             }

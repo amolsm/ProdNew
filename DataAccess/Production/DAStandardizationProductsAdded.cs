@@ -58,9 +58,10 @@ namespace DataAccess.Production
             return DS;
         }
 
-        public DataSet GetStandardizationProductsAddedDetails()
+        public DataSet GetStandardizationProductsAddedDetails(string dates)
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
+            paramCollection.Add(new DBParameter("@date", dates));
             return _DBHelper.ExecuteDataSet("sp_Prod_GetStandardizationProductsAddedDetails", paramCollection, CommandType.StoredProcedure);
         }
     }

@@ -37,10 +37,10 @@ namespace Bussiness.Production
             dastdp = new DAStandardizationProductsAdded();
             return dastdp.GetStandardizationProductsAddedDetailsById(Id);
         }
-        public DataSet GetStandardizationProductsAddedDetails()
+        public DataSet GetStandardizationProductsAddedDetails(string dates)
         {
             dastdp = new DAStandardizationProductsAdded();
-            return dastdp.GetStandardizationProductsAddedDetails();
+            return dastdp.GetStandardizationProductsAddedDetails(dates);
         }
     }
 }

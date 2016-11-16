@@ -29,7 +29,7 @@ namespace Dairy.Tabs.Production
             {
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                GetStandardizationProductsAddedDetails();
+                //GetStandardizationProductsAddedDetails();
                 txtBatchNo.ReadOnly = true;
                 btnUpdate.Visible = false;
             }
@@ -86,7 +86,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Standardization Products Added Data Add  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetStandardizationProductsAddedDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetStandardizationProductsAddedDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -132,7 +134,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Standardization Products Added Data Update Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetStandardizationProductsAddedDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetStandardizationProductsAddedDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -190,11 +194,11 @@ namespace Dairy.Tabs.Production
             }
         }
 
-        public void GetStandardizationProductsAddedDetails()
+        public void GetStandardizationProductsAddedDetails(string dates)
         {
             bstdpdata = new BStandardizationProductsAdded();
             DataSet DS = new DataSet();
-            DS = bstdpdata.GetStandardizationProductsAddedDetails();
+            DS = bstdpdata.GetStandardizationProductsAddedDetails(dates);
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
                 rpStandardizationProductsAdded.DataSource = DS;
@@ -254,6 +258,12 @@ namespace Dairy.Tabs.Production
                     dpStdAddDone.SelectedIndex = 2;
                 }
             }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetStandardizationProductsAddedDetails(dates);
         }
     }
 }

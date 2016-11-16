@@ -22,13 +22,14 @@ namespace Dairy.Tabs.Production
         RMRecieve rmrdata;
         ProductionData proddata;
         DataSet DS = new DataSet();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 BindDropDwon();
                // BindDropDwonQC();
-                GetRMRDetails();
+                //GetRMRDetails();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 txtMilkType.Text = "Raw Milk";
                 btnUpdateProductindetail.Visible = false;
@@ -98,7 +99,9 @@ namespace Dairy.Tabs.Production
                 divDanger.Visible = false;
                 divwarning.Visible = false;
                 divSusccess.Visible = true;
-                GetRMRDetails();
+                string dates;
+                dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetRMRDetails(dates);
                 uprouteList.Update();
                 lblSuccess.Text = "RMR Data Add  Successfully";
                 pnlError.Update();
@@ -231,12 +234,12 @@ namespace Dairy.Tabs.Production
         }
 
 
-        public void GetRMRDetails()
+        public void GetRMRDetails(string dates)
         {
 
             proddata = new ProductionData();
             DataSet DS = new DataSet();
-            DS = proddata.GetRMRDetails();
+            DS = proddata.GetRMRDetails(dates);
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
@@ -275,7 +278,9 @@ namespace Dairy.Tabs.Production
                 divDanger.Visible = false;
                 divwarning.Visible = false;
                 divSusccess.Visible = true;
-                GetRMRDetails();
+                string dates;
+                dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetRMRDetails(dates);
                 uprouteList.Update();
                 lblSuccess.Text = "RMR Updated  Successfully";
                 
@@ -314,8 +319,14 @@ namespace Dairy.Tabs.Production
                 txtBatchNo.Text = string.Empty;
             }
         }
-             
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetRMRDetails(dates);
+            uprouteList.Update();
         }
+    }
 
        
     }

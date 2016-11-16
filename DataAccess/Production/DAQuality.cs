@@ -55,7 +55,7 @@ namespace DataAccess.Production
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
             paramCollection.Add(new DBParameter("@date", dates));
-            return (_DBHelper.ExecuteDataSet("sp_Prod_GetRMRInformation", paramCollection, CommandType.StoredProcedure));
+            return (_DBHelper.ExecuteDataSet("sp_Prod_GetQualityInformation", paramCollection, CommandType.StoredProcedure));
         }
 
         public DataSet GetQualityDetailsById(int RMRId)

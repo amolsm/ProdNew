@@ -81,9 +81,10 @@ namespace DataAccess
             return DS;
         }
 
-        public DataSet GetRMRDetails()
+        public DataSet GetRMRDetails(string dates)
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
+            paramCollection.Add(new DBParameter("@date", dates));
             return _DBHelper.ExecuteDataSet("sp_Prod_GetRMRInformation", paramCollection, CommandType.StoredProcedure);
         }
 

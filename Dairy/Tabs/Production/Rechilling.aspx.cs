@@ -30,7 +30,7 @@ namespace Dairy.Tabs.Production
                 //ClearField();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 btnUpdate.Visible = false;
-                GetReachlingDetails();
+                //GetReachlingDetails();
 
             }
         }
@@ -88,7 +88,9 @@ namespace Dairy.Tabs.Production
                 lblSuccess.Text = "Rechilling Data Add  Successfully";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                 pnlError.Update();
-                GetReachlingDetails();
+                string dates;
+                dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetReachlingDetails(dates);
                 uprouteList.Update();
             }
             else
@@ -136,7 +138,9 @@ namespace Dairy.Tabs.Production
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
                     ClearField();
-                    GetReachlingDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetReachlingDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -201,17 +205,22 @@ namespace Dairy.Tabs.Production
             Response.Redirect(Request.RawUrl);
         }
 
-        public void GetReachlingDetails()
+        public void GetReachlingDetails(string dates)
         {
             DataSet DS = new DataSet();
             BRechilling BData = new BRechilling();
-            DS = BData.GetRechillingDetails();
+            DS = BData.GetRechillingDetails(dates);
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
 
                 rpRechillingList.DataSource = DS;
                 rpRechillingList.DataBind();
+            }
+            else
+            {
+                GetReachlingDetails(dates);
+                uprouteList.Update();
             }
 
         }
@@ -278,6 +287,12 @@ namespace Dairy.Tabs.Production
             txtMilkInTemperature.Text = string.Empty;
             txtMilkOutTemperature.Text = string.Empty;
             txtRechilledBy.Text = string.Empty;
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetReachlingDetails(dates);
         }
     }
 }

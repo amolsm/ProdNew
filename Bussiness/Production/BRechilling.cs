@@ -35,11 +35,11 @@ namespace Bussiness.Production
             return Result;
         }
 
-        public DataSet GetRechillingDetails()
+        public DataSet GetRechillingDetails(string dates)
         {
             darechilling = new DARechilling();
 
-            return darechilling.GetRechillingDetails();
+            return darechilling.GetRechillingDetails(dates);
         }
         public DataSet GetRechillingDataById(int RMRId) 
         {
