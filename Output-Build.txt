@@ -1,0 +1,85 @@
+﻿1>------ Build started: Project: Comman, Configuration: Debug Any CPU ------
+2>------ Build started: Project: Model, Configuration: Debug Any CPU ------
+2>  Model -> D:\Karthik\29Sep2016\Model\bin\Model.dll
+1>  Comman -> D:\Karthik\29Sep2016\Comman\bin\Comman.dll
+3>------ Build started: Project: DataAccess, Configuration: Debug Any CPU ------
+3>  DataAccess -> D:\Karthik\29Sep2016\DataAccess\bin\DataAccess.dll
+4>------ Build started: Project: Bussiness, Configuration: Debug Any CPU ------
+4>  Bussiness -> D:\Karthik\29Sep2016\Bussiness\bin\Bussiness.dll
+5>------ Build started: Project: Dairy, Configuration: Debug Any CPU ------
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\PlaceOrder.aspx.cs(10,7,10,18): warning CS0105: The using directive for 'System.Data' appeared previously in this namespace
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\PlaceOrderEmpRoutewise.aspx.cs(10,7,10,18): warning CS0105: The using directive for 'System.Data' appeared previously in this namespace
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\PlaceOrderRoutewise.aspx.cs(10,7,10,18): warning CS0105: The using directive for 'System.Data' appeared previously in this namespace
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\PlaceOrder.aspx.cs(10,7,10,18): warning CS0105: The using directive for 'System.Data' appeared previously in this namespace
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\PlaceOrderEmpRoutewise.aspx.cs(10,7,10,18): warning CS0105: The using directive for 'System.Data' appeared previously in this namespace
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\PlaceOrderRoutewise.aspx.cs(10,7,10,18): warning CS0105: The using directive for 'System.Data' appeared previously in this namespace
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\RatewiseOrderSummary.aspx.cs(269,38,269,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\RatewiseOrderSummary.aspx.cs(288,38,288,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\RatewiseOrderSummary.aspx.cs(322,34,322,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\RatewiseOrderSummary.aspx.cs(368,34,368,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\RatewiseOrderSummary.aspx.cs(379,34,379,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\PlaceOrder.aspx.cs(327,20,327,25): warning CS0219: The variable 'price' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\PlaceOrder.aspx.cs(654,17,654,22): warning CS0219: The variable 'count' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\ItemwiseOrderSummary.aspx.cs(206,38,206,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\ItemwiseOrderSummary.aspx.cs(223,38,223,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\ItemwiseOrderSummary.aspx.cs(250,34,250,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\ItemwiseOrderSummary.aspx.cs(267,34,267,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Sales\EmployeeBilling.aspx.cs(126,17,126,22): warning CS0219: The variable 'count' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Sales\BoothStockLanding.aspx.cs(291,34,291,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Sales\BoothStockLanding.aspx.cs(687,34,687,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Sales\AgentBilling.aspx.cs(188,20,188,25): warning CS0219: The variable 'price' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\SalesAnalysisItemwise.aspx.cs(208,50,208,52): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\SalesAnalysisItemwise.aspx.cs(264,42,264,44): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\SalesAnalysisItemwise.aspx.cs(322,38,322,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\RatewiseOrderSummary.aspx.cs(269,38,269,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\RatewiseOrderSummary.aspx.cs(288,38,288,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\RatewiseOrderSummary.aspx.cs(322,34,322,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\RatewiseOrderSummary.aspx.cs(368,34,368,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\RatewiseOrderSummary.aspx.cs(379,34,379,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\ItemwiseSalesSummary.aspx.cs(285,38,285,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\ItemwiseSalesSummary.aspx.cs(310,38,310,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\ItemwiseSalesSummary.aspx.cs(368,34,368,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\ItemwiseSalesSummary.aspx.cs(395,34,395,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\ItemwiseSalesSummary.aspx.cs(417,34,417,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\ItemwiseOrderSummary.aspx.cs(206,38,206,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\ItemwiseOrderSummary.aspx.cs(223,38,223,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\ItemwiseOrderSummary.aspx.cs(250,34,250,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\ItemwiseOrderSummary.aspx.cs(267,34,267,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\BoothSalesAnalysisItemwise.aspx.cs(281,50,281,52): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\BoothSalesAnalysisItemwise.aspx.cs(360,42,360,44): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\BoothSalesAnalysisItemwise.aspx.cs(442,38,442,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\PlaceOrder.aspx.cs(325,20,325,25): warning CS0219: The variable 'price' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\PlaceOrder.aspx.cs(651,17,651,22): warning CS0219: The variable 'count' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\BoothBillWiseSalesSummary.aspx.cs(449,34,449,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\EmployeeInfo.aspx.cs(98,17,98,23): warning CS0219: The variable 'result' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\EmployeeInfo.aspx.cs(174,17,174,23): warning CS0219: The variable 'result' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\EmployeeInfo.aspx.cs(437,17,437,23): warning CS0219: The variable 'result' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\BillwiseSaleSummary.aspx.cs(361,38,361,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\BillwiseSaleSummary.aspx.cs(397,38,397,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\BillwiseSaleSummary.aspx.cs(417,38,417,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\BillwiseSaleSummary.aspx.cs(450,38,450,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\BoothSalesAnalysisUsers.aspx.cs(278,34,278,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\BoothSalesAnalysis.aspx.cs(269,34,269,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\BillSequence.aspx.cs(102,46,102,48): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\BillSequence.aspx.cs(150,46,150,48): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\BillSequence.aspx.cs(174,46,174,48): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Marketing\MarketingSalesAnalysisItemwise.aspx.cs(221,50,221,52): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Marketing\MarketingSalesAnalysisItemwise.aspx.cs(299,42,299,44): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Marketing\MarketingSalesAnalysisItemwise.aspx.cs(368,38,368,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Despatch\ItemwiseSalesSummary.aspx.cs(285,38,285,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Despatch\ItemwiseSalesSummary.aspx.cs(310,38,310,40): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Despatch\ItemwiseSalesSummary.aspx.cs(368,34,368,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Despatch\ItemwiseSalesSummary.aspx.cs(395,34,395,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Despatch\ItemwiseSalesSummary.aspx.cs(418,34,418,36): warning CS0168: The variable 'ex' is declared but never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Production\QualityCheck.aspx.cs(27,19,27,26): warning CS0169: The field 'QualityCheck.rmrdata' is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Production\QualityCheck.aspx.cs(23,21,23,30): warning CS0169: The field 'QualityCheck.chilldata' is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Sales\BoothReturnReplace.aspx.cs(24,17,24,24): warning CS0169: The field 'BoothReturnReplace.product' is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Production\QualityCheck.aspx.cs(24,22,24,33): warning CS0169: The field 'QualityCheck.dachilldata' is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reports\RatewiseOrderSummary.aspx.cs(21,16,21,27): warning CS0169: The field 'RatewiseOrderSummary.totalamount' is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Reception\RatewiseOrderSummary.aspx.cs(21,16,21,27): warning CS0169: The field 'RatewiseOrderSummary.totalamount' is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\AddReturnedItems.aspx.cs(25,20,25,23): warning CS0414: The field 'AddReturnedItems.Row' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Administration\ReturnedTrays.aspx.cs(21,20,21,23): warning CS0414: The field 'ReturnedTrays.Row' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Despatch\AddReturnedItems.aspx.cs(25,20,25,23): warning CS0414: The field 'AddReturnedItems.Row' is assigned but its value is never used
+5>D:\Karthik\29Sep2016\Dairy\Tabs\Despatch\ReturnedTrays.aspx.cs(21,20,21,23): warning CS0414: The field 'ReturnedTrays.Row' is assigned but its value is never used
+5>  Dairy -> D:\Karthik\29Sep2016\Dairy\bin\Dairy.dll
+========== Build: 5 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
