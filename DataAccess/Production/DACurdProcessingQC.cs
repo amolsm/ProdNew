@@ -56,9 +56,10 @@ namespace DataAccess.Production
             return result;
 
         }
-        public DataSet GetCurdProcessQCDetails()
+        public DataSet GetCurdProcessQCDetails(string dates)
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
+            paramCollection.Add(new DBParameter("@date", dates));
             return _DBHelper.ExecuteDataSet("sp_Prod_GetCurdProcessQCInfo", paramCollection, CommandType.StoredProcedure);
         }
 

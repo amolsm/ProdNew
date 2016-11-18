@@ -31,6 +31,7 @@ namespace Dairy.Tabs.Production
                 BindDropDwon();
                 BindDropDwonQC();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 //GetPasteurizationDetails();
                 txtBatchNo.ReadOnly = true;
                

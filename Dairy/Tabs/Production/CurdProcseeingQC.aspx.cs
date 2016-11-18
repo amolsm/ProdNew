@@ -27,8 +27,9 @@ namespace Dairy.Tabs.Production
             if (!IsPostBack)
             {
                 BindDropDwon();
-                GetCurdProcessQCDetails();
+                //GetCurdProcessQCDetails();
                 txtCurdQCDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 dpQCDetails.Items.FindByText("Pending").Enabled = false;
                 dpQCDetails.Items.FindByText("Re-Chilling").Enabled = false;
             }
@@ -49,12 +50,12 @@ namespace Dairy.Tabs.Production
             dpQCDetails.Items.Insert(0, new ListItem("--Select Status--", "0"));
         }
 
-        public void GetCurdProcessQCDetails()
+        public void GetCurdProcessQCDetails(string dates)
         {
 
             BCQCdata = new BCurdProcessingQC();
             DataSet DS = new DataSet();
-            DS = BCQCdata.GetCurdProcessQCDetails();
+            DS = BCQCdata.GetCurdProcessQCDetails(dates);
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
@@ -228,7 +229,9 @@ namespace Dairy.Tabs.Production
                 lblSuccess.Text = "Data Added Successfully";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                 pnlError.Update();
-                GetCurdProcessQCDetails();
+                string dates;
+                dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetCurdProcessQCDetails(dates);
                 uprouteList.Update();
             }
             else
@@ -280,7 +283,9 @@ namespace Dairy.Tabs.Production
                 lblSuccess.Text = "Data Updated Successfully";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                 pnlError.Update();
-                GetCurdProcessQCDetails();
+                string dates;
+                dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetCurdProcessQCDetails(dates);
                 uprouteList.Update();
             }
             else
@@ -298,6 +303,10 @@ namespace Dairy.Tabs.Production
             Response.Redirect(Request.RawUrl);
         }
 
-       
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetCurdProcessQCDetails(dates);
+        }
     }
 }

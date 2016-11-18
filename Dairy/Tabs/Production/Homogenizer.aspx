@@ -323,7 +323,7 @@
             </div>
             <div class="box-body" id="datalist">
 
-                                                <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
+           <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
                     <ContentTemplate>
                         <div class="row">
                     <div class="col-lg-3">

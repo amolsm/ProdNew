@@ -59,9 +59,10 @@ namespace DataAccess.Production
             return DS;
         }
 
-        public DataSet GetFilmDetails()
+        public DataSet GetFilmDetails(string dates)
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
+            paramCollection.Add(new DBParameter("@date", dates));
             return _DBHelper.ExecuteDataSet("sp_Prod_GetFilmDetails", paramCollection, CommandType.StoredProcedure);
         }
     }

@@ -443,7 +443,7 @@
 
                                      
                                       <%-- <th>RMRId</th>--%>
-                                        <th>StandardDate</th> 
+                                        <th>RMR Date</th> 
                                        <th>RMR Batch No</th>
                                                                               
                                         <th>Shift Name</th> 
@@ -463,7 +463,7 @@
 
                                                             
                                         <%--<td><%# Eval("RMRId")%></td>--%>  
-                                     <td><%# Convert.ToDateTime(Eval("StandardDate")).ToString("dd-MM-yyyy")%></td>    
+                                     <td><%# Convert.ToDateTime(Eval("RMRDate")).ToString("dd-MM-yyyy")%></td>    
                                        <td><%# Eval("BatchNo")%></td>                       
                                         <td><%# Eval("ShiftName")%></td>
                                         <td><%# Eval("StatusName")%></td>
@@ -491,8 +491,8 @@
                       <tr>
 
                                       
-                                          <%-- <th>RMRId</th>--%>
-                                        <th>StandardDate</th> 
+                                         <%-- <th>RMRId</th>--%>
+                                        <th>RMR Date</th> 
                                        <th>RMR Batch No</th>
                                                                               
                                         <th>Shift Name</th> 

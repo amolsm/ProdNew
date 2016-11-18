@@ -28,8 +28,9 @@ namespace Dairy.Tabs.Production
             if (!IsPostBack)
             {
                 BindDropDwon();
-                GetCurdProcessDetails();
+                //GetCurdProcessDetails();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 txtBatchNo.ReadOnly = true;
                 //txtDate.ReadOnly = true;
                 txtMilkType.ReadOnly = true;
@@ -106,12 +107,12 @@ namespace Dairy.Tabs.Production
             }
         }
 
-        public void GetCurdProcessDetails()
+        public void GetCurdProcessDetails(string dates)
         {
 
             BCdata = new BCurdProcessing();
             DataSet DS = new DataSet();
-            DS = BCdata.GetCurdProcessDetails();
+            DS = BCdata.GetCurdProcessDetails(dates);
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
@@ -240,7 +241,8 @@ namespace Dairy.Tabs.Production
                 lblSuccess.Text = "Curd Processing Data Added Successfully";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                 pnlError.Update();
-                GetCurdProcessDetails();
+                string dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetCurdProcessDetails(dates);
                 uprouteList.Update();
             }
             else
@@ -292,7 +294,8 @@ namespace Dairy.Tabs.Production
                 lblSuccess.Text = "Curd Processing Data Updated Successfully";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                 pnlError.Update();
-                GetCurdProcessDetails();
+                string dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetCurdProcessDetails(dates);
                 uprouteList.Update();
             }
             else
@@ -308,6 +311,12 @@ namespace Dairy.Tabs.Production
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
             Response.Redirect(Request.RawUrl);
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetCurdProcessDetails(dates);
         }
     }
 }

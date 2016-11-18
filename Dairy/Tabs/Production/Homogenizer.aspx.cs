@@ -31,6 +31,7 @@ namespace Dairy.Tabs.Production
                 BindDropDwonStatus();
                 BindDropDwonOilLeakage();
                 txtHomogenizerDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 //GetHomogenizerDetails();
                 txtBatchNo.ReadOnly = true;
                 btnUpdate.Visible = false;

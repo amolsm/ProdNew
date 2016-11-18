@@ -34,6 +34,7 @@ namespace Dairy.Tabs.Production
                 ClearField();
                 txtBatchNo.ReadOnly = true;
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 txtDate.ReadOnly = false;
                 dpShiftDetails.Enabled = true;
                 //dpQCDetails.ClearSelection();

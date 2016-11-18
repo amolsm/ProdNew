@@ -538,7 +538,7 @@
                                     
                                       <%--  <th>Quality Id</th>--%>
                                        <%-- <th>RMRId</th>--%>
-                                        <th>Date</th>
+                                        <th>RMRDate</th>
                                         <th>RMR Batch No</th>
                                         <th>Shift Name</th>
                                        
@@ -595,7 +595,7 @@
                       <tr>
                                    <%--  <th>Quality Id</th>--%>
                                        <%-- <th>RMRId</th>--%>
-                                        <th>Date</th>
+                                        <th>RMRDate</th>
                                         <th>RMR Batch No</th>
                                         <th>Shift Name</th>
                                        

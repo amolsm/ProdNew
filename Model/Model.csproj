@@ -67,7 +67,7 @@
     <Compile Include="Employee.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="Marketings.cs" />
-    <Compile Include="MHomogenizer.cs" />
+    <Compile Include="Production\MHomogenizer.cs" />
     <Compile Include="Production\MAfterPackedMilkTestQCDetails.cs" />
     <Compile Include="Production\MMilkColdRoomTemperature.cs" />
     <Compile Include="Product.cs" />

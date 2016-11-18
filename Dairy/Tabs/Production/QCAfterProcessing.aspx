@@ -455,7 +455,7 @@
                       </div>
                        <asp:TextBox ID="txtSearchDate" class="form-control" type="date" runat="server" ValidationGroup="Save" ></asp:TextBox>                        
                     </div><!-- /.input group -->
-
+  <asp:RequiredFieldValidator ID="RequiredFieldValidator21" runat="server" ErrorMessage="Pls Enter Date" style="font-size:12px;" ControlToValidate="txtSearchDate" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
                   </div><!-- /.form group -->
                                         
                           
@@ -478,7 +478,7 @@
                    
 
                  
-                      <asp:Repeater ID="rpQCAfterProcessingList" runat="server" OnItemCommand="rpQCAfterProcessingList_ItemCommand" >
+        <asp:Repeater ID="rpQCAfterProcessingList" runat="server" OnItemCommand="rpQCAfterProcessingList_ItemCommand" >
                 
                 
                <HeaderTemplate>

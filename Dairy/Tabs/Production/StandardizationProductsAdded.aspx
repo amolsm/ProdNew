@@ -16,7 +16,7 @@
           </ol>
         </section>
 
-     <section class="content">
+      <section class="content">
              <div class="row">
                 <asp:UpdatePanel runat="server" ID="pnlError" UpdateMode="Conditional">
                     <ContentTemplate>
