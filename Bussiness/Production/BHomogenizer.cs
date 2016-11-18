@@ -40,10 +40,10 @@ namespace Bussiness.Production
             return dahomo.GetHomogenizerDetailsById(Id);
         }
 
-        public DataSet GetHomogenizerDetails()
+        public DataSet GetHomogenizerDetails(string dates)
         {
             dahomo = new DAHomogenizer();
-            return dahomo.GetHomogenizerDetails();
+            return dahomo.GetHomogenizerDetails(dates);
        }
     }
 }

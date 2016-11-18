@@ -41,11 +41,11 @@ namespace Bussiness.Production
 
         
 
-        public DataSet GetPasteurizationDetails()
+        public DataSet GetPasteurizationDetails(string dates)
         {
             dapasteurization = new DAPasteurizationQC();
 
-            return dapasteurization.GetPasteurizationDetails();
+            return dapasteurization.GetPasteurizationDetails(dates);
         }
 
        

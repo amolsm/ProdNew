@@ -28,7 +28,7 @@ namespace Dairy.Tabs.Production
             {
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                GetCreamDetails();
+                //GetCreamDetails();
                 txtBatchCode.ReadOnly = true;
                 btnUpdate.Visible = false;
             }
@@ -86,7 +86,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Packed Data Add  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetCreamDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetCreamDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -134,7 +136,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Packed Data Update  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetCreamDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetCreamDetails(dates);
                     uprouteList.Update();
                     
                 }
@@ -193,11 +197,11 @@ namespace Dairy.Tabs.Production
             }
         }
 
-        public void GetCreamDetails()
+        public void GetCreamDetails(string dates)
         {
             bpacked = new BMilkPackedData();
             DataSet DS = new DataSet();
-            DS = bpacked.GetPackedDetails();
+            DS = bpacked.GetPackedDetails(dates);
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
                 rpPackedDataList.DataSource = DS;
@@ -259,6 +263,12 @@ namespace Dairy.Tabs.Production
                     dpPackingDetailStatus.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["PackingDetailStatusId"]).ToString()).Selected = true;
                 }
             }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetCreamDetails(dates);
         }
     }
 }

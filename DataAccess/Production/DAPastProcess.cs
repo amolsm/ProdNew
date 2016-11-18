@@ -69,10 +69,11 @@ namespace DataAccess.Production
         }
             
 
-        public DataSet GetPastDetails()
+        public DataSet GetPastDetails(string dates)
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
-            return _DBHelper.ExecuteDataSet("[sp_Prod_GetPasteurizationDetails]", paramCollection, CommandType.StoredProcedure);
+            paramCollection.Add(new DBParameter("@date", dates));
+            return _DBHelper.ExecuteDataSet("sp_Prod_GetPasteurizationDetails", paramCollection, CommandType.StoredProcedure);
         }
     }
 }

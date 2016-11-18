@@ -29,7 +29,7 @@ namespace Dairy.Tabs.Production
             {
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                GetPastDetails();
+                //GetPastDetails();
                 txtBatchNo.ReadOnly=true;
                 btnUpdate.Visible = false;
                 dpPastProcessDone.Items.FindByText("Release").Enabled = false;
@@ -53,12 +53,12 @@ namespace Dairy.Tabs.Production
             dpPastProcessDone.Items.FindByText("No").Enabled = false;
             dpPastProcessDone.Items.Insert(0, new ListItem("--Status--","0"));
         }
-         public void GetPastDetails()
+         public void GetPastDetails(string dates)
         {
 
             bpast = new BPastProcess();
             DataSet DS = new DataSet();
-            DS = bpast.GetPastDetails();
+            DS = bpast.GetPastDetails(dates);
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
@@ -243,7 +243,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "PasteurizationProcess Data Add  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetPastDetails();
+                    string dates;
+                    dates =string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty: Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetPastDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -297,7 +299,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "PasteurizationProcess Data Update  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetPastDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetPastDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -311,6 +315,12 @@ namespace Dairy.Tabs.Production
 
                 //return Result;
             }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetPastDetails(dates);
         }
     }
 }

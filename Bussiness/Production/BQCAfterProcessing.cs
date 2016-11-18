@@ -30,11 +30,11 @@ namespace Bussiness.Production
             return Result;
         }
 
-        public DataSet GetQCProcssingDetails()
+        public DataSet GetQCProcssingDetails(string dates)
         {
             daqc = new DAQCAfterProcessing();
 
-            return daqc.GetQCProcssingDetails();
+            return daqc.GetQCProcssingDetails(dates);
         }
         public DataSet GetQCProcssingDetailsById(int RMRId)
         {

@@ -32,6 +32,7 @@ namespace Dairy.Tabs.Production
                 //GetStandardizationProductsAddedDetails();
                 txtBatchNo.ReadOnly = true;
                 btnUpdate.Visible = false;
+               
             }
         }
 
@@ -204,6 +205,11 @@ namespace Dairy.Tabs.Production
                 rpStandardizationProductsAdded.DataSource = DS;
                 rpStandardizationProductsAdded.DataBind();
             }
+            else if (DS==null)
+            {
+               
+            }
+           
         }
 
         public void GetStandardizationProductsAddedDetails(int RMRId)

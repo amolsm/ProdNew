@@ -81,10 +81,11 @@ namespace DataAccess.Production
             return DS;
         }
 
-        public DataSet GetStandardizationDetails()
+        public DataSet GetStandardizationDetails(string dates)
         {
 
             DBParameterCollection paramCollection = new DBParameterCollection();
+            paramCollection.Add(new DBParameter("@date", dates));
             return _DBHelper.ExecuteDataSet("[sp_Prod_GetStandardizationInformation]", paramCollection, CommandType.StoredProcedure);
         }
     }

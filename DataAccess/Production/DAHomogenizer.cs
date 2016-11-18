@@ -60,9 +60,10 @@ namespace DataAccess.Production
             return DS;
         }
 
-        public DataSet GetHomogenizerDetails()
+        public DataSet GetHomogenizerDetails(string dates)
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
+            paramCollection.Add(new DataAcess.DBParameter("@date",dates));
             return _DBHelper.ExecuteDataSet("sp_Prod_GetHomogenizerDetails", paramCollection, CommandType.StoredProcedure);
         }
     }

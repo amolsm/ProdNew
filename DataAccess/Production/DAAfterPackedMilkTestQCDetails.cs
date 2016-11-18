@@ -68,9 +68,10 @@ namespace DataAccess.Production
             return DS;
         }
 
-        public DataSet GetMilkQCDetails()
+        public DataSet GetMilkQCDetails(string dates)
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
+            paramCollection.Add(new DBParameter("@date", dates));
             return _DBHelper.ExecuteDataSet("sp_Prod_GetAfterMilkTestQCDetails", paramCollection, CommandType.StoredProcedure);
         }
     }

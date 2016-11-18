@@ -53,9 +53,10 @@ namespace DataAccess.Production
             return result;
         }
 
-        public DataSet GetQCProcssingDetails()
+        public DataSet GetQCProcssingDetails(string dates)
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
+            paramCollection.Add(new DBParameter("@date", dates));
             return _DBHelper.ExecuteDataSet("[sp_Prod_GetQCProcssingDetails]", paramCollection, CommandType.StoredProcedure);
         }
         public DataSet GetQCProcssingDetailsById(int RMRId)

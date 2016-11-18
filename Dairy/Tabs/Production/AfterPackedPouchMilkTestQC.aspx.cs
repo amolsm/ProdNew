@@ -29,7 +29,7 @@ namespace Dairy.Tabs.Production
             {
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                GetMilkQCDetails();
+                //GetMilkQCDetails();
                 txtBatchCode.ReadOnly = true;
 
             }
@@ -104,7 +104,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "AfterPackedMilkTestQC Data Add  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetMilkQCDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetMilkQCDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -171,7 +173,9 @@ namespace Dairy.Tabs.Production
                   
                     
                     pnlError.Update();
-                    GetMilkQCDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetMilkQCDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -291,12 +295,12 @@ namespace Dairy.Tabs.Production
         }
 
 
-        public void GetMilkQCDetails()
+        public void GetMilkQCDetails(string dates)
         {
 
             bqc = new BAfterPackedMilkTestQCDetails();
             DataSet DS = new DataSet();
-            DS = bqc.GetMilkQCDetails();
+            DS = bqc.GetMilkQCDetails(dates);
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
@@ -308,7 +312,10 @@ namespace Dairy.Tabs.Production
 
         }
 
-       
-       
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetMilkQCDetails(dates);
+        }
     }
 }

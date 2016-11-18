@@ -36,11 +36,11 @@ namespace Bussiness.Production
             return dastd.GetStandardizationDetailsbyID(RMRId);
         }
 
-        public DataSet GetStandardizationDetails()
+        public DataSet GetStandardizationDetails(string dates)
         {
             dastd = new DAStandardization();
 
-            return dastd.GetStandardizationDetails();
+            return dastd.GetStandardizationDetails(dates);
         }
     }
 }

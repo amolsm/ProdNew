@@ -26,7 +26,7 @@ namespace Dairy.Tabs.Production
         {
             if (!IsPostBack)
             {
-                GetStandardizationDetails();
+                //GetStandardizationDetails();
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 //txtStandardizationStartTime.Text = Convert.ToString(DateTime.Now.ToString("HH:mm"));
@@ -175,12 +175,12 @@ namespace Dairy.Tabs.Production
             }
         }
 
-        public void GetStandardizationDetails()
+        public void GetStandardizationDetails(string dates)
         {
 
             stdbdata = new BStandardization();
             DataSet DS = new DataSet();
-            DS = stdbdata.GetStandardizationDetails();
+            DS = stdbdata.GetStandardizationDetails(dates);
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
@@ -239,7 +239,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Data Added  Successfully";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                 pnlError.Update();
-                GetStandardizationDetails();
+                string dates;
+                dates= string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetStandardizationDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -299,7 +301,9 @@ namespace Dairy.Tabs.Production
                 lblSuccess.Text = "Data Updated  Successfully";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                 pnlError.Update();
-                GetStandardizationDetails();
+                string dates;
+                dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetStandardizationDetails(dates);
                 uprouteList.Update();
 
             }
@@ -311,6 +315,12 @@ namespace Dairy.Tabs.Production
                 lblSuccess.Text = "Something went wrong plz contact site admin";
                 pnlError.Update();
             }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetStandardizationDetails(dates);
         }
     }
 }

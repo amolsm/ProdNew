@@ -29,7 +29,7 @@ namespace Dairy.Tabs.Production
             {
                 BindDropDwon();
 
-                GetQCProcssingDetails();
+                //GetQCProcssingDetails();
                 //txtDate.Text = Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy"));
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
             }
@@ -53,11 +53,11 @@ namespace Dairy.Tabs.Production
             dpAfterProcessingStatus.Items.Insert(0, new ListItem("--Status--", "0"));
         }
 
-        protected void GetQCProcssingDetails()
+        protected void GetQCProcssingDetails(string dates)
         {
             bqcp = new BQCAfterProcessing();
             DataSet DS = new DataSet();
-            DS = bqcp.GetQCProcssingDetails();
+            DS = bqcp.GetQCProcssingDetails(dates);
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
@@ -194,7 +194,9 @@ namespace Dairy.Tabs.Production
                 lblSuccess.Text = "PasteurizationProcess Data Add  Successfully";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                 pnlError.Update();
-                GetQCProcssingDetails();
+                string dates;
+                dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetQCProcssingDetails(dates);
                 uprouteList.Update();
             }
             else
@@ -245,7 +247,9 @@ namespace Dairy.Tabs.Production
                 lblSuccess.Text = "PasteurizationProcess Data Updated  Successfully";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                 pnlError.Update();
-                GetQCProcssingDetails();
+                string dates;
+                dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetQCProcssingDetails(dates);
                 uprouteList.Update();
             }
             else
@@ -273,6 +277,12 @@ namespace Dairy.Tabs.Production
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Batch Code. Already exists.')", true);
                 txtBatchCode.Text = string.Empty;
             }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetQCProcssingDetails(dates);
         }
     }
 }

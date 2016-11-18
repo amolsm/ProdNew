@@ -40,10 +40,10 @@ namespace Bussiness.Production
             return dapackeddata.GetPackedDetailsbyId(RMRId);
         }
 
-        public DataSet GetPackedDetails()
+        public DataSet GetPackedDetails(string dates)
         {
             dapackeddata = new DAMilkPackedData();
-            return dapackeddata.dapackeddata();
+            return dapackeddata.dapackeddata(dates);
         }
     }
 }

@@ -37,9 +37,10 @@ namespace DataAccess.Production
             return result;
 
         }
-                public DataSet GetFinishedGoodReleaseDetails()
+                public DataSet GetFinishedGoodReleaseDetails(string dates)
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
+            paramCollection.Add(new DataAcess.DBParameter("@date", dates));
             return (_DBHelper.ExecuteDataSet("sp_Prod_GetFinishedGoodsInformation", paramCollection, CommandType.StoredProcedure));
         }
         public DataSet GetFinishedGoodReleaseDetailsById(int RMRId)

@@ -27,7 +27,7 @@ namespace Dairy.Tabs.Production
         {
             if (!IsPostBack)
             {
-                GetFinishedGoodReleaseDetails();
+                //GetFinishedGoodReleaseDetails();
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 txtMfgDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
@@ -57,12 +57,12 @@ namespace Dairy.Tabs.Production
            
         }
 
-        public void GetFinishedGoodReleaseDetails()
+        public void GetFinishedGoodReleaseDetails(string dates)
         {
 
             finishBdata = new BFinishedGoodsRelease();
             DataSet DS = new DataSet();
-            DS = finishBdata.GetFinishedGoodReleaseDetails();
+            DS = finishBdata.GetFinishedGoodReleaseDetails(dates);
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
@@ -206,7 +206,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Finished Goods Added Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetFinishedGoodReleaseDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetFinishedGoodReleaseDetails(dates);
                     uprouteList.Update();
                     //ClearField();
                 }
@@ -250,7 +252,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Finished Goods Updated Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetFinishedGoodReleaseDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetFinishedGoodReleaseDetails(dates);
                     uprouteList.Update();
                     //ClearField();
                 }
@@ -272,6 +276,12 @@ namespace Dairy.Tabs.Production
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
             Response.Redirect(Request.RawUrl);
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetFinishedGoodReleaseDetails(dates);
         }
     }
 }

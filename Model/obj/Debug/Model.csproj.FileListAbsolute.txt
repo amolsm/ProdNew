@@ -477,3 +477,4 @@ D:\Nanjil\ProdNew\Model\bin\Model.dll
 D:\Nanjil\ProdNew\Model\bin\Model.pdb
 D:\Nanjil\ProdNew\Model\obj\Debug\Model.dll
 D:\Nanjil\ProdNew\Model\obj\Debug\Model.pdb
+D:\Nanjil\ProdNew\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

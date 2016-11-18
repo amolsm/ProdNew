@@ -359,7 +359,7 @@
 
                     <tfoot>
                       <tr>
-                                        <%--<th>RMRId</th>--%>
+                                       <%-- <th>RMRId</th>--%>
                                          <th>RMR Date</th>
                                         <th>RMR Batch No</th>
                                         <th>Milk Type</th>   
@@ -370,6 +370,8 @@
                                         
                       </tr>
                     </tfoot>
+
+                      
 
                     </FooterTemplate>
                                 </asp:Repeater>    

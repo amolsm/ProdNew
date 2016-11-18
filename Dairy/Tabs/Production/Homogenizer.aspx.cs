@@ -31,7 +31,7 @@ namespace Dairy.Tabs.Production
                 BindDropDwonStatus();
                 BindDropDwonOilLeakage();
                 txtHomogenizerDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                GetHomogenizerDetails();
+                //GetHomogenizerDetails();
                 txtBatchNo.ReadOnly = true;
                 btnUpdate.Visible = false;
                
@@ -107,7 +107,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Homogenizer Data Add  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetHomogenizerDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetHomogenizerDetails(dates);
                     uprouteList.Update();
                    
                 }
@@ -160,7 +162,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Homogenizer Data Update  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetHomogenizerDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetHomogenizerDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -232,11 +236,11 @@ namespace Dairy.Tabs.Production
             }
         }
 
-        public void GetHomogenizerDetails()
+        public void GetHomogenizerDetails(string dates)
         {
             bhomo = new BHomogenizer();
             DataSet DS = new DataSet();
-            DS = bhomo.GetHomogenizerDetails();
+            DS = bhomo.GetHomogenizerDetails(dates);
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
                 rpHomogenizer.DataSource = DS;
@@ -324,6 +328,12 @@ namespace Dairy.Tabs.Production
                 //    dpStatusDetails.SelectedIndex = 2;
                 //}
             }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetHomogenizerDetails(dates);
         }
     }
 }

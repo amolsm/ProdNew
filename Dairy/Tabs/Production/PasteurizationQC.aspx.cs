@@ -31,7 +31,7 @@ namespace Dairy.Tabs.Production
                 BindDropDwon();
                 BindDropDwonQC();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                GetPasteurizationDetails();
+                //GetPasteurizationDetails();
                 txtBatchNo.ReadOnly = true;
                
 
@@ -60,12 +60,12 @@ namespace Dairy.Tabs.Production
             dpQCDetails.Items.Insert(0, new ListItem("--Select Status--", "0"));
         }
 
-        public void GetPasteurizationDetails()
+        public void GetPasteurizationDetails(string dates)
         {
 
             bdata = new BPasteurizationQC();
             DataSet DS = new DataSet();
-            DS = bdata.GetPasteurizationDetails();
+            DS = bdata.GetPasteurizationDetails(dates);
             
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
@@ -180,7 +180,9 @@ namespace Dairy.Tabs.Production
                 lblSuccess.Text = "Pasteurization Data Add  Successfully";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                 pnlError.Update();
-             GetPasteurizationDetails();
+                string dates;
+                dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+               GetPasteurizationDetails(dates);
                 uprouteList.Update();
             }
             else
@@ -221,7 +223,9 @@ namespace Dairy.Tabs.Production
                 lblSuccess.Text = "Pasteurization Data Updated  Successfully";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                 pnlError.Update();
-                GetPasteurizationDetails();
+                string dates;
+                dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                GetPasteurizationDetails(dates);
                 uprouteList.Update();
             }
             else
@@ -283,7 +287,11 @@ namespace Dairy.Tabs.Production
             }
         }
 
-      
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetPasteurizationDetails(dates);
+        }
     }
 }
     

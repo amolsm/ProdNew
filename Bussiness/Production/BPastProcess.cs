@@ -42,11 +42,11 @@ namespace Bussiness.Production
             return dapast.GetPastDetailsbyId(RMRId);
         }
 
-             public DataSet GetPastDetails()
+             public DataSet GetPastDetails(string dates)
              {
                  dapast = new DAPastProcess();
 
-                 return dapast.GetPastDetails();    
+                 return dapast.GetPastDetails(dates);    
              }
     }
 }

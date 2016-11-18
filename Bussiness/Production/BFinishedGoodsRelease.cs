@@ -32,11 +32,11 @@ namespace Bussiness.Production
             return Result;
         }
         
-        public DataSet GetFinishedGoodReleaseDetails()
+        public DataSet GetFinishedGoodReleaseDetails(string dates)
         {
             dafinishgoods = new DAFinishedGoodsRelease();
 
-            return dafinishgoods.GetFinishedGoodReleaseDetails();
+            return dafinishgoods.GetFinishedGoodReleaseDetails(dates);
         }
         public DataSet GetFinishedGoodReleaseDetailsById(int RMRId)
         {
