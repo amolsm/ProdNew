@@ -1272,3 +1272,14 @@ D:\Dairy\19-11-2016\Bussiness\bin\Comman.pdb
 D:\Dairy\19-11-2016\Bussiness\bin\DataAccess.pdb
 D:\Dairy\19-11-2016\Bussiness\bin\Model.pdb
 D:\Dairy\19-11-2016\Bussiness\obj\Debug\Bussiness.pdb
+D:\Nanjil\ProdNew\Bussiness\obj\Debug\Bussiness.csprojResolveAssemblyReference.cache
+D:\Nanjil\ProdNew\Bussiness\obj\Debug\Bussiness.dll
+D:\Nanjil\ProdNew\Bussiness\obj\Debug\Bussiness.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\Bussiness.dll
+D:\Nanjil\ProdNew\Bussiness\bin\Bussiness.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\Comman.dll
+D:\Nanjil\ProdNew\Bussiness\bin\DataAccess.dll
+D:\Nanjil\ProdNew\Bussiness\bin\Model.dll
+D:\Nanjil\ProdNew\Bussiness\bin\Comman.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\DataAccess.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\Model.pdb

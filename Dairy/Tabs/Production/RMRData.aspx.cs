@@ -22,15 +22,17 @@ namespace Dairy.Tabs.Production
         RMRecieve rmrdata;
         ProductionData proddata;
         DataSet DS = new DataSet();
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 BindDropDwon();
-               // BindDropDwonQC();
+                // BindDropDwonQC();
                 //GetRMRDetails();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+
                 txtMilkType.Text = "Raw Milk";
                 btnUpdateProductindetail.Visible = false;
                 //txtRMRQCStatus.Text = "Pending";
@@ -45,9 +47,9 @@ namespace Dairy.Tabs.Production
 
                 dpfinishQC.Enabled = false;
                 RFVMBRTStart.Enabled = false;
-                    RFVMBRTEnd.Enabled = false;
-                    RFVTotalHrs.Enabled = false;
-             
+                RFVMBRTEnd.Enabled = false;
+                RFVTotalHrs.Enabled = false;
+
             }
         }
 
@@ -68,7 +70,7 @@ namespace Dairy.Tabs.Production
         }
 
 
-        
+
         protected void btnAddProductionInfo_Click(object sender, EventArgs e)
         {
             rmrdata = new RMRecieve();
@@ -77,9 +79,9 @@ namespace Dairy.Tabs.Production
             rmrdata.RMRId = 0;
             rmrdata.RMRDate = Convert.ToDateTime(txtDate.Text).ToString("dd-MM-yyyy");
             rmrdata.RMRShiftId = Convert.ToInt32(dpShiftDetails.SelectedItem.Value);
-            rmrdata.BatchNo = txtBatchNo.Text;
-            rmrdata.TankMilkReciptNo = txtTankerReceipitNo.Text;
-            rmrdata.TankerNo = txtTankerNo.Text;
+            rmrdata.BatchNo = string.IsNullOrEmpty(txtBatchNo.Text) ? string.Empty : txtBatchNo.Text;
+            rmrdata.TankMilkReciptNo = string.IsNullOrEmpty(txtTankerReceipitNo.Text) ? string.Empty : txtTankerReceipitNo.Text;
+            rmrdata.TankerNo = string.IsNullOrEmpty(txtTankerNo.Text) ? string.Empty : txtTankerNo.Text;
             rmrdata.Quantity = string.IsNullOrEmpty(txtQty.Text) ? 0 : Convert.ToDouble(txtQty.Text);
             rmrdata.MilkType = string.IsNullOrEmpty(txtMilkType.Text) ? string.Empty : txtMilkType.Text;
             rmrdata.CreatedBy = GlobalInfo.Userid;
@@ -90,7 +92,7 @@ namespace Dairy.Tabs.Production
             rmrdata.TotalHours = string.IsNullOrEmpty(txtTotalHours.Text) ? string.Empty : txtTotalHours.Text;
             rmrdata.IsActive = true;
             rmrdata.flag = "Insert";
-           // rmrdata.CheckBatchNo = 0;
+            // rmrdata.CheckBatchNo = 0;
             Result = proddata.RMRData(rmrdata);
             if (Result > 0)
             {
@@ -105,7 +107,7 @@ namespace Dairy.Tabs.Production
                 uprouteList.Update();
                 lblSuccess.Text = "RMR Data Add  Successfully";
                 pnlError.Update();
-                
+
             }
             else if (Result == 100)
             {
@@ -130,9 +132,9 @@ namespace Dairy.Tabs.Production
 
         }
 
-       
 
-       
+
+
 
         protected void rpRMRList_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
@@ -150,8 +152,8 @@ namespace Dairy.Tabs.Production
                         hId.Value = RMRId.ToString();
                         RMRId = Convert.ToInt32(hId.Value);
                         GetRMRDetails(RMRId);
-                       
-                        
+
+
 
                         btnAddProductionInfo.Visible = false;
                         btnUpdateProductindetail.Visible = true;
@@ -159,18 +161,18 @@ namespace Dairy.Tabs.Production
                         uprouteList.Update();
                         break;
                     }
-                //case ("delete"):
-                //    {
+                    //case ("delete"):
+                    //    {
 
-                //        hId.Value = Id.ToString();
-                //        Id = Convert.ToInt32(hId.Value);
-                //        DeleteRMRDetails(Id);
-                //        bindRMRList();
-                //        upMain.Update();
-                //        uprouteList.Update();
-                //        break;
+                    //        hId.Value = Id.ToString();
+                    //        Id = Convert.ToInt32(hId.Value);
+                    //        DeleteRMRDetails(Id);
+                    //        bindRMRList();
+                    //        upMain.Update();
+                    //        uprouteList.Update();
+                    //        break;
 
-                //    }
+                    //    }
             }
         }
 
@@ -215,7 +217,7 @@ namespace Dairy.Tabs.Production
                         txtMBRTStartTime.Text = Convert.ToString(DateTime.Now.ToString("HH:mm"));
                         txtMBRTEndTime.ReadOnly = false;
                         txtTotalHours.ReadOnly = false;
-                        
+
                         RFVMBRTStart.Enabled = true;
                         RFVMBRTEnd.Enabled = true;
                         RFVTotalHrs.Enabled = true;
@@ -239,7 +241,7 @@ namespace Dairy.Tabs.Production
 
             proddata = new ProductionData();
             DataSet DS = new DataSet();
-            DS = proddata.GetRMRDetails (dates);
+            DS = proddata.GetRMRDetails(dates);
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
@@ -258,12 +260,12 @@ namespace Dairy.Tabs.Production
             RMR.RMRShiftId = Convert.ToInt32(dpShiftDetails.SelectedItem.Value);
             RMR.RMRDate = Convert.ToDateTime(txtDate.Text).ToString("dd-MM-yyyy");
             RMR.BatchNo = string.IsNullOrEmpty(txtBatchNo.Text) ? string.Empty : txtBatchNo.Text;
-            RMR.TankMilkReciptNo = string.IsNullOrEmpty(txtTankerReceipitNo.Text) ? string.Empty : txtTankerReceipitNo.Text; 
-            RMR.TankerNo= string.IsNullOrEmpty(txtTankerNo.Text) ? string.Empty : txtTankerNo.Text; 
+            RMR.TankMilkReciptNo = string.IsNullOrEmpty(txtTankerReceipitNo.Text) ? string.Empty : txtTankerReceipitNo.Text;
+            RMR.TankerNo = string.IsNullOrEmpty(txtTankerNo.Text) ? string.Empty : txtTankerNo.Text;
             RMR.MilkType = string.IsNullOrEmpty(txtMilkType.Text) ? string.Empty : txtMilkType.Text;
             RMR.Quantity = string.IsNullOrEmpty(txtQty.Text) ? 0 : Convert.ToDouble(txtQty.Text);
-            RMR.MBRTStart = string.IsNullOrEmpty(txtMBRTStartTime.Text)? string.Empty : txtMBRTStartTime.Text;
-            RMR.MBRTEnd= string.IsNullOrEmpty(txtMBRTEndTime.Text) ? string.Empty : txtMBRTEndTime.Text;
+            RMR.MBRTStart = string.IsNullOrEmpty(txtMBRTStartTime.Text) ? string.Empty : txtMBRTStartTime.Text;
+            RMR.MBRTEnd = string.IsNullOrEmpty(txtMBRTEndTime.Text) ? string.Empty : txtMBRTEndTime.Text;
             RMR.TotalHours = string.IsNullOrEmpty(txtTotalHours.Text) ? string.Empty : txtTotalHours.Text;
             RMR.CreatedBy = 0;
             RMR.CreatedDate = DateTime.Now.ToString();
@@ -273,7 +275,7 @@ namespace Dairy.Tabs.Production
             Result = proddata.RMRData(RMR);
             if (Result > 0)
             {
-               
+
                 lblHeaderTab.Text = "Update RMR  Details";
                 divDanger.Visible = false;
                 divwarning.Visible = false;
@@ -283,8 +285,8 @@ namespace Dairy.Tabs.Production
                 GetRMRDetails(dates);
                 uprouteList.Update();
                 lblSuccess.Text = "RMR Updated  Successfully";
-                
-              
+
+
                 pnlError.Update();
                 btnAddProductionInfo.Visible = true;
                 btnUpdateProductindetail.Visible = false;
@@ -328,6 +330,6 @@ namespace Dairy.Tabs.Production
         }
     }
 
-       
-    }
+
+}
 

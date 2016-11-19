@@ -1038,3 +1038,12 @@ D:\Dairy\19-11-2016\DataAccess\bin\Model.pdb
 D:\Dairy\19-11-2016\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 D:\Dairy\19-11-2016\DataAccess\obj\Debug\DataAccess.dll
 D:\Dairy\19-11-2016\DataAccess\obj\Debug\DataAccess.pdb
+D:\Nanjil\ProdNew\DataAccess\bin\DataAccess.dll
+D:\Nanjil\ProdNew\DataAccess\bin\DataAccess.pdb
+D:\Nanjil\ProdNew\DataAccess\bin\Comman.dll
+D:\Nanjil\ProdNew\DataAccess\bin\Model.dll
+D:\Nanjil\ProdNew\DataAccess\bin\Comman.pdb
+D:\Nanjil\ProdNew\DataAccess\bin\Model.pdb
+D:\Nanjil\ProdNew\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\Nanjil\ProdNew\DataAccess\obj\Debug\DataAccess.dll
+D:\Nanjil\ProdNew\DataAccess\obj\Debug\DataAccess.pdb

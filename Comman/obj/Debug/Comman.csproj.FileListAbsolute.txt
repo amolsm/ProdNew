@@ -576,3 +576,8 @@ D:\Dairy\19-11-2016\Comman\bin\Comman.pdb
 D:\Dairy\19-11-2016\Comman\obj\Debug\Comman.csprojResolveAssemblyReference.cache
 D:\Dairy\19-11-2016\Comman\obj\Debug\Comman.dll
 D:\Dairy\19-11-2016\Comman\obj\Debug\Comman.pdb
+D:\Nanjil\ProdNew\Comman\bin\Comman.dll
+D:\Nanjil\ProdNew\Comman\bin\Comman.pdb
+D:\Nanjil\ProdNew\Comman\obj\Debug\Comman.csprojResolveAssemblyReference.cache
+D:\Nanjil\ProdNew\Comman\obj\Debug\Comman.dll
+D:\Nanjil\ProdNew\Comman\obj\Debug\Comman.pdb

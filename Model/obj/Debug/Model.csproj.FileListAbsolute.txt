@@ -577,3 +577,8 @@ D:\Dairy\19-11-2016\Model\bin\Model.pdb
 D:\Dairy\19-11-2016\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\Dairy\19-11-2016\Model\obj\Debug\Model.dll
 D:\Dairy\19-11-2016\Model\obj\Debug\Model.pdb
+D:\Nanjil\ProdNew\Model\bin\Model.dll
+D:\Nanjil\ProdNew\Model\bin\Model.pdb
+D:\Nanjil\ProdNew\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Nanjil\ProdNew\Model\obj\Debug\Model.dll
+D:\Nanjil\ProdNew\Model\obj\Debug\Model.pdb
