@@ -40,10 +40,10 @@ namespace Bussiness.Production
             return dacreamprod.GetCreamDetailsbyId(Id);
         }
 
-        public DataSet GetCreamDetails()
+        public DataSet GetCreamDetails(string dates)
         {
             dacreamprod = new DACreamProduction();
-            return dacreamprod.GetCreamDetails();
+            return dacreamprod.GetCreamDetails(dates);
         }
     }
 }
