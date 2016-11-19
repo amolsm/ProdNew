@@ -67,34 +67,17 @@
     <Compile Include="Employee.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="Marketings.cs" />
-    <Compile Include="Product.cs" />
-    <Compile Include="Production\MAdulterationConfirmationTastQC.cs" />
+    <Compile Include="Production\MHomogenizer.cs" />
     <Compile Include="Production\MAfterPackedMilkTestQCDetails.cs" />
-    <Compile Include="Production\MBoreWater.cs" />
-    <Compile Include="Production\MButterMilkPreparation.cs" />
-    <Compile Include="Production\MChemicalReagentAndMediaPreparationsQC.cs" />
-    <Compile Include="Production\MClosingStockForMilkInSiloAndAllProducts.cs" />
+    <Compile Include="Production\MMilkColdRoomTemperature.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Production\MCreamProduction.cs" />
-    <Compile Include="Production\MCurdPackedData.cs" />
     <Compile Include="Production\MCurdProcessing.cs" />
     <Compile Include="Production\MCurdProcessingQC.cs" />
     <Compile Include="Production\MFilmData.cs" />
     <Compile Include="Production\MFinishedGoodsRelease.cs" />
-    <Compile Include="Production\MGheeProductionRegister.cs" />
-    <Compile Include="Production\MHomogenizer.cs" />
-    <Compile Include="Production\MIceCreamColdRoomTemperature.cs" />
-    <Compile Include="Production\MIceCreamMixProcessing.cs" />
-    <Compile Include="Production\MKhoaPlantLogQC.cs" />
-    <Compile Include="Production\MMachineAirCompressors.cs" />
-    <Compile Include="Production\MMachineComplaintsAndRectifiedRecord.cs" />
-    <Compile Include="Production\MMachineStartingCondition.cs" />
-    <Compile Include="Production\MMicrobiologicalAnalysisForMilkAndMilkProductsQC.cs" />
-    <Compile Include="Production\MMicrobiologicalCultureStockRegisterQC.cs" />
-    <Compile Include="Production\MMilkColdRoomTemperature.cs" />
     <Compile Include="Production\MMilkPackedData.cs" />
     <Compile Include="Production\MMilkProductsTestBeforePackingQC.cs" />
-    <Compile Include="Production\MMixPreparationIncrediantsAdded.cs" />
-    <Compile Include="Production\MOpeningStockForMilkAndAllProducts.cs" />
     <Compile Include="Production\MPasteurizationQC.cs" />
     <Compile Include="Production\MPastProcess.cs" />
     <Compile Include="Production\MQCAfterProcessing.cs" />
@@ -137,7 +120,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>2144</DevelopmentServerPort>
+          <DevelopmentServerPort>1893</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

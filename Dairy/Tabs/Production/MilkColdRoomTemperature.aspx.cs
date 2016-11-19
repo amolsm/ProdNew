@@ -30,7 +30,8 @@ namespace Dairy.Tabs.Production
                 BindDropDwon();
                 BindDropDwonStatus();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                GetMilkColdRoomTemperatureDetails();
+                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+                //GetMilkColdRoomTemperatureDetails();
                 txtBatchNo.ReadOnly = true;
                 btnUpdate.Visible = false;
 
@@ -90,7 +91,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "MilkColdRoomTemperature Data Added Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetMilkColdRoomTemperatureDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetMilkColdRoomTemperatureDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -135,7 +138,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "MilkColdRoomTemperature Data Add  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetMilkColdRoomTemperatureDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetMilkColdRoomTemperatureDetails(dates);
                     uprouteList.Update();
 
                 }
@@ -193,11 +198,11 @@ namespace Dairy.Tabs.Production
             }
         }
 
-        public void GetMilkColdRoomTemperatureDetails()
+        public void GetMilkColdRoomTemperatureDetails(string dates)
         {
             bcold = new BMilkColdRoomTemperature();
             DataSet DS = new DataSet();
-            DS = bcold.GetMilkColdRoomTemperatureDetails();
+            DS = bcold.GetMilkColdRoomTemperatureDetails(dates);
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
                 rpMilkColdRoomTemperature.DataSource = DS;
@@ -252,6 +257,12 @@ namespace Dairy.Tabs.Production
                     dpStatusDetailsId.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["MilkColdRoomStatusId"]).ToString()).Selected = true;
                 }
             }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetMilkColdRoomTemperatureDetails(dates);
         }
     }
 }

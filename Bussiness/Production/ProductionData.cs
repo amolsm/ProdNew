@@ -8,29 +8,29 @@ using System.Web;
 
 namespace Bussiness.Production
 {
-
-    public class ProductionData
-    {
-        DBProduction dbproduction;
-        DataSet DS;
-        public int RMRData(RMRecieve recieve)
+   
+        public class ProductionData
         {
-
-            dbproduction = new DBProduction();
-            int Result = 0;
-            try
-            {
-                Result = dbproduction.RMRData(recieve);
-
-            }
-            catch (Exception)
+            DBProduction dbproduction;
+            DataSet DS;
+            public int RMRData(RMRecieve recieve)
             {
 
-                throw;
-            }
-            return Result;
-        }
+                dbproduction = new DBProduction();
+                int Result = 0;
+                try
+                {
+                    Result = dbproduction.RMRData(recieve);
 
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                return Result;
+            }
+        
         //RMR On Item click
         public DataSet GetRMRDatabyId(int RMRId)
         {
@@ -40,11 +40,11 @@ namespace Bussiness.Production
 
         //RMR Rp bind
         public DataSet GetRMRDetails(string dates)
-        {
-            dbproduction = new DBProduction();
+            {
+                dbproduction = new DBProduction();
 
-            return dbproduction.GetRMRDetails(dates);
-        }
+                return dbproduction.GetRMRDetails(dates);
+            }
 
         public DataSet GetExistingBatchNo(string batchno)
         {
@@ -52,4 +52,4 @@ namespace Bussiness.Production
             return dbproduction.GetExistingBatchNo(batchno);
         }
     }
-}
+    }

@@ -229,7 +229,7 @@
             </div>
 
 
-                                 <div class="col-lg-3">
+             <div class="col-lg-3">
                   <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">

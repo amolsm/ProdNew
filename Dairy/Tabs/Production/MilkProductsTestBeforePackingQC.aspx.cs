@@ -29,7 +29,8 @@ namespace Dairy.Tabs.Production
             {
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                GetMilkProductsTestBeforePackingQCDetails();
+                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+                //GetMilkProductsTestBeforePackingQCDetails();
                 txtBatchNo.ReadOnly = true;
                 btnUpdate.Visible = false;
             }
@@ -79,7 +80,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Milk Packing QC Data Added Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetMilkProductsTestBeforePackingQCDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetMilkProductsTestBeforePackingQCDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -122,7 +125,9 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Milk Packing QC Data Updated Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    GetMilkProductsTestBeforePackingQCDetails();
+                    string dates;
+                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+                    GetMilkProductsTestBeforePackingQCDetails(dates);
                     uprouteList.Update();
                 }
                 else
@@ -180,11 +185,11 @@ namespace Dairy.Tabs.Production
             }
         }
 
-        public void GetMilkProductsTestBeforePackingQCDetails()
+        public void GetMilkProductsTestBeforePackingQCDetails(string dates)
         {
             bmptbpqc = new BMilkProductsTestBeforePackingQC();
             DataSet DS = new DataSet();
-            DS = bmptbpqc.GetMilkProductsTestBeforePackingQCDetails();
+            DS = bmptbpqc.GetMilkProductsTestBeforePackingQCDetails(dates);
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
                 rpMilkBeforePackingQC.DataSource = DS;
@@ -238,6 +243,12 @@ namespace Dairy.Tabs.Production
                     dpQCStatusId.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["MilkProdTestBeforePackingQCStatusId"]).ToString()).Selected = true;
                 }
             }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
+            GetMilkProductsTestBeforePackingQCDetails(dates);
         }
     }
 }

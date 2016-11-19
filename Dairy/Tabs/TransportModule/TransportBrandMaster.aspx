@@ -102,8 +102,8 @@
                       
                   </div><!-- /.form group -->
 
-                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtBrand"
-    ValidationExpression="[a-zA-Z ]*$" ErrorMessage="*Valid characters: Alphabets and space."  ForeColor="Red" />
+                   
+                    
                        
                           
                       </div> 

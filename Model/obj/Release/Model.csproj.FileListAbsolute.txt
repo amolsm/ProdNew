@@ -231,3 +231,13 @@ D:\CurrentProjectWorking\AmolCode23\Model\bin\Model.pdb
 D:\CurrentProjectWorking\AmolCode23\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
 D:\CurrentProjectWorking\AmolCode23\Model\obj\Release\Model.dll
 D:\CurrentProjectWorking\AmolCode23\Model\obj\Release\Model.pdb
+D:\ProdGit\ProdCode\Model\bin\Model.dll
+D:\ProdGit\ProdCode\Model\bin\Model.pdb
+D:\ProdGit\ProdCode\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+D:\ProdGit\ProdCode\Model\obj\Release\Model.dll
+D:\ProdGit\ProdCode\Model\obj\Release\Model.pdb
+D:\Test\ProdGit\ProdCode\Model\bin\Model.dll
+D:\Test\ProdGit\ProdCode\Model\bin\Model.pdb
+D:\Test\ProdGit\ProdCode\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+D:\Test\ProdGit\ProdCode\Model\obj\Release\Model.dll
+D:\Test\ProdGit\ProdCode\Model\obj\Release\Model.pdb

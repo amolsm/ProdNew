@@ -30,11 +30,11 @@ namespace Bussiness.Production
             return Result;
         }
 
-        public DataSet GetCurdProcessDetails()
+        public DataSet GetCurdProcessDetails(string dates)
         {
             dacurdprocess = new DACurdProcessing();
 
-            return dacurdprocess.GetCurdProcessDetails();
+            return dacurdprocess.GetCurdProcessDetails(dates);
         }
 
         public DataSet GetCurdProcessDetails(int RMRId)

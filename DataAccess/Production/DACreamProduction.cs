@@ -54,9 +54,10 @@ namespace DataAccess.Production
             return DS;
         }
 
-        public DataSet GetCreamDetails()
+        public DataSet GetCreamDetails(string dates)
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
+            paramCollection.Add(new DataAcess.DBParameter("@date", dates));
             return _DBHelper.ExecuteDataSet("sp_Prod_GetCreamDetails", paramCollection, CommandType.StoredProcedure);
         }
 

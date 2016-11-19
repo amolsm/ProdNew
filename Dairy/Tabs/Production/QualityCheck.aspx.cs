@@ -34,6 +34,7 @@ namespace Dairy.Tabs.Production
                 ClearField();
                 txtBatchNo.ReadOnly = true;
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 txtDate.ReadOnly = false;
                 dpShiftDetails.Enabled = true;
                 //dpQCDetails.ClearSelection();
@@ -362,6 +363,91 @@ namespace Dairy.Tabs.Production
         }
 
 
-           }
+        //}
+
+
+
+        //    //else if(dpQCDetails.SelectedItem.Text == "Re-Chilling")
+        //{
+        //    chilldata = new MRechilling();
+        //    dachilldata = new DARechilling();
+        //    int Result = 0;
+        //    chilldata.BatchNo = txtBatchNo.Text;
+        //    chilldata.ShiftId = Convert.ToInt32(dpShiftDetails.SelectedItem.Value);
+        //    chilldata.Date = Convert.ToDateTime(txtDate.Text).ToString("dd-MM-yyyy");
+        //    chilldata.Id = string.IsNullOrEmpty(hfrid.Value) ? 0 : Convert.ToInt32(hfrid.Value);
+        //    chilldata.TypeOfMilk = string.IsNullOrEmpty(txtMilkType.Text) ? string.Empty : txtMilkType.Text;
+        //    chilldata.Quantity = string.IsNullOrEmpty(txtQty.Text) ? 0 : Convert.ToDouble(txtQty.Text);
+        //    chilldata.SiloId = 0;
+        //    chilldata.IBTInTemperature = string.IsNullOrEmpty(txtQty.Text) ? 0 : Convert.ToDouble(txtQty.Text);
+        //    chilldata.IBTOutTemperature = string.IsNullOrEmpty(txtQty.Text) ? 0 : Convert.ToDouble(txtQty.Text);
+        //    chilldata.MilkInTemperature = string.IsNullOrEmpty(txtQty.Text) ? 0 : Convert.ToDouble(txtQty.Text);
+        //    chilldata.MilkOutTemperature = string.IsNullOrEmpty(txtQty.Text) ? 0 : Convert.ToDouble(txtQty.Text);
+        //    chilldata.RechilledBy = string.IsNullOrEmpty(txtMilkType.Text) ? string.Empty : txtMilkType.Text;
+        //    chilldata.flag = "Insert";
+
+        //    Result = dachilldata.RechillingData(chilldata);
+        //    if (Result > 0)
+        //    {
+        //        divDanger.Visible = false;
+        //        divwarning.Visible = false;
+        //        divSusccess.Visible = true;
+        //        lblSuccess.Text = "Data Send to Rechilling Process Successfully";
+        //        pnlError.Update();
+        //        //GetRechillDetails();
+        //    }
+        //    else
+        //    {
+        //        divDanger.Visible = false;
+        //        divwarning.Visible = true;
+        //        divSusccess.Visible = false;
+        //        lblSuccess.Text = "Something went wrong plz contact site admin";
+        //        pnlError.Update();
+        //    }
+
+        //}
+        //else
+        //{
+
+        //}
+    }
+
+
+
+    //protected void txtTemperature_TextChanged(object sender, EventArgs e)
+    //{
+    //    if (Convert.ToDouble(txtTemperature.Text) > 4.00)
+    //    {
+    //        dpQCDetails.SelectedIndex = 4;
+    //        dpQCDetails.Enabled = false;
+    //    }
+    //    else
+    //    {
+    //        //txtTemperature.Text = string.Empty;
+
+    //        dpQCDetails.Enabled = true;
+    //        dpQCDetails.ClearSelection();
+    //        dpQCDetails.Items.FindByText("Re-Chilling").Enabled = false;
+    //    }
+
+    //}
+
+    //public void GetRechillDetails()
+    //{
+
+    //    chilldata = new MRechilling();
+    //    DataSet DS = new DataSet();
+    //    DS = chilldata.
+
+    //    if (!Comman.Comman.IsDataSetEmpty(DS))
+    //    {
+
+    //        rpQualityList.DataSource = DS;
+    //        rpQualityList.DataBind();
+    //    }
+
+   
+  
+
 }
  
