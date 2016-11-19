@@ -60,16 +60,6 @@ namespace Dairy.UserControl
                             pnlTransport.Visible = true;
                             break;
                         }
-                    case "Production":
-                        {
-                            pnlAddminitration.Visible = false;
-                            pnlProduction.Visible = true;
-                            pnlReception.Visible = false;
-                            pnlSales.Visible = false;
-                            pnlDesptach.Visible = false;
-                            pnlTransport.Visible = false;
-                            break;
-                        }
                 }
             }
 

@@ -38,10 +38,10 @@ namespace Bussiness.Production
             dadata = new DAFilmData();
             return dadata.GetFilmDetailsById(Id);
         }
-        public DataSet GetFilmDetails(string dates)
+        public DataSet GetFilmDetails()
         {
             dadata = new DAFilmData();
-            return dadata.GetFilmDetails(dates);
+            return dadata.GetFilmDetails();
         }
     }
 }

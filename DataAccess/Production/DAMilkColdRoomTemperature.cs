@@ -59,10 +59,9 @@ namespace DataAccess.Production
             return DS;
         }
 
-        public DataSet GetMilkColdRoomTemperatureDetails(string dates)
+        public DataSet GetMilkColdRoomTemperatureDetails()
         {
             DBParameterCollection paramcollection = new DBParameterCollection();
-            paramcollection.Add(new DBParameter("@date",dates));
             return _DBHelper.ExecuteDataSet("sp_Prod_GetMilkColdRoomTemperaturDetails", paramcollection, CommandType.StoredProcedure);
            
         }

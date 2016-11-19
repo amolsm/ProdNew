@@ -63,10 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgentInfoData.cs" />
-    <Compile Include="Production\BMilkProductsTestBeforePackingQC.cs" />
-    <Compile Include="Production\BReturnDrainedMilkQualityQC.cs" />
-    <Compile Include="Production\BAfterPackedMilkTestQCDetails.cs" />
-    <Compile Include="Production\BHomogenizer.cs" />
     <Compile Include="BillData.cs" />
     <Compile Include="BindCommanData.cs" />
     <Compile Include="DispatchData.cs" />
@@ -74,18 +70,39 @@
     <Compile Include="InvoiceData.cs" />
     <Compile Include="MarketingData.cs" />
     <Compile Include="ProductData.cs" />
+    <Compile Include="Production\BAdulterationConfirmationTastQC.cs" />
+    <Compile Include="Production\BAfterPackedMilkTestQCDetails.cs" />
+    <Compile Include="Production\BBoreWater.cs" />
+    <Compile Include="Production\BButterMilkPreparation.cs" />
+    <Compile Include="Production\BChemicalReagentAndMediaPreparationsQC.cs" />
+    <Compile Include="Production\BClosingStockForMilkInSiloAndAllProducts.cs" />
     <Compile Include="Production\BCreamProduction.cs" />
+    <Compile Include="Production\BCurdPackedData.cs" />
     <Compile Include="Production\BCurdProcessing.cs" />
     <Compile Include="Production\BCurdProcessingQC.cs" />
     <Compile Include="Production\BFilmData.cs" />
     <Compile Include="Production\BFinishedGoodsRelease.cs" />
+    <Compile Include="Production\BGheeProductionRegister.cs" />
+    <Compile Include="Production\BHomogenizer.cs" />
+    <Compile Include="Production\BIceCreamColdRoomTemperature.cs" />
+    <Compile Include="Production\BIceCreamMixProcessing.cs" />
+    <Compile Include="Production\BKhoaPlantLogQC.cs" />
+    <Compile Include="Production\BMachineAirCompressors.cs" />
+    <Compile Include="Production\BMachineComplaintsAndRectifiedRecord.cs" />
+    <Compile Include="Production\BMachineStartingCondition.cs" />
+    <Compile Include="Production\BMicrobiologicalAnalysisForMilkAndMilkProductsQC.cs" />
+    <Compile Include="Production\BMicrobiologicalCultureStockRegisterQC.cs" />
     <Compile Include="Production\BMilkColdRoomTemperature.cs" />
     <Compile Include="Production\BMilkPackedData.cs" />
-    <Compile Include="Production\BPasteurizationQC.cs" />
+    <Compile Include="Production\BMilkProductsTestBeforePackingQC.cs" />
+    <Compile Include="Production\BMixPreparationIncrediantsAdded.cs" />
+    <Compile Include="Production\BOpeningStockForMilkAndAllProducts.cs" />
     <Compile Include="Production\BPastProcess.cs" />
     <Compile Include="Production\BQCAfterProcessing.cs" />
     <Compile Include="Production\BQuality.cs" />
+    <Compile Include="Production\BPasteurizationQC.cs" />
     <Compile Include="Production\BRechilling.cs" />
+    <Compile Include="Production\BReturnDrainedMilkQualityQC.cs" />
     <Compile Include="Production\BStandardization.cs" />
     <Compile Include="Production\BStandardizationProductsAdded.cs" />
     <Compile Include="Production\BTraceabilityMilkQC.cs" />
@@ -129,9 +146,6 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -145,7 +159,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1878</DevelopmentServerPort>
+          <DevelopmentServerPort>2154</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

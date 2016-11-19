@@ -29,7 +29,6 @@ namespace Dairy.Tabs.Production
                 //GetStandardizationDetails();
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 //txtStandardizationStartTime.Text = Convert.ToString(DateTime.Now.ToString("HH:mm"));
                 //txtDate.ReadOnly = true;
                 txtBatchNo.ReadOnly = true;

@@ -54,10 +54,9 @@ namespace DataAccess.Production
 
         }
         
-        public DataSet GetCurdProcessDetails(string dates)
+        public DataSet GetCurdProcessDetails()
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
-            paramCollection.Add(new DBParameter("@date", dates));
             return _DBHelper.ExecuteDataSet("sp_Prod_GetCurdInformation", paramCollection, CommandType.StoredProcedure);
         }
 

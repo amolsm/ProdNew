@@ -30,8 +30,7 @@ namespace Dairy.Tabs.Production
                 BindDropDwon();
                 txtSkimDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 txtPackingDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                //GetTraceabilityDetails();
+                GetTraceabilityDetails();
                 txtBatchNo.ReadOnly = true;
               
             }
@@ -96,9 +95,7 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Traceability Data Added Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    string dates;
-                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-                    GetTraceabilityDetails(dates);
+                    GetTraceabilityDetails();
                     uprouteList.Update();
                 }
                 else
@@ -154,9 +151,7 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Traceability Data Updated  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    string dates;
-                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-                    GetTraceabilityDetails(dates);
+                    GetTraceabilityDetails();
                     uprouteList.Update();
                 }
                 else
@@ -215,11 +210,11 @@ namespace Dairy.Tabs.Production
             }
         }
 
-        public void GetTraceabilityDetails(string dates)
+        public void GetTraceabilityDetails()
         {
             btracqc = new BTraceabilityMilkQC();
             DataSet DS = new DataSet();
-            DS = btracqc.GetTraceabilityDetails(dates);
+            DS = btracqc.GetTraceabilityDetails();
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
                 TraceabilityQC.DataSource = DS;
@@ -283,10 +278,5 @@ namespace Dairy.Tabs.Production
             }
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-            GetTraceabilityDetails(dates);
-        }
     }
 }

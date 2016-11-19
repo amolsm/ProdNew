@@ -40,11 +40,11 @@ namespace Bussiness.Production
             return dadrainedqc.GetDrainedMilkQCDetabyId(RMRId);
         }
 
-        public DataSet GetDrainedMilkQCDetails(string dates)
+        public DataSet GetDrainedMilkQCDetails()
         {
             dadrainedqc = new DAReturnDrainedMilkQualityQC();
 
-            return dadrainedqc.GetDrainedMilkQCDetails(dates);
+            return dadrainedqc.GetDrainedMilkQCDetails();
         }
     }
 }

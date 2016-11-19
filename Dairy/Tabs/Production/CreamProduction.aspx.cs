@@ -29,8 +29,7 @@ namespace Dairy.Tabs.Production
             {
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                txtSearchDate.Text= Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                //GetCreamDetails();
+                GetCreamDetails();
                 txtBatchNo.ReadOnly = true;
                 
             }
@@ -80,9 +79,7 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "PasteurizationProcess Data Add  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    string dates;
-                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-                    GetCreamDetails(dates);
+                    GetCreamDetails();
                     uprouteList.Update();
 
                 }
@@ -124,9 +121,7 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "PasteurizationProcess Data Add  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    string dates;
-                    dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-                    GetCreamDetails(dates);
+                    GetCreamDetails();
                     uprouteList.Update();
                 }
                 else
@@ -185,11 +180,11 @@ namespace Dairy.Tabs.Production
             }
         }
 
-        public void GetCreamDetails(string dates)
+        public void GetCreamDetails()
         { 
           bcream =new BCreamProduction();
           DataSet DS=new DataSet();
-          DS=bcream.GetCreamDetails(dates);
+          DS=bcream.GetCreamDetails();
             if(!Comman.Comman.IsDataSetEmpty(DS))
             {
                rpCreamProduction.DataSource=DS;
@@ -255,10 +250,5 @@ namespace Dairy.Tabs.Production
             dpCreamProductionDone.ClearSelection();
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-            GetCreamDetails(dates);
-        }
     }
 }

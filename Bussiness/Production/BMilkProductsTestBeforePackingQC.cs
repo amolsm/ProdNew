@@ -39,10 +39,10 @@ namespace Bussiness.Production
             return damptbpqc.GetMilkProductsTestBeforePackingQCDetailsById(Id);
         }
 
-        public DataSet GetMilkProductsTestBeforePackingQCDetails(string dates)
+        public DataSet GetMilkProductsTestBeforePackingQCDetails()
         {
             damptbpqc = new DAMilkProductsTestBeforePackingQC();
-            return damptbpqc.GetMilkProductsTestBeforePackingQCDetails(dates);   
+            return damptbpqc.GetMilkProductsTestBeforePackingQCDetails();   
         }
     }
 }

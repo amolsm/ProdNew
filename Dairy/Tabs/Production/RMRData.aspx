@@ -199,7 +199,7 @@
                         <%--<i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
                           <asp:Label ID="Label5" runat="server" Text="MBRT Start Time"></asp:Label>
                       </div>
-                       <asp:TextBox ID="txtMBRTStartTime" class="form-control" type="time" placeholder=" MBRT Start Time" ToolTip="MBRT Start Time" runat="server" ReadOnly="true"></asp:TextBox>        
+                       <asp:TextBox ID="txtMBRTStartTime" class="form-control" type="time"        placeholder=" MBRT Start Time" ToolTip="MBRT Start Time" runat="server" ReadOnly="true"></asp:TextBox>        
                     </div><!-- /.input group -->
                         <asp:RequiredFieldValidator ID="RFVMBRTStart" runat="server" ErrorMessage="Please MBRT Start Time" style="font-size:12px;" ControlToValidate="txtMBRTStartTime" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
                   </div><!-- /.form group -->

@@ -29,8 +29,7 @@ namespace Dairy.Tabs.Production
             {
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                //GetFilmDetails();
+                GetFilmDetails();
                 txtBatchNo.ReadOnly = true;
                 
             }
@@ -86,8 +85,7 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Film Data Added Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    string dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-                    GetFilmDetails(dates);
+                    GetFilmDetails();
                     uprouteList.Update();
                 }
                 else
@@ -133,8 +131,7 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "Film Data Updated  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    string dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-                    GetFilmDetails(dates);
+                    GetFilmDetails();
                     uprouteList.Update();
 
                 }
@@ -195,11 +192,11 @@ namespace Dairy.Tabs.Production
             }
         }
 
-             public void GetFilmDetails( string dates)
+             public void GetFilmDetails()
         { 
           bdata =new BFilmData();
           DataSet DS=new DataSet();
-          DS=bdata.GetFilmDetails(dates);
+          DS=bdata.GetFilmDetails();
             if(!Comman.Comman.IsDataSetEmpty(DS))
             {
                rpFilmDataList.DataSource=DS;
@@ -260,11 +257,5 @@ namespace Dairy.Tabs.Production
                 }
             }
         }
-
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-            GetFilmDetails(dates);
-        }
-    }
+      }
   }

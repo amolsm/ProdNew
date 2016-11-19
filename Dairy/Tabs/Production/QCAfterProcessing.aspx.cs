@@ -32,7 +32,6 @@ namespace Dairy.Tabs.Production
                 //GetQCProcssingDetails();
                 //txtDate.Text = Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy"));
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
             }
                
         }

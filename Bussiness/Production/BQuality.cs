@@ -47,24 +47,6 @@ namespace Bussiness.Production
            }
 
        
-        //public DataSet GetQualityDetabyId(int Id)
-        //{
-        //    bquality = new BQuality();
-        //    return bquality.GetQualityDetabyId(Id);
-        //}
-
-        //public DataSet GetQltyDetails()
-        //{
-        //    bquality = new BQuality();
-
-        //    return bquality.GetQltyDetails();
-        //}
-
-        //public DataSet GetQualityDetails()
-        //{
-        //    bquality = new BQuality();
-
-        //    return bquality.GetQualityDetails();
-        //}
+        
     }
 }

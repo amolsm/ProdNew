@@ -37,10 +37,10 @@ namespace Bussiness.Production
             return dacold.GetMilkColdRoomTemperatureDetailsById(Id);
         }
 
-        public DataSet GetMilkColdRoomTemperatureDetails(string dates)
+        public DataSet GetMilkColdRoomTemperatureDetails()
         {
             dacold = new DAMilkColdRoomTemperature();
-            return dacold.GetMilkColdRoomTemperatureDetails(dates);
+            return dacold.GetMilkColdRoomTemperatureDetails();
         }
     }
 }

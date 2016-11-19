@@ -31,7 +31,7 @@ namespace Dairy.Tabs.Production
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 txtMfgDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+                
                 btnUpdateFinishGoodsdetail.Visible = false;
             }
         }

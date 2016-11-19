@@ -190,8 +190,6 @@
                             <asp:ListItem Value="3">Sales</asp:ListItem>
                             <asp:ListItem Value="4">Despatch</asp:ListItem> 
                            <asp:ListItem Value="5">Transport</asp:ListItem> 
-                           <asp:ListItem Value="6">Marketing</asp:ListItem> 
-                           <asp:ListItem Value="7">Production</asp:ListItem> 
                          
                           
                        </asp:DropDownList> 

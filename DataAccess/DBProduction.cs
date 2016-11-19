@@ -31,13 +31,12 @@ namespace DataAccess
                 paramCollection.Add(new DBParameter("@Qty", receive.Quantity));
                 paramCollection.Add(new DBParameter("@CreatedBy", receive.CreatedBy));
                 paramCollection.Add(new DBParameter("@CreatedDate", receive.CreatedDate));
-                paramCollection.Add(new DBParameter("@RMRQCStatus", receive.QCId));
+                paramCollection.Add(new DBParameter("@finishQC", receive.QCId));
                 paramCollection.Add(new DBParameter("@MBRTStart", receive.MBRTStart));
                 paramCollection.Add(new DBParameter("@MBRTEnd", receive.MBRTEnd));
                 paramCollection.Add(new DBParameter("@TotalHours", receive.TotalHours));
                 paramCollection.Add(new DBParameter("@flag", receive.flag));
-                //paramCollection.Add(new DBParameter("@CheckBatchNo", receive.CheckBatchNo));
-                result = _DBHelper.ExecuteNonQuery("sp_Prod_RMReceived", paramCollection, CommandType.StoredProcedure);
+                result = _DBHelper.ExecuteNonQuery("spProd_RMReceived", paramCollection, CommandType.StoredProcedure);
 
             }
             catch (Exception EX)
@@ -49,20 +48,6 @@ namespace DataAccess
             }
             return result;
         }
-
-        public DataSet GetExistingBatchNo(string batchno)
-        {
-            DataSet DS = new DataSet();
-            try
-            {
-                DBParameterCollection paramCollection = new DBParameterCollection();
-                paramCollection.Add(new DBParameter("@batchno", batchno));
-                DS = _DBHelper.ExecuteDataSet("sp_Prod_GetExistingBatchNo", paramCollection, CommandType.StoredProcedure);
-
-            }
-            catch { }
-            return DS;
-        }
         public DataSet GetRMRDetailsbyID(int RMRId)
         {
             DataSet DS = new DataSet();
@@ -72,22 +57,44 @@ namespace DataAccess
 
                 DBParameterCollection paramCollection = new DBParameterCollection();
                 paramCollection.Add(new DBParameter("@RMRId", RMRId));
-                DS = _DBHelper.ExecuteDataSet("sp_Prod_GetRMRDetailsbyID", paramCollection, CommandType.StoredProcedure);
+                DS = _DBHelper.ExecuteDataSet("sp_GetRMRDetailsbyID", paramCollection, CommandType.StoredProcedure);
             }
-            catch (Exception EX)
+            catch (Exception)
             {
-                string MSG = EX.ToString();
+
             }
             return DS;
         }
 
-        public DataSet GetRMRDetails(string dates)
+        public DataSet GetQualityDetailsbyID(int Id)
         {
-            DBParameterCollection paramCollection = new DBParameterCollection();
-            paramCollection.Add(new DBParameter("@date", dates));
-            return _DBHelper.ExecuteDataSet("sp_Prod_GetRMRInformation", paramCollection, CommandType.StoredProcedure);
+            DataSet DS = new DataSet();
+            try
+            {
+
+
+                DBParameterCollection paramCollection = new DBParameterCollection();
+                paramCollection.Add(new DBParameter("@Id", Id));
+                DS = _DBHelper.ExecuteDataSet("sp_GetQualityDetailsbyID", paramCollection, CommandType.StoredProcedure);
+            }
+            catch (Exception)
+            {
+
+            }
+            return DS;
         }
 
-       
+        public DataSet GetRMRDetails()
+        {
+            DBParameterCollection paramCollection = new DBParameterCollection();
+            return _DBHelper.ExecuteDataSet("sp_GetRMRInformation", paramCollection, CommandType.StoredProcedure);
+        }
+
+        public DataSet GetQualityDetails()
+        {
+            DBParameterCollection paramCollection = new DBParameterCollection();
+            return (_DBHelper.ExecuteDataSet("sp_GetRMRInformation", paramCollection, CommandType.StoredProcedure));
+        }
+
     }
 }

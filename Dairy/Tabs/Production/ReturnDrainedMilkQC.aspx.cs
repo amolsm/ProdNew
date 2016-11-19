@@ -28,8 +28,7 @@ namespace Dairy.Tabs.Production
             {
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                //GetDrainedMilkQCDetails();
+                GetDrainedMilkQCDetails();
                 txtBatchNo.ReadOnly = true;
                 btnUpdate.Visible = false;
             }
@@ -53,12 +52,12 @@ namespace Dairy.Tabs.Production
             dpDrainedMilkQCStatusId.Items.Insert(0, new ListItem("--Status--", "0"));
         }
 
-        public void GetDrainedMilkQCDetails(string dates)
+        public void GetDrainedMilkQCDetails()
         {
 
             bdrainedqc = new BReturnDrainedMilkQualityQC();
             DataSet DS = new DataSet();
-            DS = bdrainedqc.GetDrainedMilkQCDetails(dates);
+            DS = bdrainedqc.GetDrainedMilkQCDetails();
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
@@ -185,8 +184,7 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "ReturnDrainedMilkQualityQC Data Added  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    string dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-                    GetDrainedMilkQCDetails(dates);
+                    GetDrainedMilkQCDetails();
                     uprouteList.Update();
                 }
                 else
@@ -232,8 +230,7 @@ namespace Dairy.Tabs.Production
                     lblSuccess.Text = "ReturnDrainedMilkQualityQC Data Updated  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
-                    string dates = string.IsNullOrEmpty(txtSearchDate.Text) ? string.Empty : Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-                    GetDrainedMilkQCDetails(dates);
+                    GetDrainedMilkQCDetails();
                     uprouteList.Update();
                 }
                 else
@@ -252,12 +249,6 @@ namespace Dairy.Tabs.Production
         protected void btnRefresh_Click1(object sender, EventArgs e)
         {
             Response.Redirect(Request.RawUrl);
-        }
-
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-            string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
-            GetDrainedMilkQCDetails(dates);
         }
     }
 }

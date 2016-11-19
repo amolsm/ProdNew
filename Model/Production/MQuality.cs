@@ -8,6 +8,7 @@ namespace Model.Production
     public class MQuality:RMRecieve
     {
        public int QualityId { get; set; }
+       public int RMRShiftId { get; set; }
         public string QualityDate { get; set; }
         public double Temperature { get; set; }
         public double Alcohol { get; set; }

@@ -29,7 +29,6 @@ namespace Dairy.Tabs.Production
                 BindDropDwon();
                 //ClearField();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 btnUpdate.Visible = false;
                 //GetReachlingDetails();
 

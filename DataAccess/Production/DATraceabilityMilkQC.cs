@@ -69,10 +69,9 @@ namespace DataAccess.Production
             return DS;
         }
 
-        public DataSet GetTraceabilityDetails(string dates)
+        public DataSet GetTraceabilityDetails()
         {
             DBParameterCollection paramCollection = new DBParameterCollection();
-            paramCollection.Add(new DBParameter("@date", dates));
             return _DBHelper.ExecuteDataSet("sp_Prod_GetTraceabilityMilkQCDetails", paramCollection, CommandType.StoredProcedure);
         }
     }

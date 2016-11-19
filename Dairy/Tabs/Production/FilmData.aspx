@@ -266,34 +266,6 @@
 
                                                 <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
                     <ContentTemplate>
-                        <div class="row">
-                    <div class="col-lg-3">
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-<%--                        <i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
-                          <asp:Label ID="Label17" runat="server" Text="Date"></asp:Label>
-                      </div>
-                       <asp:TextBox ID="txtSearchDate" class="form-control" type="date" runat="server" ValidationGroup="Save" ></asp:TextBox>                        
-                    </div><!-- /.input group -->
-
-                  </div><!-- /.form group -->
-                                        
-                          
-                      </div> 
-                    <div class="col-lg-3" >
-                  <div class="form-group ">
-                    <div class="input-group">
-                        <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Search" ValidationGroup="Search" OnClick="btnSearch_Click"/> &nbsp;    
-                        
-                    </div><!-- /.input group -->
-
-                  </div><!-- /.form group -->
-                                   
-                       
-                          
-                      </div>
-                            </div>
 
                 <table id="example1" class="table table-bordered table-striped">
                    
@@ -306,7 +278,7 @@
                   <thead>
                       <tr>
                                         <%-- <th>RMRId</th>--%>
-                                        <th>RMRDate</th>  
+                                        <th>Date</th>  
                                          <th>Batch No</th> 
                                         <th>Product</th>
                                         <th>Recieved Qty</th>
@@ -326,7 +298,7 @@
                     <tr>
                             
                                         <%--<td><%# Eval("RMRId")%></td> --%> 
-                            <td><%#  String.IsNullOrEmpty(Eval("RMRDate").ToString()) ? "": Convert.ToDateTime(Eval("RMRDate")).ToString("dd-MM-yyyy")%></td>     
+                            <td><%#  String.IsNullOrEmpty(Eval("FilmDate").ToString()) ? "": Convert.ToDateTime(Eval("FilmDate")).ToString("dd-MM-yyyy")%></td>     
                                          <td><%# Eval("BatchNo")%></td>
                            <td><%# Eval("Product")%></td>    
                            <td><%# Eval("ReceivedQty")%></td>    
@@ -355,8 +327,8 @@
 
                     <tfoot>
                       <tr>
-                                       <%-- <th>RMRId</th>--%>
-                                        <th>RMRDate</th>  
+                                        <%-- <th>RMRId</th>--%>
+                                        <th>Date</th>  
                                          <th>Batch No</th> 
                                         <th>Product</th>
                                         <th>Recieved Qty</th>
@@ -364,6 +336,8 @@
                                         <th>Closing Stock</th>
                                         <th>Status</th>                                                                                                            
                                         <th>Edit</th>
+                                       
+
                                       
                                         
                       </tr>

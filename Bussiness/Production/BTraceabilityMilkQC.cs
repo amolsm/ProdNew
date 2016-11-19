@@ -38,10 +38,10 @@ namespace Bussiness.Production
             datracqc = new DATraceabilityMilkQC();
             return datracqc.GetTraceabilityQCDetailsById(Id);
         }
-        public DataSet GetTraceabilityDetails(string dates)
+        public DataSet GetTraceabilityDetails()
         {
             datracqc = new DATraceabilityMilkQC();
-            return datracqc.GetTraceabilityDetails(dates);
+            return datracqc.GetTraceabilityDetails();
         }
     }
 }

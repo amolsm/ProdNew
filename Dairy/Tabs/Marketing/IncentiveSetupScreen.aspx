@@ -266,7 +266,7 @@
                                 <asp:HiddenField id="hfAgentId" runat="server" value='<%#Eval("AgentID") %>' />                 
                              <asp:LinkButton ID="lbEdite" AlternateText="Save" ForeColor="Gray" OnItemCommand="lbEdite_ItemCommand" 
                                                                     ToolTip="Save" runat="server" CommandArgument='<%#Eval("AgentID") %>'
-                                                                  CommandName="Edit"><i class="btn btn-primary"></i></asp:LinkButton>
+                                                                    CommandName="Edit"><i class="btn btn-primary"></i></asp:LinkButton>
 
                          </td>
                         

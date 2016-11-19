@@ -389,8 +389,7 @@
                       
                     
                       
-                              <asp:Button ID="btnAddInOperation" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Add" ValidationGroup="Save" OnClick="btnClick_
-                                  InOperation" />     
+                              <asp:Button ID="btnAddInOperation" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Add" ValidationGroup="Save" OnClick="btnClick_btnAddInOperation" />     
                         &nbsp;&nbsp;<asp:Button ID="btnUpdateInOpration" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Update" ValidationGroup="Save" OnClick="btnClick_btnUpdateInOpration" />  
                          &nbsp;&nbsp; &nbsp;   <asp:Button ID="btnAddNew" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="AddNew"  OnClick="btnClick_btnAddNew" />                            
                     </div><!-- /.input group -->

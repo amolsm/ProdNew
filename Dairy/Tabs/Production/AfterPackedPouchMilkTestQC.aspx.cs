@@ -29,7 +29,6 @@ namespace Dairy.Tabs.Production
             {
                 BindDropDwon();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 //GetMilkQCDetails();
                 txtBatchCode.ReadOnly = true;
 
@@ -102,7 +101,7 @@ namespace Dairy.Tabs.Production
                     divDanger.Visible = false;
                     divwarning.Visible = false;
                     divSusccess.Visible = true;
-                    lblSuccess.Text = "Pouch Milk QC Data Add  Successfully";
+                    lblSuccess.Text = "AfterPackedMilkTestQC Data Add  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                     pnlError.Update();
                     string dates;
@@ -169,7 +168,7 @@ namespace Dairy.Tabs.Production
                     divDanger.Visible = false;
                     divwarning.Visible = false;
                     divSusccess.Visible = true;
-                    lblSuccess.Text = "Pouch Milk QC Data Updated  Successfully";
+                    lblSuccess.Text = "AfterPackedMilkTestQC Data Update  Successfully";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').addClass('collapsed-box');", true);
                   
                     

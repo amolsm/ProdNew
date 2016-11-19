@@ -31,8 +31,6 @@ namespace Dairy.Tabs.Production
                // BindDropDwonQC();
                 //GetRMRDetails();
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                
                 txtMilkType.Text = "Raw Milk";
                 btnUpdateProductindetail.Visible = false;
                 //txtRMRQCStatus.Text = "Pending";
@@ -79,9 +77,9 @@ namespace Dairy.Tabs.Production
             rmrdata.RMRId = 0;
             rmrdata.RMRDate = Convert.ToDateTime(txtDate.Text).ToString("dd-MM-yyyy");
             rmrdata.RMRShiftId = Convert.ToInt32(dpShiftDetails.SelectedItem.Value);
-            rmrdata.BatchNo = string.IsNullOrEmpty(txtBatchNo.Text) ? string.Empty : txtBatchNo.Text;
-            rmrdata.TankMilkReciptNo = string.IsNullOrEmpty(txtTankerReceipitNo.Text) ? string.Empty :txtTankerReceipitNo.Text;
-            rmrdata.TankerNo = string.IsNullOrEmpty(txtTankerNo.Text) ? string.Empty : txtTankerNo.Text;
+            rmrdata.BatchNo = txtBatchNo.Text;
+            rmrdata.TankMilkReciptNo = txtTankerReceipitNo.Text;
+            rmrdata.TankerNo = txtTankerNo.Text;
             rmrdata.Quantity = string.IsNullOrEmpty(txtQty.Text) ? 0 : Convert.ToDouble(txtQty.Text);
             rmrdata.MilkType = string.IsNullOrEmpty(txtMilkType.Text) ? string.Empty : txtMilkType.Text;
             rmrdata.CreatedBy = GlobalInfo.Userid;
@@ -241,7 +239,7 @@ namespace Dairy.Tabs.Production
 
             proddata = new ProductionData();
             DataSet DS = new DataSet();
-            DS = proddata.GetRMRDetails(dates);
+            DS = proddata.GetRMRDetails (dates);
 
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
