@@ -208,6 +208,12 @@ namespace Dairy.Tabs.Production
                 rpPackedDataList.DataSource = DS;
                 rpPackedDataList.DataBind();
             }
+            else
+            {
+                DS.Clear();
+                rpPackedDataList.DataSource = DS;
+                rpPackedDataList.DataBind();
+            }
         }
 
         public void GetPackedDetails(int RMRId)

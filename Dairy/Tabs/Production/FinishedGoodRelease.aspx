@@ -11,7 +11,7 @@
           Finished Good Release 
             <small>Details</small>    
           </h1> 
-          <ol class="breadcrumb">
+          <ol class="breadcrumb"> 
             <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li>
             <li class="active">Admin</li>
           </ol>

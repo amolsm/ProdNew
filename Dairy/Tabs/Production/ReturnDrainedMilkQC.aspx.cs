@@ -66,7 +66,12 @@ namespace Dairy.Tabs.Production
                 rpReturnDrainedMilkQC.DataSource = DS;
                 rpReturnDrainedMilkQC.DataBind();
             }
-
+            else
+            {
+                DS.Clear();
+                rpReturnDrainedMilkQC.DataSource = DS;
+                rpReturnDrainedMilkQC.DataBind();
+            }
 
         }
 

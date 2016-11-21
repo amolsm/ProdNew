@@ -78,6 +78,12 @@ namespace Dairy.Tabs.Production
                 rpQualityList.DataSource = DS;
                 rpQualityList.DataBind();
             }
+            else
+            {
+                DS.Clear();
+                rpQualityList.DataSource = DS;
+                rpQualityList.DataBind();
+            }
 
 
         }

@@ -249,7 +249,12 @@ namespace Dairy.Tabs.Production
                 rpRMRList.DataSource = DS;
                 rpRMRList.DataBind();
             }
-
+            else
+            {
+                DS.Clear();
+                rpRMRList.DataSource = DS;
+                rpRMRList.DataBind();
+            }
 
         }
         protected void btnUpdateProductindetail_Click(object sender, EventArgs e)

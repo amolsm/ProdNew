@@ -195,6 +195,12 @@ namespace Dairy.Tabs.Production
                rpCreamProduction.DataSource=DS;
                rpCreamProduction.DataBind(); 
             }
+            else
+            {
+                DS.Clear();
+                rpCreamProduction.DataSource = DS;
+                rpCreamProduction.DataBind();
+            }
         }
 
         public void GetCreamDetails(int RMRId)

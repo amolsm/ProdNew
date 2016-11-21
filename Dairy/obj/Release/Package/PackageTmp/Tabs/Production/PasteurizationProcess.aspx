@@ -11,7 +11,7 @@
         Pasteurization Process      
           </h1> 
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li> 
             <li class="active">Pasteurization</li>
           </ol>
         </section >
@@ -401,6 +401,34 @@
 
                                 <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
                     <ContentTemplate>
+                        <div class="row">
+                    <div class="col-lg-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+<%--                        <i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
+                          <asp:Label ID="Label18" runat="server" Text="Date"></asp:Label>
+                      </div>
+                       <asp:TextBox ID="txtSearchDate" class="form-control" type="date" runat="server" ValidationGroup="Save" ></asp:TextBox>                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                        
+                          
+                      </div> 
+                    <div class="col-lg-3" >
+                  <div class="form-group ">
+                    <div class="input-group">
+                        <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Search" ValidationGroup="Search" OnClick="btnSearch_Click"/> &nbsp;    
+                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                   
+                       
+                          
+                      </div>
+                            </div>
 
                 <table id="example1" class="table table-bordered table-striped">
                    
@@ -415,7 +443,7 @@
 
                                      
                                       <%-- <th>RMRId</th>--%>
-                                        <th>StandardDate</th> 
+                                        <th>RMR Date</th> 
                                        <th>RMR Batch No</th>
                                                                               
                                         <th>Shift Name</th> 
@@ -435,7 +463,7 @@
 
                                                             
                                         <%--<td><%# Eval("RMRId")%></td>--%>  
-                                     <td><%# Convert.ToDateTime(Eval("StandardDate")).ToString("dd-MM-yyyy")%></td>    
+                                     <td><%# Convert.ToDateTime(Eval("RMRDate")).ToString("dd-MM-yyyy")%></td>    
                                        <td><%# Eval("BatchNo")%></td>                       
                                         <td><%# Eval("ShiftName")%></td>
                                         <td><%# Eval("StatusName")%></td>
@@ -463,8 +491,8 @@
                       <tr>
 
                                       
-                                          <%-- <th>RMRId</th>--%>
-                                        <th>StandardDate</th> 
+                                         <%-- <th>RMRId</th>--%>
+                                        <th>RMR Date</th> 
                                        <th>RMR Batch No</th>
                                                                               
                                         <th>Shift Name</th> 

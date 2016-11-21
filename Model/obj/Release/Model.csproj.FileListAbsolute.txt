@@ -241,3 +241,8 @@ D:\Test\ProdGit\ProdCode\Model\bin\Model.pdb
 D:\Test\ProdGit\ProdCode\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
 D:\Test\ProdGit\ProdCode\Model\obj\Release\Model.dll
 D:\Test\ProdGit\ProdCode\Model\obj\Release\Model.pdb
+D:\Nanjil\ProdNew\Model\bin\Model.dll
+D:\Nanjil\ProdNew\Model\bin\Model.pdb
+D:\Nanjil\ProdNew\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+D:\Nanjil\ProdNew\Model\obj\Release\Model.dll
+D:\Nanjil\ProdNew\Model\obj\Release\Model.pdb

@@ -16,7 +16,7 @@
             <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li>
             <li class="active">RMR</li>
           </ol>
-        </section>
+       </section>
 
     <section class="content">
                    <div class="row">

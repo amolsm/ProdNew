@@ -8,7 +8,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <section class="content-header">
         <h1>
-            After Packed Milk QC     
+            After Packed Pauch Milk QC     
           </h1> 
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li>
@@ -48,7 +48,7 @@
        <div id="bx1" class="box collapsed-box">
 
             <div class="box-header with-border">
-              <h3 class="box-title"><asp:Label ID="lblHeaderTab" runat="server" Text="After Packed Milk QC Details"></asp:Label> </h3>
+              <h3 class="box-title"><asp:Label ID="lblHeaderTab" runat="server" Text="Pauch Milk QC Details"></asp:Label> </h3>
               <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-plus"></i></button>
                 
@@ -56,7 +56,7 @@
             </div>
             <div class="box-body">
 
-                                                  <asp:UpdatePanel runat="server" ID="upMain" UpdateMode="Conditional">
+          <asp:UpdatePanel runat="server" ID="upMain" UpdateMode="Conditional">
               <ContentTemplate>
         
               <div class="col-lg-3">
@@ -164,9 +164,9 @@
             </div>
 
                   
-                                            <div class="col-lg-3">
-                  <div class="form-group">
-                    <div class="input-group cntrlbtm">
+        <div class="col-lg-3">
+                  <div class="form-group cntrlbtm">
+                    <div class="input-group ">
                       <div class="input-group-addon">
 <%--                        <i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
                           <asp:Label ID="Label7" runat="server" Text="FAT "></asp:Label>
@@ -350,8 +350,8 @@
             </div>
 
         <div class="col-lg-3">
-                  <div class="form-group">
-                    <div class="input-group cntrlbtm">
+                  <div class="form-group cntrlbtm">
+                    <div class="input-group ">
                       <div class="input-group-addon">                    
                         <asp:Label ID="Label20" runat="server" Text="Packing Detail"></asp:Label>
                       </div>
@@ -393,6 +393,34 @@
 
                                                 <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
                     <ContentTemplate>
+                        <div class="row">
+                    <div class="col-lg-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+<%--                        <i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
+                          <asp:Label ID="Label21" runat="server" Text="Date"></asp:Label>
+                      </div>
+                       <asp:TextBox ID="txtSearchDate" class="form-control" type="date" runat="server" ValidationGroup="Save" ></asp:TextBox>                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                        
+                          
+                      </div> 
+                    <div class="col-lg-3" >
+                  <div class="form-group ">
+                    <div class="input-group">
+                        <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Search" ValidationGroup="Search" OnClick="btnSearch_Click"/> &nbsp;    
+                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                   
+                       
+                          
+                      </div>
+                            </div>
 
                 <table id="example1" class="table table-bordered table-striped">
                    
@@ -424,7 +452,7 @@
                     <tr>
                             
                                        <%-- <td><%# Eval("RMRId")%></td>  --%>
-                          <td><%# Convert.ToDateTime(Eval("PackedDate")).ToString("dd-MM-yyyy")%></td> 
+                          <td><%# Convert.ToDateTime(Eval("RMRDate")).ToString("dd-MM-yyyy")%></td> 
                                       <td><%# Eval("BatchNo")%></td>      
                                         <td><%# Eval("BatchCode")%></td>   
                                                                        

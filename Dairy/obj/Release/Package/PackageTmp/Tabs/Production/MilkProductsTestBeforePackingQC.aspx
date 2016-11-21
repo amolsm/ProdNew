@@ -11,7 +11,7 @@
             Milk Products Test Before Packing QC  
           </h1> 
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li> 
             <li class="active">MilkTestBeforePackingQC</li>
           </ol>
         </section>
@@ -198,6 +198,7 @@
 
 </div>
 
+<div class="row">
                 <div  class="col-lg-3" >
                   <div class="form-group cntrlbtm">
                     <div class="input-group">
@@ -215,7 +216,7 @@
                          </asp:RequiredFieldValidator>
                   </div><!-- /.form group -->
                          </div>
-
+</div>
                 <div class="col-lg-3 pull-right">
                   <div class="form-group cntrlbtm">
                     <div class="input-group">
@@ -245,6 +246,36 @@
                                                 <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
                     <ContentTemplate>
 
+                        <div class="row">
+                    <div class="col-lg-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+<%--                        <i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
+                          <asp:Label ID="Label17" runat="server" Text="Date"></asp:Label>
+                      </div>
+                       <asp:TextBox ID="txtSearchDate" class="form-control" type="date" runat="server" ValidationGroup="Save" ></asp:TextBox>                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                        
+                          
+                      </div> 
+                    <div class="col-lg-3" >
+                  <div class="form-group ">
+                    <div class="input-group">
+                        <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Search" ValidationGroup="Search" OnClick="btnSearch_Click"/> &nbsp;    
+                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                   
+                       
+                          
+                      </div>
+                            </div>
+
+
                 <table id="example1" class="table table-bordered table-striped">
                    
 
@@ -257,7 +288,7 @@
                       <tr>
                                       
                                         <%-- <th>RMRId</th>--%>
-                                         <th>Date </th>
+                                         <th>RMRDate </th>
                                          <th>Batch No</th>  
                                       
                                         <th>Shift Name</th>
@@ -280,7 +311,7 @@
                     <tr>
                             
                                         <%--<td><%# Eval("RMRId")%></td>   --%>
-                         <td><%# String.IsNullOrEmpty(Eval("MilkProductsTestBeforePackingQCDate").ToString()) ? "": Convert.ToDateTime(Eval("MilkProductsTestBeforePackingQCDate")).ToString("dd-MM-yyyy")%></td> 
+                         <td><%# String.IsNullOrEmpty(Eval("RMRDate").ToString()) ? "": Convert.ToDateTime(Eval("RMRDate")).ToString("dd-MM-yyyy")%></td> 
 
                                             <td><%# Eval("BatchNo")%></td>  
                                                                   
@@ -312,7 +343,7 @@
                     <tfoot>
                       <tr>
                                          <%--<th>RMRId</th>--%>
-                                         <th>Date </th>
+                                         <th>RMRDate </th>
                                          <th>Batch No</th>  
                                        
                                         <th>Shift Name</th>

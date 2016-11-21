@@ -227,6 +227,34 @@
 
                                 <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
                     <ContentTemplate>
+                                                <div class="row">
+                    <div class="col-lg-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+<%--                        <i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
+                          <asp:Label ID="Label4" runat="server" Text="Date"></asp:Label>
+                      </div>
+                       <asp:TextBox ID="txtSearchDate" class="form-control" type="date" runat="server" ValidationGroup="Save" ></asp:TextBox>                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                        
+                          
+                      </div> 
+                    <div class="col-lg-3" >
+                  <div class="form-group ">
+                    <div class="input-group">
+                        <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Search" ValidationGroup="Search" OnClick="btnSearch_Click"/> &nbsp;    
+                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                   
+                       
+                          
+                      </div>
+                            </div>
 
                 <table id="example1" class="table table-bordered table-striped">
                    
@@ -241,9 +269,8 @@
 
                                      
                                       <%--  <th>RMRId</th>--%>
-                                        <th>CreamProductionDate</th> 
-                                        <th>RMR Batch No</th>
-                                                                             
+                                        <th>RMRDate</th> 
+                                        <th>RMR Batch No</th>                                                                             
                                         <th>Shift Name</th>  
                                         <th>Status</th>                                     
                                         <th>Edit</th>
@@ -260,9 +287,8 @@
 
                                                             
                                        <%-- <td><%# Eval("RMRId")%></td>     --%>
-                                         <td><%# Eval("PastQCDate")%></td> 
-                                         <td><%# Eval("BatchNo")%></td>                                       
-                                       
+                                         <td><%# Eval("RMRDate")%></td> 
+                                         <td><%# Eval("BatchNo")%></td>  
                                         <td><%# Eval("ShiftName")%></td>
                                        <td><%# Eval("StatusName") %></td>
                                     
@@ -287,13 +313,11 @@
                     <tfoot>
                       <tr>
 
-                                      
-                                        <%--  <th>RMRId</th>--%>
-                                        <th>CreamProductionDate</th> 
-                                        <th>RMR Batch No</th>
-                                                                             
-                                        <th>Shift Name</th> 
-                                        <th>Status</th>                                                                           
+                                       <%--  <th>RMRId</th>--%>
+                                        <th>RMRDate</th> 
+                                        <th>RMR Batch No</th>                                                                             
+                                        <th>Shift Name</th>  
+                                        <th>Status</th>                                     
                                         <th>Edit</th>
                                        
 

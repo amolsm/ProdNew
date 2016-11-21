@@ -13,7 +13,7 @@
             <small>Details</small>    
           </h1> 
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li> 
             <li class="active">Qlty</li>
           </ol>
         </section>
@@ -465,9 +465,6 @@
                <div class="col-lg-3 pull-right" >
                   <div class="form-group cntrlbtm">
                     <div class="input-group">
-                      
-                    
-                      
                         <asp:Button ID="btnAdd" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Add" ValidationGroup="Save" OnClick="btnAdd_Click"/> &nbsp;    
                         <asp:Button ID="btnUpdate" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Update" ValidationGroup="Save" OnClick="btnUpdate_Click"/> &nbsp;    
                         <asp:Button ID="btnRefresh" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Refresh" ValidationGroup="Refresh" OnClick="btnRefresh_Click"/> &nbsp;    
@@ -496,16 +493,38 @@
               </div>
             </div>
             <div class="box-body" id="datalist">
-                   
 
 
-
-                
-                       
-
-                                <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
+           <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
                     <ContentTemplate>
+                        <div class="row">
+                    <div class="col-lg-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+<%--                        <i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
+                          <asp:Label ID="Label17" runat="server" Text="Date"></asp:Label>
+                      </div>
+                       <asp:TextBox ID="txtSearchDate" class="form-control" type="date" runat="server" ValidationGroup="Save" ></asp:TextBox>                        
+                    </div><!-- /.input group -->
 
+                  </div><!-- /.form group -->
+                                        
+                          
+                      </div> 
+                    <div class="col-lg-3" >
+                  <div class="form-group ">
+                    <div class="input-group">
+                        <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Search" ValidationGroup="Search" OnClick="btnSearch_Click"/> &nbsp;    
+                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                   
+                       
+                          
+                      </div>
+                            </div>
                 <table id="example1" class="table table-bordered table-striped">
                    
 
@@ -519,7 +538,7 @@
                                     
                                       <%--  <th>Quality Id</th>--%>
                                        <%-- <th>RMRId</th>--%>
-                                        <th>Date</th>
+                                        <th>RMRDate</th>
                                         <th>RMR Batch No</th>
                                         <th>Shift Name</th>
                                        
@@ -576,7 +595,7 @@
                       <tr>
                                    <%--  <th>Quality Id</th>--%>
                                        <%-- <th>RMRId</th>--%>
-                                        <th>Date</th>
+                                        <th>RMRDate</th>
                                         <th>RMR Batch No</th>
                                         <th>Shift Name</th>
                                        

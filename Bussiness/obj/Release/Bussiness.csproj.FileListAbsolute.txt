@@ -537,3 +537,14 @@ D:\Test\ProdGit\ProdCode\Bussiness\bin\Model.pdb
 D:\Test\ProdGit\ProdCode\Bussiness\obj\Release\Bussiness.csprojResolveAssemblyReference.cache
 D:\Test\ProdGit\ProdCode\Bussiness\obj\Release\Bussiness.dll
 D:\Test\ProdGit\ProdCode\Bussiness\obj\Release\Bussiness.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\Bussiness.dll
+D:\Nanjil\ProdNew\Bussiness\bin\Bussiness.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\Comman.dll
+D:\Nanjil\ProdNew\Bussiness\bin\DataAccess.dll
+D:\Nanjil\ProdNew\Bussiness\bin\Model.dll
+D:\Nanjil\ProdNew\Bussiness\bin\Comman.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\DataAccess.pdb
+D:\Nanjil\ProdNew\Bussiness\bin\Model.pdb
+D:\Nanjil\ProdNew\Bussiness\obj\Release\Bussiness.csprojResolveAssemblyReference.cache
+D:\Nanjil\ProdNew\Bussiness\obj\Release\Bussiness.dll
+D:\Nanjil\ProdNew\Bussiness\obj\Release\Bussiness.pdb
