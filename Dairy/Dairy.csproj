@@ -134,21 +134,42 @@
     <Content Include="Tabs\Marketing\SchemeRefund.aspx" />
     <Content Include="Tabs\Marketing\SpotDamageComparisonReport.aspx" />
     <Content Include="Tabs\Marketing\StaffAccountSalesSummary.aspx" />
+    <Content Include="Tabs\Production\AdulterationConfirmationTastQC.aspx" />
     <Content Include="Tabs\Production\AfterPackedPouchMilkTestQC.aspx" />
+    <Content Include="Tabs\Production\BoreWater.aspx" />
+    <Content Include="Tabs\Production\ButterMilkPreparation.aspx" />
+    <Content Include="Tabs\Production\ChemicalReagentAndMediaPreparationsQC.aspx" />
+    <Content Include="Tabs\Production\CleaningRegister.aspx" />
+    <Content Include="Tabs\Production\ClosingStockForMilkInSiloAndAllProducts.aspx" />
     <Content Include="Tabs\Production\Cold room temperature chart.aspx" />
     <Content Include="Tabs\Production\CreamProduction.aspx" />
+    <Content Include="Tabs\Production\CurdPacking.aspx" />
     <Content Include="Tabs\Production\CurdProcessing.aspx" />
     <Content Include="Tabs\Production\CurdProcseeingQC.aspx" />
+    <Content Include="Tabs\Production\EffluentTreatmentPlant.aspx" />
     <Content Include="Tabs\Production\FilmData.aspx" />
     <Content Include="Tabs\Production\FinishedGoodRelease.aspx" />
+    <Content Include="Tabs\Production\GheeProductionRegister.aspx" />
     <Content Include="Tabs\Production\Homogenizer.aspx" />
+    <Content Include="Tabs\Production\IceCreamColdRoomTemperature.aspx" />
+    <Content Include="Tabs\Production\IceCreamMixProcessing.aspx" />
+    <Content Include="Tabs\Production\KhoaPlantLogQC.aspx" />
+    <Content Include="Tabs\Production\MachineAirCompressors.aspx" />
+    <Content Include="Tabs\Production\MachineComplaintsAndRectifiedRecord.aspx" />
+    <Content Include="Tabs\Production\MachineStartingCondition.aspx" />
+    <Content Include="Tabs\Production\MicrobiologicalAnalysisForMilkAndMilkProductsQC.aspx" />
+    <Content Include="Tabs\Production\MicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest.aspx" />
+    <Content Include="Tabs\Production\MicrobiologicalCultureStockRegisterQC.aspx" />
     <Content Include="Tabs\Production\MilkColdRoomTemperature.aspx" />
     <Content Include="Tabs\Production\MilkPacking.aspx" />
     <Content Include="Tabs\Production\MilkProductsTestBeforePackingQC.aspx" />
+    <Content Include="Tabs\Production\MixPreparationIncrediantsAdded.aspx" />
+    <Content Include="Tabs\Production\OpeningStockForMilkAndAllProducts.aspx" />
     <Content Include="Tabs\Production\PasteurizationProcess.aspx" />
     <Content Include="Tabs\Production\PasteurizationQC.aspx" />
     <Content Include="Tabs\Production\QCAfterProcessing.aspx" />
     <Content Include="Tabs\Production\QualityCheck.aspx" />
+    <Content Include="Tabs\Production\Re-ChilledMilkQc.aspx" />
     <Content Include="Tabs\Production\Rechilling.aspx" />
     <Content Include="Tabs\Production\ReturnDrainedMilkQC.aspx" />
     <Content Include="Tabs\Production\RMRData.aspx" />
@@ -1201,6 +1222,7 @@
     </Compile>
     <Compile Include="Tabs\Administration\BillSequence.aspx.cs">
       <DependentUpon>BillSequence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Administration\BillSequence.aspx.designer.cs">
       <DependentUpon>BillSequence.aspx</DependentUpon>
@@ -1214,6 +1236,7 @@
     </Compile>
     <Compile Include="Tabs\Administration\UserLog.aspx.cs">
       <DependentUpon>UserLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Administration\UserLog.aspx.designer.cs">
       <DependentUpon>UserLog.aspx</DependentUpon>
@@ -1421,11 +1444,54 @@
     <Compile Include="Tabs\Marketing\StaffAccountSalesSummary.aspx.designer.cs">
       <DependentUpon>StaffAccountSalesSummary.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\Production\AdulterationConfirmationTastQC.aspx.cs">
+      <DependentUpon>AdulterationConfirmationTastQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\AdulterationConfirmationTastQC.aspx.designer.cs">
+      <DependentUpon>AdulterationConfirmationTastQC.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Production\AfterPackedPouchMilkTestQC.aspx.cs">
       <DependentUpon>AfterPackedPouchMilkTestQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Production\AfterPackedPouchMilkTestQC.aspx.designer.cs">
       <DependentUpon>AfterPackedPouchMilkTestQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\BoreWater.aspx.cs">
+      <DependentUpon>BoreWater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\BoreWater.aspx.designer.cs">
+      <DependentUpon>BoreWater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\ButterMilkPreparation.aspx.cs">
+      <DependentUpon>ButterMilkPreparation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\ButterMilkPreparation.aspx.designer.cs">
+      <DependentUpon>ButterMilkPreparation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\ChemicalReagentAndMediaPreparationsQC.aspx.cs">
+      <DependentUpon>ChemicalReagentAndMediaPreparationsQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\ChemicalReagentAndMediaPreparationsQC.aspx.designer.cs">
+      <DependentUpon>ChemicalReagentAndMediaPreparationsQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\CleaningRegister.aspx.cs">
+      <DependentUpon>CleaningRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\CleaningRegister.aspx.designer.cs">
+      <DependentUpon>CleaningRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\ClosingStockForMilkInSiloAndAllProducts.aspx.cs">
+      <DependentUpon>ClosingStockForMilkInSiloAndAllProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\ClosingStockForMilkInSiloAndAllProducts.aspx.designer.cs">
+      <DependentUpon>ClosingStockForMilkInSiloAndAllProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Production\Cold room temperature chart.aspx.cs">
       <DependentUpon>Cold room temperature chart.aspx</DependentUpon>
@@ -1436,9 +1502,17 @@
     </Compile>
     <Compile Include="Tabs\Production\CreamProduction.aspx.cs">
       <DependentUpon>CreamProduction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Production\CreamProduction.aspx.designer.cs">
       <DependentUpon>CreamProduction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\CurdPacking.aspx.cs">
+      <DependentUpon>CurdPacking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\CurdPacking.aspx.designer.cs">
+      <DependentUpon>CurdPacking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Production\CurdProcessing.aspx.cs">
       <DependentUpon>CurdProcessing.aspx</DependentUpon>
@@ -1454,8 +1528,16 @@
     <Compile Include="Tabs\Production\CurdProcseeingQC.aspx.designer.cs">
       <DependentUpon>CurdProcseeingQC.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\Production\EffluentTreatmentPlant.aspx.cs">
+      <DependentUpon>EffluentTreatmentPlant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\EffluentTreatmentPlant.aspx.designer.cs">
+      <DependentUpon>EffluentTreatmentPlant.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Production\FilmData.aspx.cs">
       <DependentUpon>FilmData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Production\FilmData.aspx.designer.cs">
       <DependentUpon>FilmData.aspx</DependentUpon>
@@ -1467,29 +1549,117 @@
     <Compile Include="Tabs\Production\FinishedGoodRelease.aspx.designer.cs">
       <DependentUpon>FinishedGoodRelease.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\Production\GheeProductionRegister.aspx.cs">
+      <DependentUpon>GheeProductionRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\GheeProductionRegister.aspx.designer.cs">
+      <DependentUpon>GheeProductionRegister.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Production\Homogenizer.aspx.cs">
       <DependentUpon>Homogenizer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Production\Homogenizer.aspx.designer.cs">
       <DependentUpon>Homogenizer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\Production\IceCreamColdRoomTemperature.aspx.cs">
+      <DependentUpon>IceCreamColdRoomTemperature.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\IceCreamColdRoomTemperature.aspx.designer.cs">
+      <DependentUpon>IceCreamColdRoomTemperature.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\IceCreamMixProcessing.aspx.cs">
+      <DependentUpon>IceCreamMixProcessing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\IceCreamMixProcessing.aspx.designer.cs">
+      <DependentUpon>IceCreamMixProcessing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\KhoaPlantLogQC.aspx.cs">
+      <DependentUpon>KhoaPlantLogQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\KhoaPlantLogQC.aspx.designer.cs">
+      <DependentUpon>KhoaPlantLogQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\MachineAirCompressors.aspx.cs">
+      <DependentUpon>MachineAirCompressors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\MachineAirCompressors.aspx.designer.cs">
+      <DependentUpon>MachineAirCompressors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\MachineComplaintsAndRectifiedRecord.aspx.cs">
+      <DependentUpon>MachineComplaintsAndRectifiedRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\MachineComplaintsAndRectifiedRecord.aspx.designer.cs">
+      <DependentUpon>MachineComplaintsAndRectifiedRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\MachineStartingCondition.aspx.cs">
+      <DependentUpon>MachineStartingCondition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\MachineStartingCondition.aspx.designer.cs">
+      <DependentUpon>MachineStartingCondition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\MicrobiologicalAnalysisForMilkAndMilkProductsQC.aspx.cs">
+      <DependentUpon>MicrobiologicalAnalysisForMilkAndMilkProductsQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\MicrobiologicalAnalysisForMilkAndMilkProductsQC.aspx.designer.cs">
+      <DependentUpon>MicrobiologicalAnalysisForMilkAndMilkProductsQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\MicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest.aspx.cs">
+      <DependentUpon>MicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\MicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest.aspx.designer.cs">
+      <DependentUpon>MicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\MicrobiologicalCultureStockRegisterQC.aspx.cs">
+      <DependentUpon>MicrobiologicalCultureStockRegisterQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\MicrobiologicalCultureStockRegisterQC.aspx.designer.cs">
+      <DependentUpon>MicrobiologicalCultureStockRegisterQC.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Production\MilkColdRoomTemperature.aspx.cs">
       <DependentUpon>MilkColdRoomTemperature.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Production\MilkColdRoomTemperature.aspx.designer.cs">
       <DependentUpon>MilkColdRoomTemperature.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Production\MilkPacking.aspx.cs">
       <DependentUpon>MilkPacking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Production\MilkPacking.aspx.designer.cs">
       <DependentUpon>MilkPacking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Production\MilkProductsTestBeforePackingQC.aspx.cs">
       <DependentUpon>MilkProductsTestBeforePackingQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Production\MilkProductsTestBeforePackingQC.aspx.designer.cs">
       <DependentUpon>MilkProductsTestBeforePackingQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\MixPreparationIncrediantsAdded.aspx.cs">
+      <DependentUpon>MixPreparationIncrediantsAdded.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\MixPreparationIncrediantsAdded.aspx.designer.cs">
+      <DependentUpon>MixPreparationIncrediantsAdded.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\OpeningStockForMilkAndAllProducts.aspx.cs">
+      <DependentUpon>OpeningStockForMilkAndAllProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\OpeningStockForMilkAndAllProducts.aspx.designer.cs">
+      <DependentUpon>OpeningStockForMilkAndAllProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Production\PasteurizationProcess.aspx.cs">
       <DependentUpon>PasteurizationProcess.aspx</DependentUpon>
@@ -1519,6 +1689,13 @@
     <Compile Include="Tabs\Production\QualityCheck.aspx.designer.cs">
       <DependentUpon>QualityCheck.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\Production\Re-ChilledMilkQc.aspx.cs">
+      <DependentUpon>Re-ChilledMilkQc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\Re-ChilledMilkQc.aspx.designer.cs">
+      <DependentUpon>Re-ChilledMilkQc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Production\Rechilling.aspx.cs">
       <DependentUpon>Rechilling.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1528,6 +1705,7 @@
     </Compile>
     <Compile Include="Tabs\Production\ReturnDrainedMilkQC.aspx.cs">
       <DependentUpon>ReturnDrainedMilkQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Production\ReturnDrainedMilkQC.aspx.designer.cs">
       <DependentUpon>ReturnDrainedMilkQC.aspx</DependentUpon>
@@ -1548,12 +1726,14 @@
     </Compile>
     <Compile Include="Tabs\Production\StandardizationProductsAdded.aspx.cs">
       <DependentUpon>StandardizationProductsAdded.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Production\StandardizationProductsAdded.aspx.designer.cs">
       <DependentUpon>StandardizationProductsAdded.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Production\TraceabilityForMilkQC.aspx.cs">
       <DependentUpon>TraceabilityForMilkQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Production\TraceabilityForMilkQC.aspx.designer.cs">
       <DependentUpon>TraceabilityForMilkQC.aspx</DependentUpon>

@@ -96,7 +96,6 @@ namespace Dairy.Tabs.Production
 
                 divSusccess.Visible = true;
                 lblSuccess.Text = "Machine Air Compressors Data Updated  Successfully";
-                //ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx2').removeClass('collapsed-box');", true);
                 pnlError.Update();
             }
             else

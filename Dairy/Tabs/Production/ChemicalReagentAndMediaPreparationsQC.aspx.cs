@@ -73,7 +73,7 @@ namespace Dairy.Tabs.Production
 
                 divSusccess.Visible = true;
                 lblSuccess.Text = "Chemical Reagent And Media Preparations QC Data Added  Successfully";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').removeClass('collapsed-box');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx2').removeClass('collapsed-box');", true);
                 pnlError.Update();
             }
             else

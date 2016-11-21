@@ -347,7 +347,7 @@
               </div><!-- /.box-body -->            
              </div><!-- /.box -->
 
-          <div id="bx1" class="box collapsed-box">
+          <div id="bx2" class="box collapsed-box">
             <div class="box-header with-border">
               <h3 class="box-title"> Chemical Reagent And Media Preparations QC List </h3>
               <div class="box-tools pull-right" style="right: 4px; top: 4px">
