@@ -206,11 +206,12 @@ namespace Dairy.Tabs.Production
                 rpStandardizationProductsAdded.DataSource = DS;
                 rpStandardizationProductsAdded.DataBind();
             }
-            else if (DS==null)
+            else
             {
-               
+                DS.Clear();
+                rpStandardizationProductsAdded.DataSource = DS;
+                rpStandardizationProductsAdded.DataBind();
             }
-           
         }
 
         public void GetStandardizationProductsAddedDetails(int RMRId)

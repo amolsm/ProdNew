@@ -241,3 +241,8 @@ D:\Test\ProdGit\ProdCode\Comman\bin\Comman.pdb
 D:\Test\ProdGit\ProdCode\Comman\obj\Release\Comman.csprojResolveAssemblyReference.cache
 D:\Test\ProdGit\ProdCode\Comman\obj\Release\Comman.dll
 D:\Test\ProdGit\ProdCode\Comman\obj\Release\Comman.pdb
+D:\Nanjil\ProdNew\Comman\bin\Comman.dll
+D:\Nanjil\ProdNew\Comman\bin\Comman.pdb
+D:\Nanjil\ProdNew\Comman\obj\Release\Comman.csprojResolveAssemblyReference.cache
+D:\Nanjil\ProdNew\Comman\obj\Release\Comman.dll
+D:\Nanjil\ProdNew\Comman\obj\Release\Comman.pdb

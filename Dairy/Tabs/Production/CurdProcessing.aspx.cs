@@ -120,6 +120,12 @@ namespace Dairy.Tabs.Production
                 rpCurdProcessingList.DataSource = DS;
                 rpCurdProcessingList.DataBind();
             }
+            else
+            {
+                DS.Clear();
+                rpCurdProcessingList.DataSource = DS;
+                rpCurdProcessingList.DataBind();
+            }
 
 
         }

@@ -445,12 +445,40 @@
 
                 <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional" >
                     <ContentTemplate>
+                        <div class="row">
+                    <div class="col-lg-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+<%--                        <i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
+                          <asp:Label ID="Label22" runat="server" Text="Date"></asp:Label>
+                      </div>
+                       <asp:TextBox ID="txtSearchDate" class="form-control" type="date" runat="server" ValidationGroup="Save" ></asp:TextBox>                        
+                    </div><!-- /.input group -->
+  <asp:RequiredFieldValidator ID="RequiredFieldValidator21" runat="server" ErrorMessage="Pls Enter Date" style="font-size:12px;" ControlToValidate="txtSearchDate" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
+                  </div><!-- /.form group -->
+                                        
+                          
+                      </div> 
+                    <div class="col-lg-3" >
+                  <div class="form-group ">
+                    <div class="input-group">
+                        <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Search" ValidationGroup="Search" OnClick="btnSearch_Click"/> &nbsp;    
+                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                   
+                       
+                          
+                      </div>
+                            </div>
 
                 <table id="example1" class="table table-bordered table-striped">
                    
 
                  
-                      <asp:Repeater ID="rpQCAfterProcessingList" runat="server" OnItemCommand="rpQCAfterProcessingList_ItemCommand" >
+        <asp:Repeater ID="rpQCAfterProcessingList" runat="server" OnItemCommand="rpQCAfterProcessingList_ItemCommand" >
                 
                 
                <HeaderTemplate>

@@ -65,7 +65,13 @@ namespace Dairy.Tabs.Production
                 rpQCAfterProcessingList.DataSource = DS;
                 rpQCAfterProcessingList.DataBind();
             }
-         }
+            else
+            {
+                DS.Clear();
+                rpQCAfterProcessingList.DataSource = DS;
+                rpQCAfterProcessingList.DataBind();
+            }
+        }
 
         protected void rpQCAfterProcessingList_ItemCommand(object source, RepeaterCommandEventArgs e)
         {

@@ -74,6 +74,12 @@ namespace Dairy.Tabs.Production
                 rpPasteurizationQCList.DataSource = DS;
                 rpPasteurizationQCList.DataBind();
             }
+            else
+            {
+                DS.Clear();
+                rpPasteurizationQCList.DataSource = DS;
+                rpPasteurizationQCList.DataBind();
+            }
 
         }
 

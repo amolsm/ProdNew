@@ -12,7 +12,7 @@
           </h1> 
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li>
-            <li class="active">StandardizationProductsAdded</li>
+            <li class="active">StandardizationProductsAdded</li> 
           </ol>
         </section>
 

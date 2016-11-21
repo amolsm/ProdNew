@@ -208,6 +208,12 @@ namespace Dairy.Tabs.Production
                 rpMilkColdRoomTemperature.DataSource = DS;
                 rpMilkColdRoomTemperature.DataBind();
             }
+            else
+            {
+                DS.Clear();
+                rpMilkColdRoomTemperature.DataSource = DS;
+                rpMilkColdRoomTemperature.DataBind();
+            }
         }
 
         public void GetMilkColdRoomTemperatureDetails(int RMRId)

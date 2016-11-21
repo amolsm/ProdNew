@@ -205,6 +205,12 @@ namespace Dairy.Tabs.Production
                rpFilmDataList.DataSource=DS;
                rpFilmDataList.DataBind(); 
             }
+            else
+            {
+                DS.Clear();
+                rpFilmDataList.DataSource = DS; 
+                rpFilmDataList.DataBind(); 
+            }
         }
 
              public void GetFilmDetails(int RMRId)

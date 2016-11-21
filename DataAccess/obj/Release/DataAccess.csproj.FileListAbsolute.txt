@@ -437,3 +437,12 @@ D:\Test\ProdGit\ProdCode\DataAccess\bin\Model.pdb
 D:\Test\ProdGit\ProdCode\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache
 D:\Test\ProdGit\ProdCode\DataAccess\obj\Release\DataAccess.dll
 D:\Test\ProdGit\ProdCode\DataAccess\obj\Release\DataAccess.pdb
+D:\Nanjil\ProdNew\DataAccess\bin\DataAccess.dll
+D:\Nanjil\ProdNew\DataAccess\bin\DataAccess.pdb
+D:\Nanjil\ProdNew\DataAccess\bin\Comman.dll
+D:\Nanjil\ProdNew\DataAccess\bin\Model.dll
+D:\Nanjil\ProdNew\DataAccess\bin\Comman.pdb
+D:\Nanjil\ProdNew\DataAccess\bin\Model.pdb
+D:\Nanjil\ProdNew\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache
+D:\Nanjil\ProdNew\DataAccess\obj\Release\DataAccess.dll
+D:\Nanjil\ProdNew\DataAccess\obj\Release\DataAccess.pdb

@@ -16,7 +16,7 @@
             <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li>
             <li class="active">RMR</li>
           </ol>
-        </section>
+       </section>
 
     <section class="content">
                    <div class="row">
@@ -51,7 +51,7 @@
             <div class="box-header with-border">
               <h3 class="box-title"><asp:Label ID="lblHeaderTab" runat="server" Text="ADD RMReceive" ></asp:Label> </h3>
               <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-plus"></i></button>
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
                 
               </div>
             </div>
@@ -199,7 +199,7 @@
                         <%--<i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
                           <asp:Label ID="Label5" runat="server" Text="MBRT Start Time"></asp:Label>
                       </div>
-                       <asp:TextBox ID="txtMBRTStartTime" class="form-control" type="time"        placeholder=" MBRT Start Time" ToolTip="MBRT Start Time" runat="server" ReadOnly="true"></asp:TextBox>        
+                       <asp:TextBox ID="txtMBRTStartTime" class="form-control" type="time" placeholder=" MBRT Start Time" ToolTip="MBRT Start Time" runat="server" ReadOnly="true"></asp:TextBox>        
                     </div><!-- /.input group -->
                         <asp:RequiredFieldValidator ID="RFVMBRTStart" runat="server" ErrorMessage="Please MBRT Start Time" style="font-size:12px;" ControlToValidate="txtMBRTStartTime" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
                   </div><!-- /.form group -->
@@ -327,6 +327,34 @@
 
                  <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
                     <ContentTemplate>
+                        <div class="row">
+                    <div class="col-lg-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+<%--                        <i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
+                          <asp:Label ID="Label17" runat="server" Text="Date"></asp:Label>
+                      </div>
+                       <asp:TextBox ID="txtSearchDate" class="form-control" type="date" runat="server" ValidationGroup="Save" ></asp:TextBox>                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                        
+                          
+                      </div> 
+                    <div class="col-lg-3" >
+                  <div class="form-group ">
+                    <div class="input-group">
+                        <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Search" ValidationGroup="Search" OnClick="btnSearch_Click"/> &nbsp;    
+                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                   
+                       
+                          
+                      </div>
+                            </div>
 
                 <table id="example1" class="table table-bordered table-striped">
                    

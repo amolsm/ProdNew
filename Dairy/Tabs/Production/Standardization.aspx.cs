@@ -189,6 +189,12 @@ namespace Dairy.Tabs.Production
                 rpStandardizationList.DataSource = DS;
                 rpStandardizationList.DataBind();
             }
+            else
+            {
+                DS.Clear();
+                rpStandardizationList.DataSource = DS;
+                rpStandardizationList.DataBind();
+            }
 
 
         }

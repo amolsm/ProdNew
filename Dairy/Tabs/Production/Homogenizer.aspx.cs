@@ -247,6 +247,12 @@ namespace Dairy.Tabs.Production
                 rpHomogenizer.DataSource = DS;
                 rpHomogenizer.DataBind();
             }
+            else
+            {
+                DS.Clear();
+                rpHomogenizer.DataSource = DS;
+                rpHomogenizer.DataBind();
+            }
         }
 
         public void GetHomogenizerDetails(int RMRId)

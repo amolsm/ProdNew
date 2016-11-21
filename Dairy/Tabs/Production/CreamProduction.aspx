@@ -269,9 +269,8 @@
 
                                      
                                       <%--  <th>RMRId</th>--%>
-                                        <th>CreamProductionDate</th> 
-                                        <th>RMR Batch No</th>
-                                                                             
+                                        <th>RMRDate</th> 
+                                        <th>RMR Batch No</th>                                                                             
                                         <th>Shift Name</th>  
                                         <th>Status</th>                                     
                                         <th>Edit</th>
@@ -288,9 +287,8 @@
 
                                                             
                                        <%-- <td><%# Eval("RMRId")%></td>     --%>
-                                         <td><%# Eval("PastQCDate")%></td> 
-                                         <td><%# Eval("BatchNo")%></td>                                       
-                                       
+                                         <td><%# Eval("RMRDate")%></td> 
+                                         <td><%# Eval("BatchNo")%></td>  
                                         <td><%# Eval("ShiftName")%></td>
                                        <td><%# Eval("StatusName") %></td>
                                     
@@ -315,13 +313,11 @@
                     <tfoot>
                       <tr>
 
-                                      
-                                        <%--  <th>RMRId</th>--%>
-                                        <th>CreamProductionDate</th> 
-                                        <th>RMR Batch No</th>
-                                                                             
-                                        <th>Shift Name</th> 
-                                        <th>Status</th>                                                                           
+                                       <%--  <th>RMRId</th>--%>
+                                        <th>RMRDate</th> 
+                                        <th>RMR Batch No</th>                                                                             
+                                        <th>Shift Name</th>  
+                                        <th>Status</th>                                     
                                         <th>Edit</th>
                                        
 

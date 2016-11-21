@@ -67,6 +67,12 @@ namespace Dairy.Tabs.Production
                 rpPastProcessList.DataSource = DS;
                 rpPastProcessList.DataBind();
             }
+            else
+            {
+                DS.Clear();
+                rpPastProcessList.DataSource = DS;
+                rpPastProcessList.DataBind();
+            }
 
 
         }

@@ -309,6 +309,12 @@ namespace Dairy.Tabs.Production
                 rpAfterPackedMilkQC.DataSource = DS;
                 rpAfterPackedMilkQC.DataBind();
             }
+            else
+            {
+                DS.Clear();
+                rpAfterPackedMilkQC.DataSource = DS;
+                rpAfterPackedMilkQC.DataBind();
+            }
 
 
         }

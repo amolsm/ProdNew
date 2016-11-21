@@ -195,6 +195,12 @@ namespace Dairy.Tabs.Production
                 rpMilkBeforePackingQC.DataSource = DS;
                 rpMilkBeforePackingQC.DataBind();
             }
+            else
+            {
+                DS.Clear();
+                rpMilkBeforePackingQC.DataSource = DS;
+                rpMilkBeforePackingQC.DataBind();
+            }
         }
 
         public void GetMilkProductsTestBeforePackingQCDetails(int RMRId)

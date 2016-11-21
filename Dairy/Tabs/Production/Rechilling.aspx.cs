@@ -220,8 +220,9 @@ namespace Dairy.Tabs.Production
             }
             else
             {
-                GetReachlingDetails(dates);
-                uprouteList.Update();
+                DS.Clear();
+                rpRechillingList.DataSource = DS;
+                rpRechillingList.DataBind();
             }
 
         }

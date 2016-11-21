@@ -10,7 +10,7 @@
         <h1>
             Film Data     
           </h1> 
-          <ol class="breadcrumb">
+          <ol class="breadcrumb"> 
             <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li>
             <li class="active">FilmData</li>
           </ol>

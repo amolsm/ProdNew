@@ -225,6 +225,12 @@ namespace Dairy.Tabs.Production
                 TraceabilityQC.DataSource = DS;
                 TraceabilityQC.DataBind();
             }
+            else
+            {
+                DS.Clear();
+                TraceabilityQC.DataSource = DS;
+                TraceabilityQC.DataBind();
+            }
         }
 
         public void GetTraceabilityDetails(int RMRId)

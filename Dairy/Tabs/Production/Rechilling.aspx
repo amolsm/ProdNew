@@ -19,7 +19,7 @@
      <section class="content">
                        <div class="row">
                 <asp:UpdatePanel runat="server" ID="pnlError" UpdateMode="Conditional">
-                    <ContentTemplate>
+                     <ContentTemplate>
                         <div class="col-md-12">
                             <div class="alert alert-danger alert-dismissable" runat="server" id="divDanger" visible="false">
 
