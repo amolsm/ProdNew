@@ -22,7 +22,7 @@ namespace Dairy.Tabs.Production
         RMRecieve rmrdata;
         ProductionData proddata;
         DataSet DS = new DataSet();
-        
+        //string startTime;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -214,7 +214,8 @@ namespace Dairy.Tabs.Production
                     if (dpfinishQC.SelectedItem.Text == "Accepted")
                     {
                         txtMBRTStartTime.ReadOnly = false;
-                        txtMBRTStartTime.Text = Convert.ToString(DateTime.Now.ToString("HH:mm"));
+                         txtMBRTStartTime.Text = Convert.ToString(DateTime.Now.ToString("HH:mm"));
+                        
                         txtMBRTEndTime.ReadOnly = false;
                         txtTotalHours.ReadOnly = false;
                         
@@ -332,6 +333,40 @@ namespace Dairy.Tabs.Production
             string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
             GetRMRDetails(dates);
             uprouteList.Update();
+        }
+
+        protected void txtMBRTEndTime_TextChanged(object sender, EventArgs e)
+        {
+           if (txtMBRTEndTime.Text != string.Empty)
+            {
+                //TimeSpan Starttime = TimeSpan.Parse(txtMBRTStartTime.Text);
+                //TimeSpan Endtime = TimeSpan.Parse(txtMBRTEndTime.Text);
+                //if (Endtime > Starttime)
+                //{
+                //    TimeSpan duration = Endtime.Subtract(Starttime);
+                //    txtTotalHours.Text = Convert.ToString(duration);
+                //}
+                //else
+                //{
+
+                //}
+
+                DateTime start = DateTime.Parse(txtMBRTStartTime.Text);
+                DateTime end = DateTime.Parse(txtMBRTEndTime.Text);
+                if(end > start)
+                {
+                    TimeSpan duration = end.Subtract(start);
+                    txtTotalHours.Text = Convert.ToString(duration);
+                }
+                else
+                {
+                    txtTotalHours.Text = string.Empty;
+                }
+            }
+           else
+            {
+                txtTotalHours.Text = string.Empty;
+            }
         }
     }
 

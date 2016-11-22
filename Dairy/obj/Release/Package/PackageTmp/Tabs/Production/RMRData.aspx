@@ -7,6 +7,7 @@
     <style type="text/css">.cntrlbtm {    margin-bottom: 1px;} </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    
     <section class="content-header">
           <h1>
            RMR Data 
@@ -199,7 +200,7 @@
                         <%--<i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
                           <asp:Label ID="Label5" runat="server" Text="MBRT Start Time"></asp:Label>
                       </div>
-                       <asp:TextBox ID="txtMBRTStartTime" class="form-control" type="time" placeholder=" MBRT Start Time" ToolTip="MBRT Start Time" runat="server" ReadOnly="true"></asp:TextBox>        
+                       <asp:TextBox ID="txtMBRTStartTime" class="form-control" type="time"  placeholder=" MBRT Start Time" ToolTip="MBRT Start Time" runat="server" ReadOnly="true"></asp:TextBox>        
                     </div><!-- /.input group -->
                         <asp:RequiredFieldValidator ID="RFVMBRTStart" runat="server" ErrorMessage="Please MBRT Start Time" style="font-size:12px;" ControlToValidate="txtMBRTStartTime" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
                   </div><!-- /.form group -->
@@ -220,7 +221,7 @@
                         <%--<i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
                           <asp:Label ID="Label6" runat="server" Text="MBRT End Time"></asp:Label>
                       </div>
-                       <asp:TextBox ID="txtMBRTEndTime" class="form-control" type="time"        placeholder=" MBRT End Time" ToolTip="MBRT End Time" runat="server" ReadOnly="true"></asp:TextBox>        
+                       <asp:TextBox ID="txtMBRTEndTime" class="form-control" type="time" placeholder=" MBRT End Time" ToolTip="MBRT End Time" runat="server" ReadOnly="true" OnTextChanged="txtMBRTEndTime_TextChanged" AutoPostBack ="true"></asp:TextBox>        
                     </div><!-- /.input group -->
                         <asp:RequiredFieldValidator ID="RFVMBRTEnd" runat="server" ErrorMessage="Please MBRT End Time" style="font-size:12px;" ControlToValidate="txtMBRTEndTime" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
                   </div><!-- /.form group -->

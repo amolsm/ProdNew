@@ -1675,7 +1675,6 @@ D:\ProdCode\Dairy\obj\Debug\RdlCompile.cache
 D:\ProdCode\Dairy\obj\Debug\RdlCompile.compiled
 D:\ProdCode\Dairy\obj\Debug\Dairy.dll
 D:\ProdCode\Dairy\obj\Debug\Dairy.pdb
-D:\Nanjil\ProdNew\Dairy\bin\Dairy.dll.config
 D:\Nanjil\ProdNew\Dairy\bin\Dairy.dll
 D:\Nanjil\ProdNew\Dairy\bin\Dairy.pdb
 D:\Nanjil\ProdNew\Dairy\bin\Bussiness.dll
@@ -1683,7 +1682,6 @@ D:\Nanjil\ProdNew\Dairy\bin\Comman.dll
 D:\Nanjil\ProdNew\Dairy\bin\DataAccess.dll
 D:\Nanjil\ProdNew\Dairy\bin\EntityFramework.dll
 D:\Nanjil\ProdNew\Dairy\bin\Model.dll
-D:\Nanjil\ProdNew\Dairy\bin\Microsoft.SqlServer.Types.dll
 D:\Nanjil\ProdNew\Dairy\bin\Bussiness.pdb
 D:\Nanjil\ProdNew\Dairy\bin\Comman.pdb
 D:\Nanjil\ProdNew\Dairy\bin\DataAccess.pdb
@@ -1694,3 +1692,5 @@ D:\Nanjil\ProdNew\Dairy\obj\Debug\RdlCompile.cache
 D:\Nanjil\ProdNew\Dairy\obj\Debug\RdlCompile.compiled
 D:\Nanjil\ProdNew\Dairy\obj\Debug\Dairy.dll
 D:\Nanjil\ProdNew\Dairy\obj\Debug\Dairy.pdb
+D:\Nanjil\ProdNew\Dairy\bin\Dairy.dll.config
+D:\Nanjil\ProdNew\Dairy\bin\Microsoft.SqlServer.Types.dll

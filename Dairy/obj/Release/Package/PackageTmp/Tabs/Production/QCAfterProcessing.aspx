@@ -254,7 +254,7 @@
 <%--                        <i class="fa fa-road "></i><span style="color:red">&nbsp;*</span>--%>
                           <asp:Label ID="Label10" runat="server" Text="Phosphatase End Time"></asp:Label>
                       </div>
-                       <asp:TextBox ID="txtPhosphataseEndTime" class="form-control" type="time"  placeholder="Enter End Time" runat="server" ></asp:TextBox>                        
+                       <asp:TextBox ID="txtPhosphataseEndTime" class="form-control" type="time"  placeholder="Enter End Time" runat="server" OnTextChanged="txtPhosphataseEndTime_TextChanged" AutoPostBack ="true"></asp:TextBox>                        
                     </div><!-- /.input group -->
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="Pls Enter Phosphatase End Time" style="font-size:12px;" ControlToValidate="txtPhosphataseEndTime" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
 

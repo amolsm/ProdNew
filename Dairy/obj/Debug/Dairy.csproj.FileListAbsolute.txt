@@ -1692,3 +1692,5 @@ D:\Nanjil\ProdNew\Dairy\obj\Debug\RdlCompile.cache
 D:\Nanjil\ProdNew\Dairy\obj\Debug\RdlCompile.compiled
 D:\Nanjil\ProdNew\Dairy\obj\Debug\Dairy.dll
 D:\Nanjil\ProdNew\Dairy\obj\Debug\Dairy.pdb
+D:\Nanjil\ProdNew\Dairy\bin\Dairy.dll.config
+D:\Nanjil\ProdNew\Dairy\bin\Microsoft.SqlServer.Types.dll

@@ -291,5 +291,27 @@ namespace Dairy.Tabs.Production
             string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
             GetQCProcssingDetails(dates);
         }
+
+        protected void txtPhosphataseEndTime_TextChanged(object sender, EventArgs e)
+        {
+            if(txtPhosphataseEndTime.Text !=string.Empty)
+            {
+                DateTime phosStart = DateTime.Parse(txtPhosphataseStartingTime.Text);
+                DateTime phosEnd = DateTime.Parse(txtPhosphataseEndTime.Text);
+                if(phosEnd > phosStart)
+                {
+                    TimeSpan phosDuration = phosEnd.Subtract(phosStart);
+                    txtPhosphatasetotalhrs.Text = Convert.ToString(phosDuration);
+                }
+                else
+                {
+                    txtPhosphatasetotalhrs.Text = string.Empty;
+                }
+            }
+            else
+            {
+                txtPhosphatasetotalhrs.Text = string.Empty;
+            }
+        }
     }
 }
