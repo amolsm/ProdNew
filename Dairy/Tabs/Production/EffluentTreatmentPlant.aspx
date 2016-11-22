@@ -1,5 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EffluentTreatmentPlant.aspx.cs" Inherits="Dairy.Tabs.Production.EffluentTreatmentPlant" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+         <link href="../../Theme/plugins/jQueryUI/jquery-ui.css" rel="stylesheet" />
+        <script src="../../Theme/plugins/jQuery/jquery-1.10.2.min.js"></script>
+        <script src="../../Theme/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <style type="text/css">.cntrlbtm {    margin-bottom: 1px;} </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
      <section class="content-header">
@@ -56,7 +60,7 @@
         
 
               <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="lblDate" runat="server" Text="Date"></asp:Label>
@@ -67,10 +71,10 @@
                   </div><!-- /.form group -->
                 </div>                
                           
-                       
+             
 
-              <div class="col-lg-3">
-                  <div class="form-group">
+                   <div class="col-lg-3">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">                    
                         <asp:Label ID="Label1" runat="server" Text="Shift"></asp:Label>
@@ -85,10 +89,9 @@
                          </asp:RequiredFieldValidator>
                   </div><!-- /.form group -->
                </div>
-
                  
                      <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label2" runat="server" Text="Operated By"></asp:Label>
@@ -101,7 +104,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label4" runat="server" Text="Remarks"></asp:Label>
@@ -114,7 +117,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                   <div class="input-group-addon">
                   <asp:Label ID="Label5" runat="server" Text="Collection pump A"></asp:Label>
                    </div>
@@ -123,7 +126,7 @@
 
 
                     <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label9" runat="server" Text=" Starting Time "></asp:Label>
@@ -136,7 +139,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label3" runat="server" Text="End Time "></asp:Label>
@@ -149,7 +152,7 @@
                          
                         
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label6" runat="server" Text="Total Running Hours"></asp:Label>
@@ -163,7 +166,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                   <div class="input-group-addon">
                   <asp:Label ID="Label7" runat="server" Text="Collection pump B"></asp:Label>
                    </div>
@@ -172,7 +175,7 @@
 
 
                     <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label8" runat="server" Text=" Starting Time "></asp:Label>
@@ -185,7 +188,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label10" runat="server" Text="End Time "></asp:Label>
@@ -198,7 +201,7 @@
                          
                         
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label11" runat="server" Text="Total Running Hours"></asp:Label>
@@ -213,7 +216,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                   <div class="input-group-addon">
                   <asp:Label ID="Label12" runat="server" Text="AERATOR"></asp:Label>
                    </div>
@@ -222,7 +225,7 @@
 
 
                     <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label13" runat="server" Text=" Starting Time "></asp:Label>
@@ -235,7 +238,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label14" runat="server" Text="End Time "></asp:Label>
@@ -248,7 +251,7 @@
                          
                         
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label15" runat="server" Text="Total Running Hours"></asp:Label>
@@ -262,7 +265,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                   <div class="input-group-addon">
                   <asp:Label ID="Label16" runat="server" Text="BLOWER A"></asp:Label>
                    </div>
@@ -271,7 +274,7 @@
 
 
                     <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label17" runat="server" Text=" Starting Time "></asp:Label>
@@ -284,7 +287,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label18" runat="server" Text="End Time "></asp:Label>
@@ -297,7 +300,7 @@
                          
                         
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label19" runat="server" Text="Total Running Hours"></asp:Label>
@@ -310,7 +313,7 @@
              
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                   <div class="input-group-addon">
                   <asp:Label ID="Label20" runat="server" Text="BLOWER B"></asp:Label>
                    </div>
@@ -319,7 +322,7 @@
 
 
                     <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label21" runat="server" Text=" Starting Time "></asp:Label>
@@ -332,7 +335,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label22" runat="server" Text="End Time "></asp:Label>
@@ -346,7 +349,7 @@
                         
                    <div class="col-lg-3">
                   <div class="form-group">
-                    <div class="input-group">
+                    <div class="input-group cntrlbtm">
                       <div class="input-group-addon">
                           <asp:Label ID="Label23" runat="server" Text="Total Running Hours"></asp:Label>
                       </div>
@@ -358,7 +361,7 @@
              
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                   <div class="input-group-addon">
                   <asp:Label ID="Label24" runat="server" Text="Clarifier Mechanism "></asp:Label>
                    </div>
@@ -367,7 +370,7 @@
 
 
                     <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label25" runat="server" Text=" Starting Time "></asp:Label>
@@ -380,7 +383,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label26" runat="server" Text="End Time "></asp:Label>
@@ -393,7 +396,7 @@
                          
                         
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label27" runat="server" Text="Total Running Hours"></asp:Label>
@@ -406,7 +409,7 @@
              
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                   <div class="input-group-addon">
                   <asp:Label ID="Label28" runat="server" Text="Sludge Re-Circulation pump A"></asp:Label>
                    </div>
@@ -415,7 +418,7 @@
 
 
                     <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label29" runat="server" Text=" Starting Time "></asp:Label>
@@ -428,7 +431,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label30" runat="server" Text="End Time "></asp:Label>
@@ -441,7 +444,7 @@
                          
                         
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label31" runat="server" Text="Total Running Hours"></asp:Label>
@@ -454,7 +457,7 @@
              
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                   <div class="input-group-addon">
                   <asp:Label ID="Label32" runat="server" Text="Sludge Re-Circulation pump A"></asp:Label>
                    </div>
@@ -463,7 +466,7 @@
 
 
                     <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label33" runat="server" Text=" Starting Time "></asp:Label>
@@ -476,7 +479,7 @@
 
 
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label34" runat="server" Text="End Time "></asp:Label>
@@ -489,7 +492,7 @@
                          
                         
                    <div class="col-lg-3">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label35" runat="server" Text="Total Running Hours"></asp:Label>
@@ -503,7 +506,7 @@
 
 
                 <div class="col-lg-3 pull-right">
-                  <div class="form-group">
+                  <div class="form-group cntrlbtm">
                     <div class="input-group">
                         <asp:Button ID="btnAdd" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Add" ValidationGroup="Save" OnClick="btnAdd_Click" /> &nbsp;    
                         <asp:Button ID="btnUpdate" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Update" ValidationGroup="Save" OnClick="btnUpdate_Click" /> &nbsp;    

@@ -402,9 +402,9 @@
                <HeaderTemplate>
                   <thead>
                       <tr>
-                                       
-                                        <th>Batch No</th>
-                                        <th>DateTime</th>
+
+                                          <th>Batch No</th>
+                                         <th>DateTime</th>
                                         <th>Shift Name</th>                                                                        
                                         <th>Edit</th>
 
@@ -417,10 +417,8 @@
                </HeaderTemplate>
                <ItemTemplate>
                     <tr>
-                            
-                                        
                                         <td><%# Eval("BatchNo")%></td>
-                                        <td><%# Eval("GheeProductionRegisterDate")%></td> 
+                                        <td><%# Eval("GheeProductionRegisterDate")%></td>  
                                         <td><%# Eval("ShiftName")%></td>
                                                                                 
                                        
@@ -447,10 +445,9 @@
                       <tr>
 
 
-                                       
-                                        <th>Batch No</th>
-                                        <th>DateTime</th>
-                                        <th>Shift Name</th>
+                                       <th>Batch No</th>
+                                         <th>DateTime</th>
+                                        <th>Shift Name</th>                                                                        
                                         <th>Edit</th>
 
                                       

@@ -70,6 +70,7 @@
     <Compile Include="Production\DAClosingStockForMilkInSiloAndAllProducts.cs" />
     <Compile Include="Production\DACurdPackedData.cs" />
     <Compile Include="Production\DAFinishedGoodsRelease.cs" />
+    <Compile Include="Production\DAFumigationQC.cs" />
     <Compile Include="Production\DAGheeProductionRegister.cs" />
     <Compile Include="Production\DAHomogenizer.cs" />
     <Compile Include="Production\DAIceCreamColdRoomTemperature.cs" />
@@ -79,12 +80,14 @@
     <Compile Include="Production\DAMachineComplaintsAndRectifiedRecord.cs" />
     <Compile Include="Production\DAMachineStartingCondition.cs" />
     <Compile Include="Production\DAMicrobiologicalAnalysisForMilkAndMilkProductsQC.cs" />
+    <Compile Include="Production\DAMicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest.cs" />
     <Compile Include="Production\DAMicrobiologicalCultureStockRegisterQC.cs" />
     <Compile Include="Production\DAMilkColdRoomTemperature.cs" />
     <Compile Include="Production\DAMilkPackedData.cs" />
     <Compile Include="Production\DAMilkProductsTestBeforePackingQC.cs" />
     <Compile Include="Production\DAMixPreparationIncrediantsAdded.cs" />
     <Compile Include="Production\DAOpeningStockForMilkAndAllProducts.cs" />
+    <Compile Include="Production\DAPersonalHygieneCheckList.cs" />
     <Compile Include="Production\DAQCAfterProcessing.cs" />
     <Compile Include="Production\DAReturnDrainedMilkQualityQC.cs" />
     <Compile Include="Production\DAStandardizationProductsAdded.cs" />

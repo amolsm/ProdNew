@@ -132,7 +132,6 @@ namespace Dairy.Tabs.Production
                         hId.Value = Id.ToString();
                         Id = Convert.ToInt32(hId.Value);
                         GetBoreWaterDetails(Id);
-                        //ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').showClass('collapsed-box');", true);
 
 
                         btnAdd.Visible = false;

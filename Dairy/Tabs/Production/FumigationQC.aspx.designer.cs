@@ -10,7 +10,7 @@
 namespace Dairy.Tabs.Production {
     
     
-    public partial class MicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest {
+    public partial class FumigationQC {
         
         /// <summary>
         /// pnlError control.
@@ -229,13 +229,13 @@ namespace Dairy.Tabs.Production {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// txtTBCCount control.
+        /// txtChemicalUsed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTBCCount;
+        protected global::System.Web.UI.WebControls.TextBox txtChemicalUsed;
         
         /// <summary>
         /// RequiredFieldValidator5 control.
@@ -245,33 +245,6 @@ namespace Dairy.Tabs.Production {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
-        
-        /// <summary>
-        /// Label7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
-        
-        /// <summary>
-        /// txtyeastAndMouldCount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtyeastAndMouldCount;
-        
-        /// <summary>
-        /// RequiredFieldValidator6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
         
         /// <summary>
         /// Label8 control.
@@ -337,13 +310,13 @@ namespace Dairy.Tabs.Production {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// txtCheckedBy control.
+        /// txtDoneBy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCheckedBy;
+        protected global::System.Web.UI.WebControls.TextBox txtDoneBy;
         
         /// <summary>
         /// RequiredFieldValidator9 control.
@@ -445,13 +418,40 @@ namespace Dairy.Tabs.Production {
         protected global::System.Web.UI.UpdatePanel uprouteList;
         
         /// <summary>
-        /// rpMicrobiologicalAnalysisofSettlePlateTest control.
+        /// Label17 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpMicrobiologicalAnalysisofSettlePlateTest;
+        protected global::System.Web.UI.WebControls.Label Label17;
+        
+        /// <summary>
+        /// txtSearchDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSearchDate;
+        
+        /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSearch;
+        
+        /// <summary>
+        /// rpFumigationQC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rpFumigationQC;
         
         /// <summary>
         /// hId control.
