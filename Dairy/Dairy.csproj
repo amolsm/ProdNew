@@ -1222,7 +1222,6 @@
     </Compile>
     <Compile Include="Tabs\Administration\BillSequence.aspx.cs">
       <DependentUpon>BillSequence.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Administration\BillSequence.aspx.designer.cs">
       <DependentUpon>BillSequence.aspx</DependentUpon>
@@ -1236,7 +1235,6 @@
     </Compile>
     <Compile Include="Tabs\Administration\UserLog.aspx.cs">
       <DependentUpon>UserLog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tabs\Administration\UserLog.aspx.designer.cs">
       <DependentUpon>UserLog.aspx</DependentUpon>
@@ -2574,9 +2572,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1873</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1890/</IISUrl>
-          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://localhost:1890/</IISAppRootUrl>
+          <IISUrl>http://localhost:1895/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
