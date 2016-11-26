@@ -377,7 +377,7 @@
 
      </ul>
 </asp:Panel>   
-               <asp:Panel runat="server" ID="pnlProduction" Visible="true">
+         <asp:Panel runat="server" ID="pnlProduction" Visible="true">
 
     <ul class="sidebar-menu">
           <li class="treeview">
@@ -393,14 +393,32 @@
                   <li><a href="/Tabs/Production/StandardizationProductsAdded.aspx"><i class="fa fa-circle-o"></i>StandardizationAdded</a></li>
                    <li><a href="/Tabs/Production/Standardization.aspx"><i class="fa fa-circle-o"></i>Standardization</a></li>
                     <li><a href="/Tabs/Production/PasteurizationProcess.aspx"><i class="fa fa-circle-o"></i>Pasteurization Process</a></li>
-<%--                    <li><a href="/Tabs/Production/PasteurizationQC.aspx"><i class="fa fa-circle-o"></i>Pasteurization QC</a></li>--%>
                    <li><a href="/Tabs/Production/CreamProduction.aspx"><i class="fa fa-circle-o"></i>CreamProduction</a></li>
                    <li><a href="/Tabs/Production/FinishedGoodRelease.aspx"><i class="fa fa-circle-o"></i>Finished Good Release</a></li>
-                    <li><a href="/Tabs/Production/Homogenizer.aspx"><i class="fa fa-circle-o"></i>Homogenizer</a></li>
-                 
+                    <li><a href="/Tabs/Production/Homogenizer.aspx"><i class="fa fa-circle-o"></i>Homogenizer</a></li>                
                 <li><a href="/Tabs/Production/MilkPacking.aspx"><i class="fa fa-circle-o"></i>Milk Packing</a></li>
                  <li><a href="/Tabs/Production/MilkColdRoomTemperature.aspx"><i class="fa fa-circle-o"></i>Cold Room Details</a></li>
                 <li><a href="/Tabs/Production/FilmData.aspx"><i class="fa fa-circle-o"></i>Film Data Details</a></li>
+                <li><a href="/Tabs/Production/IceCreamColdRoomTemperature.aspx"><i class="fa fa-circle-o"></i>IceCream ColdRoom Temp</a></li>
+                <li><a href="/Tabs/Production/IceCreamMixProcessing.aspx"><i class="fa fa-circle-o"></i>IceCream Mix Proc</a></li>
+                <li><a href="/Tabs/Production/BoreWater.aspx" ><i class="fa fa-circle-o"></i> BoreWater </a></li> 
+
+
+
+
+                <li><a href="/Tabs/Production/ButterMilkPreparation.aspx"><i class="fa fa-circle-o"></i>ButterMilkPreparation</a></li>
+                <li><a href="/Tabs/Production/ClosingStockForMilkInSiloAndAllProducts.aspx"><i class="fa fa-circle-o"></i>ClosingStockForMilk</a></li>
+                <li><a href="/Tabs/Production/GheeProductionRegister.aspx"><i class="fa fa-circle-o"></i>GheeProductionRegister</a></li>                
+                <li><a href="/Tabs/Production/MachineAirCompressors.aspx"><i class="fa fa-circle-o"></i>MachineAirCompressors</a></li>
+                 <li><a href="/Tabs/Production/MachineComplaintsAndRectifiedRecord.aspx"><i class="fa fa-circle-o"></i>MachineComplaintsAndRectifiedRecord</a></li>
+                <li><a href="/Tabs/Production/MachineStartingCondition.aspx"><i class="fa fa-circle-o"></i>MachineStartingCondition</a></li>
+                <li><a href="/Tabs/Production/MicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest.aspx"><i class="fa fa-circle-o"></i>MicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest</a></li>
+                <li><a href="/Tabs/Production/MixPreparationIncrediantsAdded.aspx"><i class="fa fa-circle-o"></i>MixPreparationIncrediantsAdded</a></li>
+                <li><a href="/Tabs/Production/OpeningStockForMilkAndAllProducts.aspx" ><i class="fa fa-circle-o"></i> OpeningStockForMilkAndAllProducts </a></li> 
+                <li><a href="/Tabs/Production/PersonalHygieneCheckList.aspx" ><i class="fa fa-circle-o"></i> PersonalHygieneCheckList </a></li> 
+
+
+
                  <li class="treeview">
                       <a href="#">
               <i class="fa fa-thumbs-up" aria-hidden="true"></i>
@@ -413,8 +431,13 @@
                 <li><a href="/Tabs/Production/AfterPackedPouchMilkTestQC.aspx"><i class="fa fa-circle-o"></i>Pouch Milk QC</a></li>
                 <li><a href="/Tabs/Production/QCAfterProcessing.aspx"><i class="fa fa-circle-o"></i>After Process QC</a></li>  
                 <li><a href="/Tabs/Production/TraceabilityForMilkQC.aspx"><i class="fa fa-circle-o"></i>Traceability Milk Qc</a></li>  
-                    <li><a href="/Tabs/Production/ReturnDrainedMilkQC.aspx"><i class="fa fa-circle-o"></i>Return Drained Milk Qc</a></li> 
-                 <li><a href=" /Tabs/Production/MilkProductsTestBeforePackingQC.aspx "><i class="fa fa-circle-o"></i>QC Before Milk Packing</a></li>    
+                <li><a href="/Tabs/Production/ReturnDrainedMilkQC.aspx"><i class="fa fa-circle-o"></i>Return Drained Milk Qc</a></li> 
+                 <li><a href=" /Tabs/Production/MilkProductsTestBeforePackingQC.aspx "><i class="fa fa-circle-o"></i>QC Before Milk Packing</a></li> 
+ 
+                     
+
+
+
                 </ul>
                     <%---------------------------%>
                      <li class="treeview">

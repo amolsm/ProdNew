@@ -221,7 +221,6 @@ namespace Dairy.Tabs.Production
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
                 string DATE = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["FilmDate"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["FilmDate"].ToString();
-                //sky
                 if (DATE == "")
                 {
                     txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
@@ -232,8 +231,6 @@ namespace Dairy.Tabs.Production
                     txtDate.Text = (Convert.ToDateTime(date1).ToString("yyyy-MM-dd"));
                 }
                 txtBatchNo.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["BatchNo"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["BatchNo"].ToString();
-                //txtDate.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["Date"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["Date"].ToString();
-                //dpShiftDetails.SelectedValue = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["ShiftId"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["ShiftId"].ToString();
                 dpShiftDetails.ClearSelection();
                 string ShiftDetails = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["ShiftId"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["ShiftId"].ToString();
                 if (ShiftDetails == "")

@@ -1,19 +1,19 @@
-﻿    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web;
-    using System.Web.UI;
-    using System.Web.UI.WebControls;
-    using Model;
-    using Model.Production;
-    using System.Data;
-    using DataAccess.Production;
-    using Bussiness.Production;
-    using System.Text;
-    using Comman;
-    using Dairy.App_code;
-    using Dairy;
-    using Bussiness;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Model;
+using Model.Production;
+using System.Data;
+using DataAccess.Production;
+using Bussiness.Production;
+using System.Text;
+using Comman;
+using Dairy.App_code;
+using Dairy;
+using Bussiness;
 
 namespace Dairy.Tabs.Production
 {
@@ -132,7 +132,6 @@ namespace Dairy.Tabs.Production
                         hId.Value = Id.ToString();
                         Id = Convert.ToInt32(hId.Value);
                         GetBoreWaterDetails(Id);
-                        //ScriptManager.RegisterStartupScript(this, this.GetType(), "sel3", "$('#bx1').showClass('collapsed-box');", true);
 
 
                         btnAdd.Visible = false;

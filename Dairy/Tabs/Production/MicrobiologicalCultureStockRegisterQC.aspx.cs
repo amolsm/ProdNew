@@ -155,7 +155,7 @@ namespace Dairy.Tabs.Production
             bmbcsrqc = new BMicrobiologicalCultureStockRegisterQC();
             DataSet DS = new DataSet();
             DS = bmbcsrqc.GetMicrobiologicalCultureStockRegisterQCDetails();
-            if (!Comman.Comman.IsDataSetEmpty(DS)) ;
+            if (!Comman.Comman.IsDataSetEmpty(DS)) 
             {
                 rpMicrobiologicalCultureStockRegisterQC.DataSource = DS;
                 rpMicrobiologicalCultureStockRegisterQC.DataBind();

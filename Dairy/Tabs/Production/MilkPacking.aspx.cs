@@ -224,7 +224,6 @@ namespace Dairy.Tabs.Production
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
                 string DATE = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["PackedDate"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["PackedDate"].ToString();
-                //sky
                 if (DATE == "")
                 {
                     txtDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
@@ -243,7 +242,6 @@ namespace Dairy.Tabs.Production
                 }
                 else
                 {
-                    //if (dpShiftDetails.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["ShiftId"]).ToString()) != null)
                     {
                         dpShiftDetails.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["ShiftId"]).ToString()).Selected = true;
                     }

@@ -187,7 +187,7 @@ namespace Dairy.Tabs.Production
             bbmp = new BButterMilkPreparation();
             DataSet DS = new DataSet();
             DS = bbmp.GetButterMilkDetails();
-            if (!Comman.Comman.IsDataSetEmpty(DS)) ;
+            if (!Comman.Comman.IsDataSetEmpty(DS)) 
             {
                 rpButterMilkPreparation.DataSource = DS;
                 rpButterMilkPreparation.DataBind();

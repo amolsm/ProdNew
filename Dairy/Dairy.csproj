@@ -149,6 +149,7 @@
     <Content Include="Tabs\Production\EffluentTreatmentPlant.aspx" />
     <Content Include="Tabs\Production\FilmData.aspx" />
     <Content Include="Tabs\Production\FinishedGoodRelease.aspx" />
+    <Content Include="Tabs\Production\FumigationQC.aspx" />
     <Content Include="Tabs\Production\GheeProductionRegister.aspx" />
     <Content Include="Tabs\Production\Homogenizer.aspx" />
     <Content Include="Tabs\Production\IceCreamColdRoomTemperature.aspx" />
@@ -167,6 +168,8 @@
     <Content Include="Tabs\Production\OpeningStockForMilkAndAllProducts.aspx" />
     <Content Include="Tabs\Production\PasteurizationProcess.aspx" />
     <Content Include="Tabs\Production\PasteurizationQC.aspx" />
+    <Content Include="Tabs\Production\PersonalHygieneCheckList.aspx" />
+    <Content Include="Tabs\Production\PersonalHygieneCheckListQC.aspx" />
     <Content Include="Tabs\Production\QCAfterProcessing.aspx" />
     <Content Include="Tabs\Production\QualityCheck.aspx" />
     <Content Include="Tabs\Production\Re-ChilledMilkQc.aspx" />
@@ -1547,6 +1550,13 @@
     <Compile Include="Tabs\Production\FinishedGoodRelease.aspx.designer.cs">
       <DependentUpon>FinishedGoodRelease.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\Production\FumigationQC.aspx.cs">
+      <DependentUpon>FumigationQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\FumigationQC.aspx.designer.cs">
+      <DependentUpon>FumigationQC.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Production\GheeProductionRegister.aspx.cs">
       <DependentUpon>GheeProductionRegister.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1672,6 +1682,20 @@
     </Compile>
     <Compile Include="Tabs\Production\PasteurizationQC.aspx.designer.cs">
       <DependentUpon>PasteurizationQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\PersonalHygieneCheckList.aspx.cs">
+      <DependentUpon>PersonalHygieneCheckList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\PersonalHygieneCheckList.aspx.designer.cs">
+      <DependentUpon>PersonalHygieneCheckList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Production\PersonalHygieneCheckListQC.aspx.cs">
+      <DependentUpon>PersonalHygieneCheckListQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabs\Production\PersonalHygieneCheckListQC.aspx.designer.cs">
+      <DependentUpon>PersonalHygieneCheckListQC.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Production\QCAfterProcessing.aspx.cs">
       <DependentUpon>QCAfterProcessing.aspx</DependentUpon>

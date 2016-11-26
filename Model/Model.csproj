@@ -73,6 +73,8 @@
     <Compile Include="Production\MChemicalReagentAndMediaPreparationsQC.cs" />
     <Compile Include="Production\MClosingStockForMilkInSiloAndAllProducts.cs" />
     <Compile Include="Production\MCurdPackedData.cs" />
+    <Compile Include="Production\MEffluentTreatmentPlant.cs" />
+    <Compile Include="Production\MFumigationQC.cs" />
     <Compile Include="Production\MGheeProductionRegister.cs" />
     <Compile Include="Production\MHomogenizer.cs" />
     <Compile Include="Production\MAfterPackedMilkTestQCDetails.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="Production\MMachineComplaintsAndRectifiedRecord.cs" />
     <Compile Include="Production\MMachineStartingCondition.cs" />
     <Compile Include="Production\MMicrobiologicalAnalysisForMilkAndMilkProductsQC.cs" />
+    <Compile Include="Production\MMicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest.cs" />
     <Compile Include="Production\MMicrobiologicalCultureStockRegisterQC.cs" />
     <Compile Include="Production\MMilkColdRoomTemperature.cs" />
     <Compile Include="Product.cs" />
@@ -97,6 +100,8 @@
     <Compile Include="Production\MOpeningStockForMilkAndAllProducts.cs" />
     <Compile Include="Production\MPasteurizationQC.cs" />
     <Compile Include="Production\MPastProcess.cs" />
+    <Compile Include="Production\MPersonalHygieneCheckList.cs" />
+    <Compile Include="Production\MPersonalHygieneCheckListQC.cs" />
     <Compile Include="Production\MQCAfterProcessing.cs" />
     <Compile Include="Production\MQuality.cs" />
     <Compile Include="Production\MRechilling.cs" />

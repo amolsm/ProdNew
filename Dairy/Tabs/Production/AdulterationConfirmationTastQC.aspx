@@ -224,10 +224,11 @@
                <HeaderTemplate>
                   <thead>
                       <tr>
-                                       <th>RMRId</th>
-                                        <th>Shift Name</th>
-                                        <th>Batch No</th>                                                                         
-                                        <th>Edit</th>
+                                       
+                                       <th>Date</th>
+                                       <th>Batch No</th>
+                                       <th>Shift Name</th>                                                                                                             
+                                       <th>Edit</th>
 
 
                       </tr>
@@ -239,9 +240,12 @@
                <ItemTemplate>
                     <tr>
                             
-                                        <td><%# Eval("RMRId")%></td>   
+                                        <%--<td><%# string.IsNullOrEmpty( Eval("RMRDate").ToString())?"":Convert.ToDateTime(Eval("AdulterationConfirmationTestQCDate")).ToString("dd-MM-yyyy")%></td> --%>
+
+                                        <td><%# Eval("AdulterationConfirmationTestQCDate")%></td> 
+                                        <td><%# Eval("BatchNo")%></td>    
                                         <td><%# Eval("ShiftName")%></td>
-                                        <td><%# Eval("BatchNo")%></td>                                         
+                                                                               
                                        
                                     
                                         
@@ -264,10 +268,10 @@
 
                     <tfoot>
                       <tr>
-                                        <th>RMRId</th>
-                                        <th>Shift Name</th>
-                                        <th>Batch No</th>                                                                         
-                                        <th>Edit</th>
+                                       <th>Date</th>
+                                       <th>Batch No</th>
+                                       <th>Shift Name</th>                                                                                                             
+                                       <th>Edit</th>
 
                                        
 

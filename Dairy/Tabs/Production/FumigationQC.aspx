@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest.aspx.cs" Inherits="Dairy.Tabs.Production.MicrobiologicalAnalysisOfAerobicMicrobialCountSettlePlateTest" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FumigationQC.aspx.cs" Inherits="Dairy.Tabs.Production.FumigationQC" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
      <link href="../../Theme/plugins/jQueryUI/jquery-ui.css" rel="stylesheet" />
         <script src="../../Theme/plugins/jQuery/jquery-1.10.2.min.js"></script>
@@ -6,18 +6,17 @@
         <style type="text/css">.cntrlbtm {    margin-bottom: 1px;} </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-      <section class="content-header">
+     <section class="content-header">
           <h1>
-           Microbiological Analysis of Aerobic Microbial Count Settle Plate Test   
+          Fumigation QC  
           </h1> 
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Administration</a></li>
-            <li class="active">MicrobiologicalAnalysisofAerobicMicrobialCountSettlePlateTest</li>
+            <li class="active">FumigationQC</li>
           </ol>
         </section>
 
-              <section class="content">
+     <section class="content">
                          <div class="row">
                     <asp:UpdatePanel runat="server" ID="pnlError" UpdateMode="Conditional">
                     <ContentTemplate>
@@ -46,9 +45,9 @@
                     </asp:UpdatePanel>
                   </div> 
 
-                   <div class="box">
+               <div class="box">
                    <div class="box-header with-border">
-                   <h3 class="box-title"><asp:Label ID="lblHeaderTab" runat="server" Text="Microbiological Analysis of Aerobic Microbial Count Settle Plate Test Details"></asp:Label> </h3>
+                   <h3 class="box-title"><asp:Label ID="lblHeaderTab" runat="server" Text="Fumigation QC Details"></asp:Label> </h3>
                    <div class="box-tools pull-right">
                    <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-plus"></i></button>
                 
@@ -56,7 +55,7 @@
                    </div>
                <div class="box-body">
 
-            <asp:UpdatePanel runat="server" ID="upMain" UpdateMode="Conditional">
+                               <asp:UpdatePanel runat="server" ID="upMain" UpdateMode="Conditional">
               <ContentTemplate>
         
 
@@ -136,24 +135,11 @@
                   <div class="form-group cntrlbtm cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
-                          <asp:Label ID="Label6" runat="server" Text="TBC Count"></asp:Label>
+                          <asp:Label ID="Label6" runat="server" Text="Chemical Used"></asp:Label>
                       </div>
-                       <asp:TextBox ID="txtTBCCount" class="form-control"   placeholder="TBC Count" runat="server" ></asp:TextBox>                        
+                       <asp:TextBox ID="txtChemicalUsed" class="form-control"   placeholder="TBC Count" runat="server" ></asp:TextBox>                        
                     </div><!-- /.input group -->
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please Enter TBC Count" ControlToValidate="txtTBCCount" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
-                  </div><!-- /.form group -->
-            </div>
-
-
-              <div class="col-lg-3">
-                  <div class="form-group cntrlbtm cntrlbtm">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                          <asp:Label ID="Label7" runat="server" Text="yeast&Mould Count"></asp:Label>
-                      </div>
-                       <asp:TextBox ID="txtyeastAndMouldCount" class="form-control"   placeholder="yeast&Mould Count" runat="server" ></asp:TextBox>                        
-                    </div><!-- /.input group -->
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Please Enter yeast&Mould Count" ControlToValidate="txtyeastAndMouldCount" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please Enter Chemical Used" ControlToValidate="txtChemicalUsed" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
                   </div><!-- /.form group -->
             </div>
 
@@ -168,7 +154,7 @@
                     </div><!-- /.input group -->
                       <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please Enter Merits" ControlToValidate="txtMerits" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
                   </div><!-- /.form group -->
-            </div>
+              </div>
 
 
               <div class="col-lg-3">
@@ -189,11 +175,11 @@
                   <div class="form-group cntrlbtm cntrlbtm">
                     <div class="input-group">
                       <div class="input-group-addon">
-                          <asp:Label ID="Label10" runat="server" Text="Checked By"></asp:Label>
+                          <asp:Label ID="Label10" runat="server" Text="Done By"></asp:Label>
                       </div>
-                       <asp:TextBox ID="txtCheckedBy" class="form-control"   placeholder="Enter Checked By" runat="server" ></asp:TextBox>                        
+                       <asp:TextBox ID="txtDoneBy" class="form-control"   placeholder="Enter Done By" runat="server" ></asp:TextBox>                        
                     </div><!-- /.input group -->
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Please Enter Checked By" ControlToValidate="txtCheckedBy" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Please Enter Done By" ControlToValidate="txtDoneBy" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
                   </div><!-- /.form group -->
                </div>
 
@@ -223,7 +209,7 @@
                   </div><!-- /.form group -->
                </div>
 
-             
+
                 <div class="col-lg-3 pull-right">
                   <div class="form-group cntrlbtm">
                     <div class="input-group">
@@ -232,20 +218,16 @@
                         <asp:Button ID="btnRefresh" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Refresh" ValidationGroup="Refresh" OnClick="btnRefresh_Click"/> &nbsp;                         
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->                        
-                     
-
-
   
                 </div>
             </ContentTemplate> 
           </asp:UpdatePanel>
-        </div><!-- /.box-body -->            
+       </div><!-- /.box-body -->            
      </div><!-- /.box -->
-
 
          <div id="bx2" class="box collapsed-box">
             <div class="box-header with-border">
-              <h3 class="box-title"> Microbiological Analysis of Aerobic Microbial Count Settle Plate Test List </h3>
+              <h3 class="box-title"> FumigationQC List </h3>
               <div class="box-tools pull-right" style="right: 4px; top: 4px">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"  title="Collapse"><i class="fa fa-minus"></i></button>
                 
@@ -253,14 +235,43 @@
             </div>
             <div class="box-body" id="datalist">
 
-             <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
+            <asp:UpdatePanel runat="server" ID="uprouteList" UpdateMode="Conditional">
               <ContentTemplate>
+
+
+                 <div class="row">
+                    <div class="col-lg-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                          <asp:Label ID="Label17" runat="server" Text="Date"></asp:Label>
+                      </div>
+                       <asp:TextBox ID="txtSearchDate" class="form-control" type="date" runat="server" ValidationGroup="Save" ></asp:TextBox>                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                        
+                          
+                      </div> 
+                    <div class="col-lg-3" >
+                  <div class="form-group ">
+                    <div class="input-group">
+                        <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Search" ValidationGroup="Search" OnClick="btnSearch_Click"/> &nbsp;    
+                        
+                    </div><!-- /.input group -->
+
+                  </div><!-- /.form group -->
+                                   
+                       
+                          
+                      </div>
+                            </div>
 
                 <table id="example1" class="table table-bordered table-striped">
                    
 
                  
-                      <asp:Repeater ID="rpMicrobiologicalAnalysisofSettlePlateTest" runat="server" OnItemCommand="rpMicrobiologicalAnalysisofSettlePlateTest_ItemCommand">
+                      <asp:Repeater ID="rpFumigationQC" runat="server" OnItemCommand="rpFumigationQC_ItemCommand">
                 
                 
                <HeaderTemplate>
@@ -280,7 +291,7 @@
                <ItemTemplate>
                     <tr>
                             
-                                        <td><%# Eval("MicrobiologicalAnalysisofAerobicMicrobialCountSettlePlateTestDate")%></td>
+                                        <td><%# Eval("FumigationQCDate")%></td>
                                         <td><%# Eval("ShiftName")%></td>
 
                                        
@@ -289,7 +300,7 @@
                                           
                          <td>
                              <asp:LinkButton ID="lbEdite"  AlternateText="Edit" ForeColor="Gray" onItemCommand="lblEdite_ItemCommand" 
-                                                                    ToolTip="Edit" runat="server" CommandArgument='<%#Eval("MicrobiologicalAnalysisofAerobicMicrobialCountSettlePlateTestId") %>'
+                                                                    ToolTip="Edit" runat="server" CommandArgument='<%#Eval("FumigationQCId") %>'
                                                                     CommandName="Edit"><i class="fa fa-edit"></i></asp:LinkButton>
 
                          </td>
@@ -328,7 +339,8 @@
                         </ContentTemplate>
                                               </asp:UpdatePanel>
  </div>
-            <asp:UpdateProgress ID="UpdateProgress2" runat="server" AssociatedUpdatePanelID="uprouteList">
+
+                         <asp:UpdateProgress ID="UpdateProgress2" runat="server" AssociatedUpdatePanelID="uprouteList">
             <ProgressTemplate>
                 
                 <div class="overlay">
@@ -337,6 +349,6 @@
 
             </ProgressTemplate>
             </asp:UpdateProgress>
-        </div>
-    </section>
+      </div>
+  </section>
 </asp:Content>
