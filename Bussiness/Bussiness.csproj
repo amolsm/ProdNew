@@ -69,6 +69,7 @@
     <Compile Include="Production\BChemicalReagentAndMediaPreparationsQC.cs" />
     <Compile Include="Production\BClosingStockForMilkInSiloAndAllProducts.cs" />
     <Compile Include="Production\BCurdPackedData.cs" />
+    <Compile Include="Production\BEffluentTreatmentPlant.cs" />
     <Compile Include="Production\BFumigationQC.cs" />
     <Compile Include="Production\BGheeProductionRegister.cs" />
     <Compile Include="Production\BIceCreamColdRoomTemperature.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Production\BMixPreparationIncrediantsAdded.cs" />
     <Compile Include="Production\BOpeningStockForMilkAndAllProducts.cs" />
     <Compile Include="Production\BPersonalHygieneCheckList.cs" />
+    <Compile Include="Production\BPersonalHygieneCheckListQC.cs" />
     <Compile Include="Production\BReturnDrainedMilkQualityQC.cs" />
     <Compile Include="Production\BAfterPackedMilkTestQCDetails.cs" />
     <Compile Include="Production\BHomogenizer.cs" />

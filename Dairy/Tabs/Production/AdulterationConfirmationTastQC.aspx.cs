@@ -31,7 +31,7 @@ namespace Dairy.Tabs.Production
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 GetAdulterationConfirmationTastQCDetails();
                 txtBatchNo.ReadOnly = true;
-
+                btnUpdate.Visible = false;
             }
         }
 
@@ -157,10 +157,18 @@ namespace Dairy.Tabs.Production
                         Id = Convert.ToInt32(hId.Value);
                         GetAdulterationConfirmationTastQCDetails(Id);
 
+                        if (txtSugar.Text == "")
+                        {
+                            btnAdd.Visible = true;
+                            btnUpdate.Visible = false;
+                        }
+                        else
+                        {
+                            btnAdd.Visible = false;
+                            btnUpdate.Visible = true;
+                        }
 
-                        // btnAdd.Visible = true;
                         btnRefresh.Visible = true;
-                        //btnUpdateProductindetail.Visible = true;
                         upMain.Update();
                         uprouteList.Update();
                         break;
@@ -187,22 +195,50 @@ namespace Dairy.Tabs.Production
             DS = bactqc.GetAdulterationConfirmationTastQCDetailsById(RMRId);
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
+                //string DATE = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCDate"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCDate"].ToString();
+                //DateTime date1 = Convert.ToDateTime(DATE, System.Globalization.CultureInfo.GetCultureInfo("ur-PK").DateTimeFormat);
+                //txtDate.Text = (Convert.ToDateTime(date1).ToString("yyyy-MM-dd"));
+                //dpShiftDetails.ClearSelection();
+                //if (dpShiftDetails.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCShiftId"]).ToString()) != null)
+                //{
+                //    dpShiftDetails.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCShiftId"]).ToString()).Selected = true;
+                //}
                 string DATE = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCDate"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCDate"].ToString();
-                DateTime date1 = Convert.ToDateTime(DATE, System.Globalization.CultureInfo.GetCultureInfo("ur-PK").DateTimeFormat);
-                txtDate.Text = (Convert.ToDateTime(date1).ToString("yyyy-MM-dd"));
-                txtBatchNo.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["BatchNo"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["BatchNo"].ToString();
+                if (DATE == "")
+                {
+                    txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
+                }
+                else
+                {
+                    DateTime date1 = Convert.ToDateTime(DATE, System.Globalization.CultureInfo.GetCultureInfo("ur-PK").DateTimeFormat);
+                    txtDate.Text = (Convert.ToDateTime(date1).ToString("yyyy-MM-dd"));
+                }
+
                 dpShiftDetails.ClearSelection();
-                if (dpShiftDetails.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCShiftId"]).ToString()) != null)
+                string ShiftDetails = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCShiftId"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCShiftId"].ToString();
+                if (ShiftDetails == "")
+                {
+                    dpShiftDetails.SelectedIndex = 0;
+                }
+                else
                 {
                     dpShiftDetails.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCShiftId"]).ToString()).Selected = true;
                 }
+
+                
+                txtBatchNo.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["BatchNo"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["BatchNo"].ToString();
                 txtSugar.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["Sugar"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["Sugar"].ToString();
                 txtStarch.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["Starch"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["Starch"].ToString();
                 txtHydrogenPeroxide.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["HydrogenPeroxide"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["HydrogenPeroxide"].ToString();
                 txtNeutralizer.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["Neutralizer"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["Neutralizer"].ToString();
                 txtRemarks.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["Remarks"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["Remarks"].ToString();
                 dpStatusDetails.ClearSelection();
-                if (dpStatusDetails.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCStatus"]).ToString()) != null)
+                string StatusDetails = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCStatus"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCStatus"].ToString();
+                if (StatusDetails=="")
+                {
+                    dpStatusDetails.SelectedIndex = 0;
+                }
+                else
                 {
                     dpStatusDetails.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["AdulterationConfirmationTestQCStatus"]).ToString()).Selected = true;
                 }

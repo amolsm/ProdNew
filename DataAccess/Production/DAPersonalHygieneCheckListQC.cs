@@ -8,19 +8,19 @@ using System.Data;
 
 namespace DataAccess.Production
 {
-    public class DAPersonalHygieneCheckList
+    public class DAPersonalHygieneCheckListQC
     {
         DBHelper _DBHelper = new DBHelper();
         DataSet DS;
 
-        public int personalhygienedata(MPersonalHygieneCheckList receive)
+        public int personalhygieneqcdata(MPersonalHygieneCheckListQC receive)
         {
             int result = 0;
             try
             {
                 DBParameterCollection paramcollection = new DBParameterCollection();
-                paramcollection.Add(new DBParameter("PersonalHygieneCheckListId", receive.PersonalHygieneCheckListId));
-                paramcollection.Add(new DBParameter("PersonalHygieneCheckListDate", receive.PersonalHygieneCheckListDate));
+                paramcollection.Add(new DBParameter("PersonalHygieneCheckListQCId", receive.PersonalHygieneCheckListQCId));
+                paramcollection.Add(new DBParameter("PersonalHygieneCheckListQCDate", receive.PersonalHygieneCheckListQCDate));
                 paramcollection.Add(new DBParameter("EmployeeId", receive.EmployeeId));
                 paramcollection.Add(new DBParameter("DesignationId", receive.DesignationId));
                 paramcollection.Add(new DBParameter("UniformCleaning", receive.UniformCleaning));
@@ -31,7 +31,7 @@ namespace DataAccess.Production
                 paramcollection.Add(new DBParameter("HandGloves", receive.HandGloves));
                 paramcollection.Add(new DBParameter("Mask", receive.Mask));
                 paramcollection.Add(new DBParameter("@flag", receive.flag));
-                result = _DBHelper.ExecuteNonQuery("sp_Prod_PersonalHygieneCheckListDetails", paramcollection, CommandType.StoredProcedure);
+                result = _DBHelper.ExecuteNonQuery("sp_Prod_PersonalHygieneCheckListQCDetails", paramcollection, CommandType.StoredProcedure);
             }
             catch (Exception EX)
             {
@@ -40,14 +40,14 @@ namespace DataAccess.Production
             return result;
         }
 
-        public DataSet GetPersonalHygieneCheckListDetailsById(int PersonalHygieneCheckListId)
+        public DataSet GetPersonalHygieneCheckListQCDetailsById(int PersonalHygieneCheckListQCId)
         {
             DataSet DS = new DataSet();
             try
             {
                 DBParameterCollection paramcollection = new DBParameterCollection();
-                paramcollection.Add(new DBParameter("PersonalHygieneCheckListId", @PersonalHygieneCheckListId));
-                DS = _DBHelper.ExecuteDataSet("sp_Prod_GetPersonalHygieneCheckListDetailsById", paramcollection, CommandType.StoredProcedure);
+                paramcollection.Add(new DBParameter("PersonalHygieneCheckListQCId", @PersonalHygieneCheckListQCId));
+                DS = _DBHelper.ExecuteDataSet("sp_Prod_GetPersonalHygieneCheckListQCDetailsById", paramcollection, CommandType.StoredProcedure);
 
             }
             catch (Exception EX)
@@ -57,10 +57,10 @@ namespace DataAccess.Production
             return DS;
         }
 
-        public DataSet GetPersonalHygieneCheckListDetails()
+        public DataSet GetPersonalHygieneCheckListQCDetails()
         {
             DBParameterCollection paramcollection = new DBParameterCollection();
-            return _DBHelper.ExecuteDataSet("sp_Prod_GetPersonalHygieneCheckListDetails", paramcollection, CommandType.StoredProcedure);
+            return _DBHelper.ExecuteDataSet("sp_Prod_GetPersonalHygieneCheckListQCDetails", paramcollection, CommandType.StoredProcedure);
         }
     }
 }

@@ -5,17 +5,17 @@ using System.Web;
 
 namespace Model.Production
 {
-    public class MPersonalHygieneCheckList
+    public class MPersonalHygieneCheckListQC
     {
-        public int PersonalHygieneCheckListId { get; set; }
+        public int PersonalHygieneCheckListQCId { get; set; }
 
-        public DateTime PersonalHygieneCheckListDate { get; set; }
+        public DateTime PersonalHygieneCheckListQCDate { get; set; }
 
         public int EmployeeId { get; set; }
 
         public int DesignationId { get; set; }
 
-        public bool  UniformCleaning { get; set; }
+        public bool UniformCleaning { get; set; }
 
         public bool Nail { get; set; }
 

@@ -31,6 +31,40 @@ namespace Dairy.Tabs.Production
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 GetPersonalHygieneCheckListDetails();
                 btnUpdate.Visible = false;
+                bindDropDown();
+                bindDropDownDesig();
+            }
+        }
+
+        private void bindDropDown()
+        {
+            DS = BindCommanData.BindCommanDropDwon("EmployeeID", "EmployeeName as Name", "employeemaster", "IsActive=1");
+            if (!Comman.Comman.IsDataSetEmpty(DS))
+            {
+
+
+                dpEmployee.DataSource = DS;
+                dpEmployee.DataBind();
+                dpEmployee.Items.Insert(0, new ListItem("--Select Employee  --", "0"));
+
+
+
+            }
+        }
+
+        private void bindDropDownDesig()
+        {
+            DS = BindCommanData.BindCommanDropDwon("EmployeeID", "Designation as Name", "employeemaster", "IsActive=1");
+            if (!Comman.Comman.IsDataSetEmpty(DS))
+            {
+
+
+                dpDesignation.DataSource = DS;
+                dpDesignation.DataBind();
+                dpDesignation.Items.Insert(0, new ListItem("--Select Designation  --", "0"));
+
+
+
             }
         }
 
@@ -41,15 +75,47 @@ namespace Dairy.Tabs.Production
             int Result = 0;
             mphcl.PersonalHygieneCheckListId = 0;
             mphcl.PersonalHygieneCheckListDate = Convert.ToDateTime(txtDate.Text.ToString());
-            mphcl.EmployeeName = string.IsNullOrEmpty(txtEmployeeName.Text) ? string.Empty : txtEmployeeName.Text;
-            mphcl.DesignationOfEmp = string.IsNullOrEmpty(txtDesignationOfEmp.Text) ? string.Empty : txtDesignationOfEmp.Text;
-            mphcl.UniformCleaning = string.IsNullOrEmpty(txtUniformCleaning.Text) ? string.Empty : txtUniformCleaning.Text;
-            mphcl.Nail = string.IsNullOrEmpty(txtNail.Text) ? string.Empty : txtNail.Text;
-            mphcl.Cap = string.IsNullOrEmpty(txtCap.Text) ? string.Empty : txtCap.Text;
-            mphcl.ApronLab = string.IsNullOrEmpty(txtApronLab.Text) ? string.Empty : txtApronLab.Text;
-            mphcl.BeardCrimp = string.IsNullOrEmpty(txtBeardCrimp.Text) ? string.Empty : txtBeardCrimp.Text;
-            mphcl.HandGloves = string.IsNullOrEmpty(txtHandGloves.Text) ? string.Empty : txtHandGloves.Text;
-            mphcl.Mask = string.IsNullOrEmpty(txtMask.Text) ? string.Empty : txtMask.Text;
+            mphcl.EmployeeId = Convert.ToInt32(dpEmployee.SelectedItem.Value);
+            mphcl.DesignationId = Convert.ToInt32(dpDesignation.SelectedItem.Value);
+            if (chkUniform.Checked)
+                mphcl.UniformCleaning = true;
+            else
+                mphcl.UniformCleaning=false;
+
+            if(chkBeardCrimp.Checked)
+                mphcl.BeardCrimp = true;
+            else
+                mphcl.BeardCrimp = false;
+
+            if (chkNail.Checked)
+                mphcl.Nail = true;
+            else
+                mphcl.Nail = false;
+
+            if (chkCap.Checked)
+            {
+                mphcl.Cap = true;
+            }
+            else
+            {
+                mphcl.Cap = false;
+            }
+
+            if (chkApronLab.Checked)
+                mphcl.ApronLab = true;
+            else
+                mphcl.ApronLab = false;
+
+            if (chkHandGloves.Checked)
+                mphcl.HandGloves = true;
+            else
+                mphcl.HandGloves = false;
+
+            if (chkMask.Checked)
+                mphcl.Mask = true;
+            else
+                mphcl.Mask = false;
+
             mphcl.flag = "insert";
             Result = bphcl.personalhygienedata(mphcl);
             if (Result > 0)
@@ -79,15 +145,47 @@ namespace Dairy.Tabs.Production
             int Result = 0;
             mphcl.PersonalHygieneCheckListId =string.IsNullOrEmpty(hId.Value)?0:Convert.ToInt32(hId.Value);
             mphcl.PersonalHygieneCheckListDate = Convert.ToDateTime(txtDate.Text.ToString());
-            mphcl.EmployeeName = string.IsNullOrEmpty(txtEmployeeName.Text) ? string.Empty : txtEmployeeName.Text;
-            mphcl.DesignationOfEmp = string.IsNullOrEmpty(txtDesignationOfEmp.Text) ? string.Empty : txtDesignationOfEmp.Text;
-            mphcl.UniformCleaning = string.IsNullOrEmpty(txtUniformCleaning.Text) ? string.Empty : txtUniformCleaning.Text;
-            mphcl.Nail = string.IsNullOrEmpty(txtNail.Text) ? string.Empty : txtNail.Text;
-            mphcl.Cap = string.IsNullOrEmpty(txtCap.Text) ? string.Empty : txtCap.Text;
-            mphcl.ApronLab = string.IsNullOrEmpty(txtApronLab.Text) ? string.Empty : txtApronLab.Text;
-            mphcl.BeardCrimp = string.IsNullOrEmpty(txtBeardCrimp.Text) ? string.Empty : txtBeardCrimp.Text;
-            mphcl.HandGloves = string.IsNullOrEmpty(txtHandGloves.Text) ? string.Empty : txtHandGloves.Text;
-            mphcl.Mask = string.IsNullOrEmpty(txtMask.Text) ? string.Empty : txtMask.Text;
+            mphcl.EmployeeId = Convert.ToInt32(dpEmployee.SelectedItem.Value);
+            mphcl.DesignationId = Convert.ToInt32(dpDesignation.SelectedItem.Value);
+            if (chkUniform.Checked)
+                mphcl.UniformCleaning = true;
+            else
+                mphcl.UniformCleaning = false;
+
+            if (chkBeardCrimp.Checked)
+                mphcl.BeardCrimp = true;
+            else
+                mphcl.BeardCrimp = false;
+
+            if (chkNail.Checked)
+                mphcl.Nail = true;
+            else
+                mphcl.Nail = false;
+
+            if (chkCap.Checked)
+            {
+                mphcl.Cap = true;
+            }
+            else
+            {
+                mphcl.Cap = false;
+            }
+
+            if (chkApronLab.Checked)
+                mphcl.ApronLab = true;
+            else
+                mphcl.ApronLab = false;
+
+            if (chkHandGloves.Checked)
+                mphcl.HandGloves = true;
+            else
+                mphcl.HandGloves = false;
+
+            if (chkMask.Checked)
+                mphcl.Mask = true;
+            else
+                mphcl.Mask = false;
+
             mphcl.flag = "Update";
             Result = bphcl.personalhygienedata(mphcl);
             if (Result > 0)
@@ -126,7 +224,7 @@ namespace Dairy.Tabs.Production
             {
                 case ("Edit"):
                     {
-                        lblHeaderTab.Text = "Edit Bore Water Details";
+                        lblHeaderTab.Text = "Edit Personal Hygiene CheckList Details";
                         hId.Value = Id.ToString();
                         Id = Convert.ToInt32(hId.Value);
                         GetPersonalHygieneCheckListDetails(Id);
@@ -161,11 +259,33 @@ namespace Dairy.Tabs.Production
             DS = bphcl.GetPersonalHygieneCheckListDetailsById(PersonalHygieneCheckListId);
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
+                //string DATE = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["PersonalHygieneCheckListDate"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["PersonalHygieneCheckListDate"].ToString();
+                //DateTime date1 = Convert.ToDateTime(DATE, System.Globalization.CultureInfo.GetCultureInfo("ur-PK").DateTimeFormat);
+                //txtDate.Text = (Convert.ToDateTime(date1).ToString("yyyy-MM-dd"));
+
                 string DATE = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["PersonalHygieneCheckListDate"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["PersonalHygieneCheckListDate"].ToString();
-                DateTime date1 = Convert.ToDateTime(DATE, System.Globalization.CultureInfo.GetCultureInfo("ur-PK").DateTimeFormat);
-                txtDate.Text = (Convert.ToDateTime(date1).ToString("yyyy-MM-dd"));
-                txtEmployeeName.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["EmployeeName"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["EmployeeName"].ToString();
-                txtDesignationOfEmp.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["DesignationOfEmp"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["DesignationOfEmp"].ToString();
+                if (DATE == "")
+                {
+                    txtDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                }
+                else
+                {
+                    DateTime date1 = Convert.ToDateTime(DATE, System.Globalization.CultureInfo.GetCultureInfo("ur-PK").DateTimeFormat);
+                    txtDate.Text = (Convert.ToDateTime(date1).ToString("yyyy-MM-dd"));
+                }
+
+                dpEmployee.ClearSelection();
+                if (dpEmployee.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["EmployeeId"]).ToString()) != null)
+                {
+                    dpEmployee.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["EmployeeId"]).ToString()).Selected = true;
+                }
+
+                dpDesignation.ClearSelection();
+                if (dpDesignation.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["DesignationId"]).ToString()) != null)
+                {
+                    dpDesignation.Items.FindByValue(Convert.ToInt32(DS.Tables[0].Rows[0]["DesignationId"]).ToString()).Selected = true;
+                }
+
                 txtUniformCleaning.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["UniformCleaning"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["UniformCleaning"].ToString();
                 txtNail.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["Nail"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["Nail"].ToString();
                 txtCap.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["Cap"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["Cap"].ToString();
@@ -175,5 +295,7 @@ namespace Dairy.Tabs.Production
                 txtMask.Text = string.IsNullOrEmpty(DS.Tables[0].Rows[0]["Mask"].ToString()) ? string.Empty : DS.Tables[0].Rows[0]["Mask"].ToString();
             }
         }
+
+
     }
 }

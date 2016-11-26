@@ -348,8 +348,8 @@
                          
                         
                    <div class="col-lg-3">
-                  <div class="form-group">
-                    <div class="input-group cntrlbtm">
+                  <div class="form-group cntrlbtm">
+                    <div class="input-group ">
                       <div class="input-group-addon">
                           <asp:Label ID="Label23" runat="server" Text="Total Running Hours"></asp:Label>
                       </div>
@@ -459,7 +459,7 @@
                    <div class="col-lg-3">
                   <div class="form-group cntrlbtm">
                   <div class="input-group-addon">
-                  <asp:Label ID="Label32" runat="server" Text="Sludge Re-Circulation pump A"></asp:Label>
+                  <asp:Label ID="Label32" runat="server" Text="Sludge Re-Circulation pump B"></asp:Label>
                    </div>
                   </div><!-- /.form group -->
                  </div>
@@ -521,7 +521,7 @@
      </div><!-- /.box -->
 
 
-                                       <div class="box ">
+          <div id="bx2" class ="box collapsed-box">
             <div class="box-header with-border">
               <h3 class="box-title"> Effluent Treatment Plant List </h3>
               <div class="box-tools pull-right" style="right: 4px; top: 4px">
@@ -544,13 +544,10 @@
                <HeaderTemplate>
                   <thead>
                       <tr>
-                                        <th>BoreWaterId</th>
                                         <th>Date</th>
                                         <th>Shift Name</th>
                                         <th>Operated By</th>
-                                        <th>Starting Time</th>
-                                        <th>End Time</th>
-                                        <th>Total Hours</th>
+                                        <th>Remarks</th>
                                         <th>Edit</th>
 
 
@@ -563,20 +560,18 @@
                <ItemTemplate>
                     <tr>
                             
-                                        <td><%# Eval("BoreWaterId")%></td>   
-                                        <td><%# Eval("BoreWaterDate")%></td>
-                                        <td><%# Eval("BoreWaterShiftId")%></td>
-                                        <td><%# Eval("OperatedBy")%></td>   
-                                        <td><%# Eval("StartingTime")%></td>   
-                                        <td><%# Eval("EndTime")%></td>
-                                        <td><%# Eval("TotalHours")%></td>  
+                                        <td><%# Eval("EffluentTreatmentPlantDate")%></td>   
+                                        <td><%# Eval("ShiftName")%></td>
+                                        <td><%# Eval("OperatedBy")%></td>
+                                        <td><%# Eval("Remarks")%></td>   
+                                         
                                        
                                     
                                         
                                           
                          <td>
                              <asp:LinkButton ID="lbEdite" AlternateText="Edit" ForeColor="Gray" onItemCommand="lblEdite_ItemCommand" 
-                                                                    ToolTip="Edit" runat="server" CommandArgument='<%#Eval("BoreWaterId") %>'
+                                                                    ToolTip="Edit" runat="server" CommandArgument='<%#Eval("EffluentTreatmentPlantId") %>'
                                                                     CommandName="Edit"><i class="fa fa-edit"></i></asp:LinkButton>
 
                          </td>
@@ -594,13 +589,10 @@
                       <tr>
 
 
-                                        <th>BoreWaterId</th>
-                                        <th>Date</th>
+                                       <th>Date</th>
                                         <th>Shift Name</th>
                                         <th>Operated By</th>
-                                        <th>Starting Time</th>
-                                        <th>End Time</th>
-                                        <th>Total Hours</th>
+                                        <th>Remarks</th>
                                         <th>Edit</th>
                                         
                       </tr>

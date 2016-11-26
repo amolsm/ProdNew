@@ -60,8 +60,8 @@
         
               
 
-              <div class="col-lg-3">
-                  <div class="form-group cntrlbtm">
+              <div class="col-lg-4">
+                  <div class="form-group ">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="lblDate" runat="server" Text="Date"></asp:Label>
@@ -73,127 +73,130 @@
                 </div>                
                           
 
-                     <div class="col-lg-3">
-                  <div class="form-group cntrlbtm">
+                     <div class="col-lg-4">
+                  <div class="form-group ">
                     <div class="input-group">
                       <div class="input-group-addon">
                           <asp:Label ID="Label2" runat="server" Text="Employee Name"></asp:Label>
                       </div>
-                       <asp:TextBox ID="txtEmployeeName" class="form-control"   placeholder="Enter Employee Name" runat="server" ></asp:TextBox>                        
+                      <asp:DropDownList ID="dpEmployee"  class="form-control" DataTextField="Name" DataValueField="employeeID" runat="server"  > 
+                       </asp:DropDownList>
                     </div><!-- /.input group -->
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please Enter Employee Name" ControlToValidate="txtEmployeeName" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
+                     <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please Enter Employee Name" ControlToValidate="txtEmployeeName" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>--%>
                   </div><!-- /.form group -->
             </div>
 
 
+
+                   <div class="col-lg-4">
+                  <div class="form-group ">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                          <asp:Label ID="Label1" runat="server" Text="Designation Name"></asp:Label>
+                      </div>
+                      <asp:DropDownList ID="dpDesignation"  class="form-control" DataTextField="Name" DataValueField="employeeID" runat="server"  > 
+                       </asp:DropDownList>
+                    </div><!-- /.input group -->
+                     <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please Enter Employee Name" ControlToValidate="txtEmployeeName" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>--%>
+                  </div><!-- /.form group -->
+                   </div>
 
                          
-                <div class="col-lg-3">
-                  <div class="form-group cntrlbtm">
+             
+              <div class="col-lg-3">
+                  <div class="form-group ">
                     <div class="input-group">
                       <div class="input-group-addon">
-                          <asp:Label ID="Label3" runat="server" Text="Designation Of Emp"></asp:Label>
+                          <asp:CheckBox ID="chkUniform" runat="server" />
                       </div>
-                       <asp:TextBox ID="txtDesignationOfEmp" class="form-control"   placeholder="Enter Designation" runat="server" ></asp:TextBox>                        
+                       <asp:TextBox ID="txtUniformCleaning" class="form-control"   placeholder="Uniform Clean" runat="server" disabled></asp:TextBox>                        
                     </div><!-- /.input group -->
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter Designation Of Emp" ControlToValidate="txtDesignationOfEmp" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
+                      <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please Enter Uniform Cleaning" ControlToValidate="txtUniformCleaning" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>--%>
                   </div><!-- /.form group -->
                </div>
-
-                          <div class="col-lg-3">
-                  <div class="form-group cntrlbtm">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                          <asp:Label ID="Label5" runat="server" Text="Uniform Cleaning"></asp:Label>
-                      </div>
-                       <asp:TextBox ID="txtUniformCleaning" class="form-control"   placeholder="Enter Uniform " runat="server" ></asp:TextBox>                        
-                    </div><!-- /.input group -->
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please Enter Uniform Cleaning" ControlToValidate="txtUniformCleaning" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
-                  </div><!-- /.form group -->
-            </div>
                   
 
                <div class="col-lg-3">
-                  <div class="form-group cntrlbtm">
+                  <div class="form-group ">
                     <div class="input-group">
                       <div class="input-group-addon">
-                          <asp:Label ID="Label6" runat="server" Text="Nail"></asp:Label>
+                          <asp:CheckBox ID="chkNail" runat="server" />
                       </div>
-                       <asp:TextBox ID="txtNail" class="form-control"   placeholder="Enter Nail" runat="server" ></asp:TextBox>                        
+                       <asp:TextBox ID="txtNail" class="form-control"   placeholder="Enter Nail" runat="server" disabled ></asp:TextBox>                        
                     </div><!-- /.input group --> 
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Pls Enter Nail"  ControlToValidate="txtNail" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
+<%--                      <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Pls Enter Nail"  ControlToValidate="txtNail" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>--%>
                   </div><!-- /.form group -->
                  </div>
 
                   
                 <div class="col-lg-3">
-                  <div class="form-group cntrlbtm">
+                  <div class="form-group ">
                     <div class="input-group">
                       <div class="input-group-addon">
-                          <asp:Label ID="Label7" runat="server" Text="Cap"></asp:Label>
+                          <asp:CheckBox ID="chkCap" runat="server" />
                       </div>
-                       <asp:TextBox ID="txtCap" class="form-control"   placeholder=" Enter Cap" runat="server" ></asp:TextBox>                        
+                       <asp:TextBox ID="txtCap" class="form-control"   placeholder=" Enter Cap" runat="server" disabled ></asp:TextBox>                        
                     </div><!-- /.input group -->
-                       <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Pls Enter Cap"  ControlToValidate="txtCap" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
+<%--                       <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Pls Enter Cap"  ControlToValidate="txtCap" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>--%>
                   </div><!-- /.form group -->
                   </div>
 
 
                    <div class="col-lg-3">
-                  <div class="form-group cntrlbtm">
+                  <div class="form-group ">
                     <div class="input-group">
                       <div class="input-group-addon">
-                          <asp:Label ID="Label8" runat="server" Text="Apron Lab"></asp:Label>
+                           <asp:CheckBox ID="chkApronLab" runat="server" />
                       </div>
-                       <asp:TextBox ID="txtApronLab" class="form-control"   placeholder="Enter Apron Lab" runat="server" ></asp:TextBox>                        
+                       <asp:TextBox ID="txtApronLab" class="form-control"   placeholder="Enter Apron Lab" runat="server" disabled ></asp:TextBox>                        
                     </div><!-- /.input group -->
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Please Enter Apron Lab" ControlToValidate="txtApronLab" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
+<%--                      <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Please Enter Apron Lab" ControlToValidate="txtApronLab" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>--%>
                   </div><!-- /.form group -->
               </div>
 
                   
                 <div class="col-lg-3">
-                  <div class="form-group cntrlbtm">
+                  <div class="form-group ">
                     <div class="input-group">
                       <div class="input-group-addon">
-                          <asp:Label ID="Label9" runat="server" Text="Beard Crimp"></asp:Label>
+                           <asp:CheckBox ID="chkBeardCrimp" runat="server" />
                       </div>
-                       <asp:TextBox ID="txtBeardCrimp" class="form-control"   placeholder="Enter Beard Crimp" runat="server" ></asp:TextBox>                        
+                       <asp:TextBox ID="txtBeardCrimp" class="form-control"   placeholder="Enter Beard Crimp" runat="server" disabled ></asp:TextBox>                        
                     </div><!-- /.input group -->
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please Enter Beard Crimp" ControlToValidate="txtBeardCrimp" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
+<%--                      <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please Enter Beard Crimp" ControlToValidate="txtBeardCrimp" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>--%>
                   </div><!-- /.form group -->
             </div>
 
 
                     <div class="col-lg-3">
-                  <div class="form-group cntrlbtm">
+                  <div class="form-group ">
                     <div class="input-group">
                       <div class="input-group-addon">
-                          <asp:Label ID="Label4" runat="server" Text="Hand Gloves"></asp:Label>
+                          <asp:CheckBox ID="chkHandGloves" runat="server" />
                       </div>
-                       <asp:TextBox ID="txtHandGloves" class="form-control"   placeholder="Enter Hand Gloves" runat="server" ></asp:TextBox>                        
+                       <asp:TextBox ID="txtHandGloves" class="form-control"   placeholder="Enter Hand Gloves" runat="server" disabled ></asp:TextBox>                        
                     </div><!-- /.input group -->
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Please Enter Hand Gloves" ControlToValidate="txtHandGloves" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
+<%--                      <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Please Enter Hand Gloves" ControlToValidate="txtHandGloves" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>--%>
                   </div><!-- /.form group -->
                 </div>
 
              
                 <div class="col-lg-3">
-                  <div class="form-group cntrlbtm">
+                  <div class="form-group ">
                     <div class="input-group">
                       <div class="input-group-addon">
-                          <asp:Label ID="Label10" runat="server" Text="Mask"></asp:Label>
+                           <asp:CheckBox ID="chkMask" runat="server" />
                       </div>
-                       <asp:TextBox ID="txtMask" class="form-control"   placeholder="Enter Mask" runat="server" ></asp:TextBox>                        
+                       <asp:TextBox ID="txtMask" class="form-control"   placeholder="Enter Mask" runat="server" disabled ></asp:TextBox>                        
                     </div><!-- /.input group -->
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please Enter Mask" ControlToValidate="txtMask" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>
+<%--                      <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please Enter Mask" ControlToValidate="txtMask" ForeColor="Red" ValidationGroup="Save"></asp:RequiredFieldValidator>--%>
                   </div><!-- /.form group -->
                 </div>
 
 
 
                 <div class="col-lg-3 pull-right">
-                  <div class="form-group cntrlbtm">
+                  <div class="form-group ">
                     <div class="input-group">
                         <asp:Button ID="btnAdd" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Add" ValidationGroup="Save" OnClick="btnAdd_Click" /> &nbsp;    
                         <asp:Button ID="btnUpdate" class="btn btn-primary" runat="server" CommandName="MoveNext"    Text="Update" ValidationGroup="Save" OnClick="btnUpdate_Click" /> &nbsp;    
@@ -235,7 +238,7 @@
                       <tr>
                                         <th>DateTime</th>
                                         <th>Employee Name</th>
-                                        <th>Designation Of Emp</th>
+                                        <th>Designation Of Emp</th>                        
                                         <th>Uniform Cleaning</th>
                                         <th>Nail</th>
                                         <th>Cap</th>
@@ -255,10 +258,9 @@
                <ItemTemplate>
                     <tr>
                             
-<%--        <td><%# String.IsNullOrEmpty(Eval("RMRDate").ToString()) ? "": Convert.ToDateTime( Eval("RMRDate")).ToString("dd-MM-yyyy")%></td>  --%>
-                                        <td><%# Convert.ToDateTime( Eval("PersonalHygieneCheckListDate")).ToString("dd-MM-yyyy")%></td>
+                                        <td><%# Eval("PersonalHygieneCheckListDate")%></td>
                                         <td><%# Eval("EmployeeName")%></td>   
-                                        <td><%# Eval("DesignationOfEmp")%></td>   
+                                        <td><%# Eval("Designation")%></td>   
                                         <td><%# Eval("UniformCleaning")%></td>
                                         <td><%# Eval("Nail")%></td>  
                                         <td><%# Eval("Cap")%></td>   
@@ -289,10 +291,9 @@
                     <tfoot>
                       <tr>
 
-
                                         <th>DateTime</th>
                                         <th>Employee Name</th>
-                                        <th>Designation Of Emp</th>
+                                        <th>Designation Of Emp</th>                        
                                         <th>Uniform Cleaning</th>
                                         <th>Nail</th>
                                         <th>Cap</th>
@@ -301,7 +302,6 @@
                                         <th>Hand Gloves</th>
                                         <th> Mask </th>
                                         <th>Edit</th>
-
                                         
                       </tr>
                     </tfoot>

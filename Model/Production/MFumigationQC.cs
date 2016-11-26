@@ -9,7 +9,7 @@ namespace Model.Production
     {
         public int FumigationQCId { get; set; }
 
-        public DateTime FumigationQCDate { get; set; }
+        public string FumigationQCDate { get; set; }
 
         public int FumigationQCShiftId { get; set; }
 

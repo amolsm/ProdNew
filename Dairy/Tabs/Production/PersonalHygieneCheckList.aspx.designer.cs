@@ -121,58 +121,40 @@ namespace Dairy.Tabs.Production {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtEmployeeName control.
+        /// dpEmployee control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmployeeName;
+        protected global::System.Web.UI.WebControls.DropDownList dpEmployee;
         
         /// <summary>
-        /// RequiredFieldValidator5 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Label3 control.
+        /// dpDesignation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.DropDownList dpDesignation;
         
         /// <summary>
-        /// txtDesignationOfEmp control.
+        /// chkUniform control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDesignationOfEmp;
-        
-        /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
-        /// <summary>
-        /// Label5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.CheckBox chkUniform;
         
         /// <summary>
         /// txtUniformCleaning control.
@@ -184,22 +166,13 @@ namespace Dairy.Tabs.Production {
         protected global::System.Web.UI.WebControls.TextBox txtUniformCleaning;
         
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// chkNail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
-        
-        /// <summary>
-        /// Label6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.CheckBox chkNail;
         
         /// <summary>
         /// txtNail control.
@@ -211,22 +184,13 @@ namespace Dairy.Tabs.Production {
         protected global::System.Web.UI.WebControls.TextBox txtNail;
         
         /// <summary>
-        /// RequiredFieldValidator9 control.
+        /// chkCap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator9;
-        
-        /// <summary>
-        /// Label7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.CheckBox chkCap;
         
         /// <summary>
         /// txtCap control.
@@ -238,22 +202,13 @@ namespace Dairy.Tabs.Production {
         protected global::System.Web.UI.WebControls.TextBox txtCap;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// chkApronLab control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
-        /// <summary>
-        /// Label8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.CheckBox chkApronLab;
         
         /// <summary>
         /// txtApronLab control.
@@ -265,22 +220,13 @@ namespace Dairy.Tabs.Production {
         protected global::System.Web.UI.WebControls.TextBox txtApronLab;
         
         /// <summary>
-        /// RequiredFieldValidator6 control.
+        /// chkBeardCrimp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
-        
-        /// <summary>
-        /// Label9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.CheckBox chkBeardCrimp;
         
         /// <summary>
         /// txtBeardCrimp control.
@@ -292,22 +238,13 @@ namespace Dairy.Tabs.Production {
         protected global::System.Web.UI.WebControls.TextBox txtBeardCrimp;
         
         /// <summary>
-        /// RequiredFieldValidator7 control.
+        /// chkHandGloves control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
-        
-        /// <summary>
-        /// Label4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.CheckBox chkHandGloves;
         
         /// <summary>
         /// txtHandGloves control.
@@ -319,22 +256,13 @@ namespace Dairy.Tabs.Production {
         protected global::System.Web.UI.WebControls.TextBox txtHandGloves;
         
         /// <summary>
-        /// RequiredFieldValidator8 control.
+        /// chkMask control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
-        
-        /// <summary>
-        /// Label10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.CheckBox chkMask;
         
         /// <summary>
         /// txtMask control.
@@ -344,15 +272,6 @@ namespace Dairy.Tabs.Production {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMask;
-        
-        /// <summary>
-        /// RequiredFieldValidator4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// btnAdd control.

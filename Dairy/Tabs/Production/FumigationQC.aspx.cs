@@ -32,7 +32,7 @@ namespace Dairy.Tabs.Production
                 txtDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 //string date = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
                 txtSearchDate.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
-                //GetFumigationQCDetails(date);
+                //GetFumigationQCDetails(dates);
                 btnUpdate.Visible = false;
             }
         }
@@ -52,7 +52,7 @@ namespace Dairy.Tabs.Production
             bfqc = new BFumigationQC();
             int Result = 0;
             mfqc.FumigationQCId = 0;
-            mfqc.FumigationQCDate = Convert.ToDateTime(txtDate.Text.ToString());
+            mfqc.FumigationQCDate = Convert.ToDateTime(txtDate.Text).ToString("dd-MM-yyyy");
             mfqc.FumigationQCShiftId = Convert.ToInt32(dpShiftDetails.SelectedItem.Value);
             mfqc.AreaOfExposure = string.IsNullOrEmpty(txtAreaOfExposure.Text) ? string.Empty : txtAreaOfExposure.Text;
             mfqc.StartingTime = string.IsNullOrEmpty(txtStartingTime.Text) ? string.Empty : txtStartingTime.Text;
@@ -91,7 +91,7 @@ namespace Dairy.Tabs.Production
             bfqc = new BFumigationQC();
             int Result = 0;
             mfqc.FumigationQCId = string.IsNullOrEmpty(hId.Value) ? 0 : Convert.ToInt32(hId.Value);
-            mfqc.FumigationQCDate = Convert.ToDateTime(txtDate.Text.ToString());
+            mfqc.FumigationQCDate = Convert.ToDateTime(txtDate.Text).ToString("dd-MM-yyyy");
             mfqc.FumigationQCShiftId = Convert.ToInt32(dpShiftDetails.SelectedItem.Value);
             mfqc.AreaOfExposure = string.IsNullOrEmpty(txtAreaOfExposure.Text) ? string.Empty : txtAreaOfExposure.Text;
             mfqc.StartingTime = string.IsNullOrEmpty(txtStartingTime.Text) ? string.Empty : txtStartingTime.Text;
@@ -134,16 +134,16 @@ namespace Dairy.Tabs.Production
             divwarning.Visible = false;
             divSusccess.Visible = false;
             pnlError.Update();
-            int Id = 0;
-            Id = Convert.ToInt32(e.CommandArgument);
+            int FumigationQCId = 0;
+            FumigationQCId = Convert.ToInt32(e.CommandArgument);
             switch (e.CommandName)
             {
                 case ("Edit"):
                     {
                         lblHeaderTab.Text = "Edit FumigationQC Data Details";
-                        hId.Value = Id.ToString();
-                        Id = Convert.ToInt32(hId.Value);
-                        GetFumigationQCDetails(Id);
+                        hId.Value = FumigationQCId.ToString();
+                        FumigationQCId = Convert.ToInt32(hId.Value);
+                        GetFumigationQCDetails(FumigationQCId);
 
 
                         btnAdd.Visible = false;
@@ -163,6 +163,12 @@ namespace Dairy.Tabs.Production
             DS = bfqc.GetFumigationQCDetails(dates);
             if (!Comman.Comman.IsDataSetEmpty(DS))
             {
+                rpFumigationQC.DataSource = DS;
+                rpFumigationQC.DataBind();
+            }
+            else
+            {
+                DS.Clear();
                 rpFumigationQC.DataSource = DS;
                 rpFumigationQC.DataBind();
             }
@@ -199,6 +205,8 @@ namespace Dairy.Tabs.Production
         {
             string dates = Convert.ToDateTime(txtSearchDate.Text).ToString("dd-MM-yyyy");
             GetFumigationQCDetails(dates);
+
         }
+
     }
 }
